@@ -8,14 +8,14 @@ author = "GPU4GEO"
 author_blurb = "Frontier GPU multi-physics solvers "
 author_short = "GPU4GEO"
 
-meta_descr = "John Doe's personal website"
-meta_kw = "blog,developer,personal"
+meta_descr = "GPU4GEO project website"
+meta_kw = "GPU,Earth-sciences,Supercomputing"
 
 tw_card = "summary"
 tw_title = author_short
 tw_descr = meta_descr
 
-website_url = "https://github.com/PTsolvers/GPU4GEO/"
+website_url = "https://ptsolvers.github.io/GPU4GEO/"
 
 footer_notice = """
   © 2022 $author · Powered by
@@ -32,7 +32,7 @@ nav_items = [
 # Social URLs for the home page
 
 social_github   = "https://github.com/PTsolvers/"
-rss_link        = "https://github.com/PTsolvers/GPU4GEO/index.xml"
+rss_link        = "https://ptsolvers.github.io/GPU4GEO/index.xml"
 
 # Layout / Franklin specifics
 
