@@ -2,5 +2,5 @@
     background-image: url('../assets/images/mnt_gl.jpg');
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% clamp(25vw, 400px, 30vw);
+    background-size: 100% clamp(18vw, 370px, 40vw);
   }
