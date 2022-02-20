@@ -1,0 +1,32 @@
+<nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/">
+      {{author_short}}
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      {{for (title, link) in nav_items}}
+        <li class="navigation-item">
+          <a class="navigation-link" href="{{link}}">{{title}}</a>
+        </li>
+      {{end}}
+
+      <!-- International part -->
+      <!--
+      <li class="navigation-item menu-separator">
+        <span>|</span>
+      </li>
+      <li class="navigation-item">
+        <a href="https://hugo-coder.netlify.app/pt-br/">🇧🇷</a>
+      </li>
+      -->
+    </ul>
+
+  </section>
+</nav>

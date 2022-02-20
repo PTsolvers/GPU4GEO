@@ -1,0 +1,36 @@
+<header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/{{_relative_url}}">
+        {{title}}
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    {{isdef date}}
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='{{date}}'>
+            {{dfmt date}}
+          </time>
+        </span>
+
+        {{isdef reading_time}}
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            {{reading_time}}
+          </span>
+        {{end}}
+      </div>
+    {{end}}
+
+    {{isnotempty tags}}
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        {{page_tags}}
+      </div>
+    {{end}}
+    </div>
+  </header>
