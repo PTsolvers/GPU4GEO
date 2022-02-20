@@ -32,7 +32,6 @@ nav_items = [
 # Social URLs for the home page
 
 social_github   = "https://github.com/PTsolvers/"
-rss_link        = "https://ptsolvers.github.io/GPU4GEO/index.xml"
 
 # Layout / Franklin specifics
 
