@@ -1,6 +1,8 @@
-  .landing {
-    background-image: url('../assets/images/mnt_gl.jpg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% clamp(18vw, 365px, 40vw);
-  }
+.landing {
+  background-image: url('../assets/images/mnt_gl.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% clamp(18vw, 365px, 40vw);
+}
+
+.bgcolor-index {background-color: rgb(33, 33, 33); }
