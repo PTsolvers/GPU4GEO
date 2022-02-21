@@ -2,6 +2,8 @@
 
 prepath = "GPU4GEO"
 
+ignore = ["website-memo.md"]
+
 # Layout information
 
 author = "GPU4GEO"
