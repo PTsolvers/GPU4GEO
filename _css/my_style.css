@@ -1,8 +1,25 @@
 .landing {
+  background-image: url('../assets/images/mnt_gl-light.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  /*background-size: 100% clamp(18vw, 365px, 40vw);*/
+  background-size: 100% clamp(15vw, 250px, 22vw);
+}
+
+
+.colorscheme-dark .landing {
   background-image: url('../assets/images/mnt_gl.jpg');
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100% clamp(18vw, 365px, 40vw);
+  /*background-size: 100% clamp(18vw, 365px, 40vw);*/
+  background-size: 100% clamp(15vw, 250px, 22vw);
 }
 
-.bgcolor-index {background-color: rgb(33, 33, 33); }
+/*.colorscheme-dark .centered .about h1 {color: rgb(250, 250, 250); }
+.centered .about h1 {color: rgb(170, 170, 170); }
+
+.colorscheme-dark .centered .about h2 {color: rgb(250, 250, 250); }
+.centered .about h2 {color: rgb(170, 170, 170); }
+
+.colorscheme-dark .navigation a {color: rgb(250, 250, 250); }
+.navigation a {color: rgb(170, 170, 170); }*/
