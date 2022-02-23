@@ -27,6 +27,7 @@ footer_notice = """
 nav_items = [
   "Project" => "/project/",
   "News"  => "/posts/",
+  "Software" => "/software/",
   "Team" => "/team/",
   "Publications" => "/publications/"
 ]
