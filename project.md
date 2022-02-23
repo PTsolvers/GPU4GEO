@@ -2,17 +2,13 @@
 header = "Project"
 +++
 
-Written in Julia, Franklin is an open source static site generator available under the
-[MIT License](https://en.wikipedia.org/wiki/MIT_License).
-Franklin supports Markdown and HTML content files and uses a bunch of tricks to make
-your life easier.
+[GPU4GEO](https://www.pasc-ch.org/projects/2021-2024/gpu4geo/) is a [PASC](https://www.pasc-ch.org) funded scientific software development project aiming at building "Frontier GPU multi-physics solvers" with application to natural sciences - ice flow dynamics and geodynamics in particular.
 
-Franklin is ideal for technical blogs, tutorials, lecture notes etc. It is used
-by a number of websites in the Julia community such as:
+The project, funded by the [Swiss National Supercomputing Centre CSCS](https://www.cscs.ch) part of [ETH Zürich](https://ethz.ch/en.html), is an international collaboration between:
+- [VAW-GL](https://vaw.ethz.ch/en/research/glaciology.html) @ETH Zürich
+- [GFD](https://gfd.ethz.ch) @ETH Zürich
+- [Goedynamics](https://www.geosciences.uni-mainz.de/geophysics-and-geodynamics/team/univ-prof-dr-boris-kaus/) @JGU Mainz
+- [JuliaLab](https://julia.mit.edu) @MIT
 
-* <https://julialang.org>
-* <https://juliacon.org/2022/>
-* <https://computationalthinking.mit.edu/Spring21/>
-* <https://juliagpu.org/>
 
-Learn more and contribute on [GitHub](https://github.com/tlienart/Franklin.jl)
+
