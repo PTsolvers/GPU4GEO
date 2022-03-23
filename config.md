@@ -7,7 +7,7 @@ ignore = ["website-memo.md"]
 # Layout information
 
 author = "GPU4GEO"
-author_blurb = "Frontier GPU multi-physics solvers "
+author_blurb = "Frontier GPU multi-physics solvers"
 author_short = "GPU4GEO"
 
 meta_descr = "GPU4GEO project website"
