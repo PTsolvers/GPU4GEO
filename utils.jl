@@ -51,7 +51,7 @@ function hfun_list_posts(t::String)
         node("ul",
                 (
                     node("li",
-                        node("span", class="date", Dates.format(p.date, "U d, yyyy") * " — "),
+                        node("span", class="date", Dates.format(p.date, "U d, yyyy") * "  — "),
                         node("a", class="title", href=p.href, p.title)
                     )
                     for p in get_posts(t)
