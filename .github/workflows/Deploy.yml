@@ -7,38 +7,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-
-      - name: Cache
-        uses: actions/cache@v2
+      - uses: actions/checkout@v2
+      - uses: tlienart/xranklin-build-action@v2
         with:
-          path: |
-                __cache
-                __site
-          key: ${{ runner.os }}-franklin-cache-${{ github.sha }}
-          restore-keys: ${{ runner.os }}-franklin-cache-
-
-      # Julia
-      - name: Install Julia
-        uses: julia-actions/setup-julia@v1
-        with:
-          version: 1.7
-
-      # Website build
-      - run: julia -e '
-          using Pkg;
-          Pkg.add(
-            url="https://github.com/tlienart/Xranklin.jl",
-            rev="main"
-          );
-          using Xranklin;
-          build();'
-
-      # Deployment and caching
-      - run: touch __site/.nojekyll
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          BRANCH: gh-pages
-          FOLDER: __site
+          BASE_URL_PREFIX: "GPU4GEO"
