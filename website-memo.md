@@ -1,6 +1,7 @@
 # website-memo
 
-The website is build using [Xranklin](https://github.com/tlienart/Xranklin.jl), the dev version of the next major release of [Franklin](https://github.com/tlienart/Franklin.jl) Julia-powered static website generator.
+The website is build using [Xranklin](https://github.com/tlienart/Xranklin.jl),
+the dev version of the next major release of [Franklin](https://github.com/tlienart/Franklin.jl) Julia-powered static website generator.
 
 ## How-to
 
