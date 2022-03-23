@@ -63,7 +63,17 @@ hfun_list_posts() = hfun_list_posts("")
 
 
 function get_posts(t::String)
-    paths = joinpath.("posts", filter!(p -> p != "index.md", readdir("posts")))
+    # find all valid "posts/xxx.md" files, exclude the index which is where
+    # the post-list gets placed
+    paths = joinpath.(
+        "posts",
+        filter!(
+            p -> endswith(p, ".md") && p != "index.md",
+            readdir("posts")
+        )
+    )
+    # for each of those posts, retrieve date and title, both are expected
+    # to be there
     posts = [
         (
             date  = getvarfrom(:date, rp),
@@ -73,7 +83,7 @@ function get_posts(t::String)
         )
         for rp in paths
     ]
-    sort!(posts, by = x->x.date, rev=true)
+    sort!(posts, by = x -> x.date, rev=true)
     if !isempty(t)
         filter!(
             p -> t in values(p.tags),
