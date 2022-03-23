@@ -24,4 +24,4 @@ During the hackathon, we will focus on advancing Julia software engineering and 
 - Further develop geomIO and make [GeophysicalModelGenerator.jl](https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl) work with parallel setup
 - Add higher-order derivatives to ParallelStencil.jl
 
-Stay tuned as more news will follow
+Stay tuned as more news will follow...
