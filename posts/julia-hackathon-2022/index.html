@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Language" content="en">
   <meta name="color-scheme" content="light dark">
 
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+  
 
   <meta name="author" content="GPU4GEO">
   <meta name="description" content="GPU4GEO project website">
@@ -39,8 +39,6 @@
 
   
 
-  
-    <link rel="stylesheet" href="/GPU4GEO/libs/highlight/github.min.css">
   
 
   <style>
@@ -116,8 +114,8 @@
           <header>
   <div class="post-title">
     <h1 class="title">
-      <a class="title-link" href="/GPU4GEO/posts/emoji-support/index.html">
-        Emoji Support
+      <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-2022/index.html">
+        Julia hackathon 2022
       </a>
     </h1>
   </div>
@@ -127,15 +125,15 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2019-03-05T00:00:00'>
-            March 5, 2019
+          <time datetime='2022-03-23'>
+            March 23, 2022
           </time>
         </span>
 
         
           <span class="reading-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            One-minute read
+            2-minute read
           </span>
         
       </div>
@@ -144,7 +142,7 @@
     
       <div class="tags">
         <i class="fa fa-tag" aria-hidden="true"></i>
-        <span class="tag"><a href="/GPU4GEO/tags/markdown/">markdown</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/text/">text</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/emoji/">emoji</a></span>
+        <span class="tag"><a href="/GPU4GEO/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/coding/">coding</a></span>
       </div>
     
     </div>
@@ -154,18 +152,23 @@
        
        
        
-<p>Emojis are supported out of the box in Franklin. You can either copy paste emojis in your source code or use a shorthand such as <code>:+1:</code>: 👍.</p>
-<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
-<p>The dictionary for emojis that is used is Julia's <code>emoji_symbols</code> which may not contain all emojis (it should contain most though), you can check whether an emoji is present in your REPL with</p>
-<pre><code class="julia">using REPL.REPLCompletions: emoji_symbols
-println(get(emoji_symbols, &quot;\\:+1:&quot;, &quot;not found&quot;))
-println(get(emoji_symbols, &quot;\\:dragon_face:&quot;, &quot;not found&quot;))</code></pre>
-<div class="code-output"><pre><code class="code-stdout language-plaintext">👍
-🐲
-</code></pre></div>
-<hr>
-<p><strong>N.B.</strong> Franklin supports Unicode Standard emoji characters, however the rendering of these glyphs depends on the browser and the platform.
-Make sure you select your <a href="https://css-tricks.com/snippets/css/system-font-stack/">font-stack</a> appropriately.</p>
+<p>The <a href="/GPU4GEO/team">GPU4GEO team</a> and external collaborators will gather for a Julia hackathon April 4-8, 2022 to advance geoscientific Julia projects.</p>
+<h2 id="hackathon_purpose" > Hackathon purpose<a class="heading-link" href="#hackathon_purpose">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>We aim at moving forward with the various open-source Julia projects within ice-flow dynamics and geodynamics where collaboration with experts enables the fast track.</p>
+<p>During the hackathon, we will focus on advancing Julia software engineering and high-performance, parallel, GPU-accelerated code development in following topics:</p>
+<ul>
+<li>Advection, marker-based routines and combining that with <a href="https://github.com/omlins/ParallelStencil.jl">ParallelStencil.jl</a></li>
+<li>Developing new software using ParallelStencil (e.g., seismic rupture)</li>
+<li>Further develop rheology and material parameter routines <a href="https://github.com/JuliaGeodynamics/GeoParams.jl">GeoParams.jl</a> and use that in existing codes</li>
+<li>Make <a href="https://github.com/EnzymeAD/Enzyme.jl">Enzyme.jl</a>, <a href="https://github.com/FluxML/Zygote.jl">Zygote.jl</a> work with GPUs</li>
+<li>Explore GPU block-based dynamic tiling</li>
+<li>Finish DMSTAG routines within <a href="https://github.com/JuliaParallel/PETSc.jl">PETSc.jl</a></li>
+<li>Further develop geomIO and make <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator.jl</a> work with parallel setup</li>
+<li>Add higher-order derivatives to ParallelStencil.jl</li>
+</ul>
+<p>Stay tuned as more news will follow</p>
 
 
       </section>
@@ -183,9 +186,6 @@ Make sure you select your <a href="https://css-tricks.com/snippets/css/system-fo
 
   
 
-  
-    <script src="/GPU4GEO/libs/highlight/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/GPU4GEO/libs/coder.min.js"></script>
