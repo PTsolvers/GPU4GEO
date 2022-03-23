@@ -1,6 +1,6 @@
 # website-memo
 
-The website is build using [Xranklin](https://github.com/tlienart/Xranklin.jl), the dev version of the next major release of [Franklin](https://github.com/tlienart/Franklin.jl) static website generator.
+The website is build using [Xranklin](https://github.com/tlienart/Xranklin.jl), the dev version of the next major release of [Franklin](https://github.com/tlienart/Franklin.jl) Julia-powered static website generator.
 
 ## How-to
 
@@ -43,7 +43,7 @@ Assets (mostly `png`, `gif`) should be placed in [/_assets/images](_assets/image
 
 
 ## Misc
-
+- This website builds upon the [coder-xranklin-demo](https://github.com/tlienart/coder-xranklin-demo).
 - Site-wide config should be placed and handled in [/config.md](config.md).
 - More advanced styling can be tweaked in the [_css](/_css) and [_layout](/_layout) folders.
 - [This memo](https://github.com/eth-vaw-glaciology/course-101-0250-00/blob/main/website-memo.md) lists some advanced feature that could apply to this website as well
