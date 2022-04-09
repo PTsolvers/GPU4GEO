@@ -16,6 +16,6 @@ Solvers based on pseudo-transient relaxation show great promise for solving a wi
 The project, funded by the [Swiss National Supercomputing Centre - CSCS](https://www.cscs.ch) part of [ETH Zurich](https://ethz.ch/en.html), is an international collaboration between:
 - [VAW-GL](https://vaw.ethz.ch/en/research/glaciology.html) @ETH Zurich
 - [GFD](https://gfd.ethz.ch) @ETH Zurich
-- [Goedynamics](https://www.geosciences.uni-mainz.de/geophysics-and-geodynamics/team/univ-prof-dr-boris-kaus/) @JGU Mainz
+- [Geodynamics](https://www.geosciences.uni-mainz.de/geophysics-and-geodynamics/team/univ-prof-dr-boris-kaus/) @JGU Mainz
 - [JuliaLab](https://julia.mit.edu) @MIT
 - [CSCS](https://www.cscs.ch) @ETH Zurich
