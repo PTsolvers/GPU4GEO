@@ -1,7 +1,7 @@
 +++
 using Dates
 
-title = "Julia hackathon 2022"
+title = "Julia hackathon 2022 - Final announcement"
 date = Date(2022, 3, 23)
 reading_time = "2-minute read"
 
