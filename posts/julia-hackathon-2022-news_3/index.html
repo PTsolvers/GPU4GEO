@@ -116,8 +116,8 @@
           <header>
   <div class="post-title">
     <h1 class="title">
-      <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-2022-news_1/index.html">
-        Julia hackathon 2022 - Stokes 3D, AD, and multi-AMDGPU
+      <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-2022-news_3/index.html">
+        Julia hackathon 2022 - ROCm (AMDGPU) MPI
       </a>
     </h1>
   </div>
@@ -127,8 +127,8 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2022-04-10'>
-            April 10, 2022
+          <time datetime='2022-04-11'>
+            April 11, 2022
           </time>
         </span>
 
@@ -154,14 +154,22 @@
        
        
        
-<p>We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. Here some attendee feedback.</p>
-<h2 id="stokes_3d,_ad,_and_multi_amdgpu_simulations" > Stokes 3D, AD, and multi-AMDGPU simulations<a class="heading-link" href="#stokes_3d,_ad,_and_multi_amdgpu_simulations">
+<p>We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics.</p>
+<h2 id="rocm_(amdgpu)_mpi" > ROCm (AMDGPU) MPI<a class="heading-link" href="#rocm_(amdgpu)_mpi">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p><em>Thibault Duretz</em></p>
-<img src="../../assets/images/news_stokes3d.png" alt="3D viscous Stokes solution" width="400"><p>The hackathon week has been extremely prolific, leading to numerous exciting discussions with participants about their projects, e.g., flexible composite viscous flow implementation, plasticity, marker-in-cell advection, pseudo-transient scheme, using <a href="https://github.com/tduretz/MDOODZ6.0">MDoodz</a> within Julia).</p>
-<p>Together with Ludovic Räss, I focused his efforts on the development of a plain Julia 3D Stokes-flow code based on the pseudo-transient method (see: <a href="https://github.com/tduretz/PT3D">https://github.com/tduretz/PT3D</a>). This script was subsequently employed by Boris Kaus and Valentin Churavy who tested the automatic differentiation tools provided by Julia, <a href="https://github.com/EnzymeAD/Enzyme.jl">Enzyme.jl</a>, which enables the automated computation of adjoint operators.</p>
-<p>The aim will be to port this 3D code for usage on multiple AMD GPUs. In order to get started, I've also worked on a 2D Poisson solver (see: <a href="https://github.com/luraess/ROCm-MPI/blob/main/scripts/diffusion_2D_kp.jl"><code>diffusion_2D_kp.jl</code></a> in <a href="https://github.com/luraess/ROCm-MPI">https://github.com/luraess/ROCm-MPI</a>) that was successfully run on 4 AMD MI50 GPUs, on the Goethe HLR cluster, University of Frankfurt. This success builds upon the latest development of <a href="https://github.com/eth-cscs/ImplicitGlobalGrid.jl">ImplicitGlobalGrid.jl</a> (to be soon merged into the master branch) to support AMD GPUs via the <a href="https://github.com/JuliaGPU/AMDGPU.jl">AMDGPU.jl</a> backend, besides existing support for <a href="https://github.com/JuliaGPU/AMDGPU.jl">CUDA.jl</a> (Nvidia GPUs). Both the AMD and Nvidia GPU backend implementations allow for ROCm- and CUDA-aware MPI, respectively, if the MPI library was built with according support.</p>
+</h2><p><em>Ludovic Räss</em></p>
+<img src="../../assets/images/rocmawarempi.png" alt="3D viscous Stokes solution" width="400"><p>Majority of the most powerful and next generation of supercomputers host either Nvidia or AMD graphical processing units (GPUs), commonly known as accelerators. Being able to efficiently utilise thousands of these GPUs in parallel is therefore crucial to sustain petascale and exascale computing workflows in scientific simulations.</p>
+<p>Important is also to be able to leverage both Nvidia and AMD devices without having to change a single line of code, making a decisive design step in a concept commonly referred to as (backend) portability. Backend portability (and thus associated performance portability) is one of the key points we aim to achieve within the <a href="https://www.pasc-ch.org/projects/2021-2024/gpu4geo/">PASC funded GPU4GEO</a> project, using the <a href="https://julialang.org">Julia language</a>.</p>
+<p><strong>We are excited to announce that <a href="https://github.com/eth-cscs/ImplicitGlobalGrid.jl">ImplicitGlobalGrid.jl</a> now supports ROCm (-aware) MPI, including <a href="https://github.com/JuliaGPU/AMDGPU.jl">AMDGPU.jl</a> as backend 🚀, besides <a href="https://github.com/JuliaGPU/CUDA.jl">CUDA.jl</a> (Nvidia GPUs) and (multi-threaded) CPU support.</strong></p>
+<p>To succeed, following changes where required  (to be merged soon and released)</p>
+<ul>
+<li><strong>ImplicitGlobalGrid.jl</strong>: AMDGPU (<code>ROCArray</code>) support, automatic backend detection</li>
+<li><strong>AMDGPU.jl</strong>: adding memory pool API for correct device (and associated device memory) selection, adding <code>unsafe_wrap</code> functionality, <a href="https://github.com/JuliaGPU/AMDGPU.jl/pull/220/commits/ee8f4b6e1fc3b34b9a09540626508226e6363249">adding async memcpy functionality</a></li>
+<li><strong>MPI.jl</strong>: adding <code>ROCArray</code> support for ROCm-aware MPI</li>
+</ul>
+<p><a href="https://github.com/luraess/ROCm-MPI/blob/main/README.md">This repository</a> contains the sandbox project using ROCm (-aware) MPI to compute 2D diffusion on 4 MAD MI50 GPUs at <a href="https://www.cscs.ch">CSCS</a>'s test system. The non-ROCm-aware runs were also successfully performed by Thibault Duretz on the Goethe HLR AMD cluster, University of Frankfurt.</p>
+<p>Thanks to Julian Samaroo (MIT), Valentin Churavy (MIT), Samuel Omlin (CSCS) and Ivan Utkin (ETHZ) for their valuable help and insights on this topic. </p>
 
 
       </section>
