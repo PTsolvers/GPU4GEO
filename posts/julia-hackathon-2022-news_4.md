@@ -11,7 +11,7 @@ tags = ["activities", "julia", "coding"]
 We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics.
 
 ## ROCm (AMDGPU) MPI
-*Ludovic Räss*
+*Ludovic Räss & Ivan Utkin*
 
 ~~~
 <img src="../../assets/images/rocmawarempi.png" alt="3D viscous Stokes solution" width="400">
