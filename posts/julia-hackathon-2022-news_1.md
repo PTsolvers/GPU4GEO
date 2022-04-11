@@ -8,9 +8,10 @@ reading_time = "2-minute read"
 tags = ["activities", "julia", "coding"]
 +++
 
-This news item is part of the 2022 Julia hackathon attendee feedback, by Thibault Duretz.
+We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. Here some attendee feedback.
 
 ## Stokes 3D, AD, and multi-AMDGPU simulations
+*Thibault Duretz*
 
 ~~~
 <img src="../../assets/images/news_stokes3d.png" alt="3D viscous Stokes solution" width="400" class="center">
