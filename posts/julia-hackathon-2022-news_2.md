@@ -8,7 +8,7 @@ reading_time = "2-minute read"
 tags = ["activities", "julia", "coding"]
 +++
 
-We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. For some of us this was one of the first encounters with Julia, whereas others had some more experience with this. Invaluable was the advice of Valentin Churavy, who joined us from the MIT JuliaLab, 
+We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. For some of us this was one of the first encounters with Julia, whereas others had some more experience with this. Invaluable was the advice of Valentin Churavy, who joined us from the MIT JuliaLab.
 
 ## LaMEM BinaryBuilder version 
 *Boris Kaus*

@@ -14,7 +14,7 @@ We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide ran
 *Thibault Duretz*
 
 ~~~
-<img src="../../assets/images/news_stokes3d.png" alt="3D viscous Stokes solution" width="400" class="center">
+<img src="../../assets/images/news_stokes3d.png" alt="3D viscous Stokes solution" width="400">
 ~~~
 
 The hackathon week has been extremely prolific, leading to numerous exciting discussions with participants about their projects, e.g., flexible composite viscous flow implementation, plasticity, marker-in-cell advection, pseudo-transient scheme, using [MDoodz](https://github.com/tduretz/MDOODZ6.0) within Julia).
