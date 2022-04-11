@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  
+
+  <meta name="author" content="GPU4GEO">
+  <meta name="description" content="GPU4GEO project website">
+  <meta name="keywords" content="GPU,Earth-sciences,Supercomputing">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GPU4GEO">
+  <meta name="twitter:description" content="GPU4GEO project website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="GPU4GEO project website">
+  <meta property="og:type" content="website">
+
+  <title>GPU4GEO</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/GPU4GEO/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/GPU4GEO/css/coder-dark.min.css" media="screen">
+  <link rel="stylesheet" href="/GPU4GEO/css/my_style.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/GPU4GEO/assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/GPU4GEO/assets/images/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/GPU4GEO/assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/GPU4GEO/assets/images/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+    <link rel="stylesheet" href="/GPU4GEO/libs/highlight/github.min.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper ">
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/GPU4GEO/">
+      GPU4GEO
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/project/">Project</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/posts/">News</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/software/">Software</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/team/">Team</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/publications/">Publications</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-2022-news_3/index.html">
+        Julia hackathon 2022 - GeoParams.jl, GeophysicalModelGenerator, MAGEMin.jl and PETSc.jl
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2022-04-11'>
+            April 11, 2022
+          </time>
+        </span>
+
+        
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            4-minute read
+          </span>
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/GPU4GEO/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/coding/">coding</a></span>
+      </div>
+    
+    </div>
+  </header>
+
+
+       
+       
+       
+<p>We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. For some of us this was one of the first encounters with Julia, whereas others had some more experience with this. Invaluable was the advice of Valentin Churavy, who joined us from the MIT JuliaLab.</p>
+<h2 id="geoparams.jl" > GeoParams.jl<a class="heading-link" href="#geoparams.jl">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus & Albert de Montserrat</em></p>
+<p>One of the time-consuming parts of writing a new code for geodynamic applications is implementing the material parameters and creep-laws right, as well as performing the proper non-dimensionalization. Most of these parameters are computed in a <em>point-wise</em> manner and the required calculations are thus the same for a finite element, finite difference or AMR approach. Moreover, experience showed us that the specific details of the implementations of, for example, creep laws is very error-prone and many published papers contain typos.   </p>
+<p>The idea of the <a href="https://github.com/JuliaGeodynamics/GeoParams.jl">GeoParams.jl</a> package is to help with this by implementing such point-wise calculations in a single package. This is not only a database of parameters, but thanks to the overall efficiency of julia, we can also directly use the same routines in actual solvers (which can either be a pseudo-transient solver, or an implicit code). A significant advantage of this is that if new rheologies or density parameterisations are implemented in GeoParams they will immediately be available to a whole range of codes rather than being something that has to be implemented in every code individually.</p>
+<p>A first example script where this is being used is in an example of the <a href="https://github.com/boriskaus/MagmaThermoKinematics.jl/blob/main/examples/Example2D_paper.jl">MagmaThermoKinematics</a> package. </p>
+<p>A challenge is that the computational routines should be non-allocating and produce little overhead as pseudo-transient solvers need to call this at every iteration step. Moreover, whereas some material parameters require only a single additional field (temperature-dependent density, for example, only requires <code>T</code>), whereas others require more (if density is computed from a phase diagram, we need both pressure and temperature, for example).
+During the hackaton Albert worked on a way to pass an arbitrary number of fields to the computational routines. This <a href="https://github.com/JuliaGeodynamics/GeoParams.jl/pull/8">Pull Request</a> was the result.</p>
+<p>There were also many discussions between Thibault, Daniel, Boris and Albert on how to best define combined creep laws (e.g, viscoelasticity, or combined diffusion and dislocation creep laws), and a few test scenarios were developed that will ultimately find its way in the package. Stay tuned!</p>
+<h2 id="geophysicalmodelgenerator" > GeophysicalModelGenerator<a class="heading-link" href="#geophysicalmodelgenerator">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus, Christian Schuler, Lucas Moser</em></p>
+<p>As a result of recent changes to make the <code>GeoParam</code> package type-stable, the <code>GeoUnit</code> was redefined which required an update of the <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator</a> package. Version 0.4.0 was the result.</p>
+<p>Christian started looking into how to combine <code>GMG</code> with MPI, as very large scale setups cannot be created on a single core but must be created in parallel. Whereas this will require more work, it seems feasible.</p>
+<p>Lucas Moser has been working on a python interface for <a href="https://github.com/JuliaGeodynamics/geomIO">geomIO</a>, which is a package that allows one to draw setups in a vector graphics program (like Inkscape). Whereas the initial version was purely in python, we are ofcourse interested to create a julia version of this as well such that it can ultimately be used along with <code>GMG</code>.  </p>
+<h2 id="magemin.jl" > MAGEMin.jl<a class="heading-link" href="#magemin.jl">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Nicolas Riel & Boris Kaus</em>
+<a href="https://github.com/ComputationalThermodynamics/MAGEMin">MAGEMin</a> is a new parallel thermodynamics solver package developed by Nicolas Riel & Boris Kaus which is  more efficient than existing approaches. The manuscript on the approach was submitted a few weeks ago and an initial version of the code along with a graphical user interface was released along side it. We initially developed this as a C-package and but provide precompiled BinaryBuilder versions (along with a julia interface that will be released in version 1.1 of the code) to make it work on most systems that geoscientists use. In the initial versio of the package, we also hardcoded a single thermodynamic database (that can simulate the fractional crystallisation of a hydrous mafic melt, which is known to be one of the more tricky problems to solve). </p>
+<p>Yet, the MAGEMin approach is fully general and should in principle work with any database.
+A challenge, though, is to bring the wide variety of extisting databases into one code (as many use qute different descriptions). As julia already has a nice ecosystem it is worth looking into whether that can be used. During the Hackathon, Nico and Boris worked on combining the <a href="https://github.com/JuliaSymbolics/Symbolics.jl">Symbolics.jl</a> computer algebra package, with a minimum working example that includes some of the key features used in MAGEMin. Quite a bit of work remains to be done before we can estimate how the speed of the julia version compares to our C-package but initial results are promising.</p>
+<h1 id="petsc.jl" > PETSc.jl<a class="heading-link" href="#petsc.jl">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h1><p><em>Nicolas Berlie & Patrick Sanan</em></p>
+<p><a href="https://github.com/JuliaParallel/PETSc.jl">PETSc.jl</a> is the main julia interface to PETSc. Whereas the package itself has been around for some time, it was unmaintained for quite some time until Jeremy Kozdon, Nico Berlie and Boris Kaus had a go at it in summer 2021. Nico and Boris were mostly interested in getting DMSTAG up & running, whereas Jeremy did a fantastic job at providing automatic wrappers for the full package and at generating more julia-style interfaces for many of the routines. It turns out that we can combined many of the cool features of julia, such as automatic differentiation or visualisation, with the parallelism of PETSc. As result, writing new codes is easier and requires less lines than  doing the equivalent in C. </p>
+<p>Unfortunately, time ran out after september 2021, and much of the progress (including the automatic Clang wrappers)  was hanging in the branches <code>/jek/gen</code> and <code>jek/dmstag</code>. </p>
+<p>During the hackaton, Nico and Patrick continued the work on the <code>dmstag</code> branch and improved documentation and added more functionality. Their work-in-progress can be seen <a href="https://github.com/nicoberlie/PETSc.jl/tree/jek/dmstag">here</a> and the idea is to finish this and ultimately make this the new main branch of PETSc.jl.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 GPU4GEO · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+    <script src="/GPU4GEO/libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/GPU4GEO/libs/coder.min.js"></script>
+
+</body>
+</html>
