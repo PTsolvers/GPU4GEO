@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  
+
+  <meta name="author" content="GPU4GEO">
+  <meta name="description" content="GPU4GEO project website">
+  <meta name="keywords" content="GPU,Earth-sciences,Supercomputing">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GPU4GEO">
+  <meta name="twitter:description" content="GPU4GEO project website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="GPU4GEO project website">
+  <meta property="og:type" content="website">
+
+  <title>GPU4GEO</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/GPU4GEO/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/GPU4GEO/css/coder-dark.min.css" media="screen">
+  <link rel="stylesheet" href="/GPU4GEO/css/my_style.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/GPU4GEO/assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/GPU4GEO/assets/images/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/GPU4GEO/assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/GPU4GEO/assets/images/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+    <link rel="stylesheet" href="/GPU4GEO/libs/highlight/github.min.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper ">
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/GPU4GEO/">
+      GPU4GEO
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/project/">Project</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/posts/">News</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/software/">Software</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/team/">Team</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/GPU4GEO/publications/">Publications</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-2022-news_2/index.html">
+        Julia hackathon 2022 - LaMEM BinaryBuilder
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2022-04-10'>
+            April 10, 2022
+          </time>
+        </span>
+
+        
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            2-minute read
+          </span>
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/GPU4GEO/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/coding/">coding</a></span>
+      </div>
+    
+    </div>
+  </header>
+
+
+       
+       
+       
+<p>We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. For some of us this was one of the first encounters with Julia, whereas others had some more experience with this. Invaluable was the advice of Valentin Churavy, who joined us from the MIT JuliaLab, </p>
+<h2 id="lamem_binarybuilder_version" > LaMEM BinaryBuilder version <a class="heading-link" href="#lamem_binarybuilder_version">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus</em>
+<a href="https://bitbucket.org/bkaus/lamem">LaMEM</a> is a 3D parallel geodynamics code used for a wide range of problems, from studying the collision of tectonics plates to estimating the long-term safety of underground reservoirs. It builds on <a href="https://petsc.org/release/">PETSc</a> which allows it to run on anything from a laptop to a massively parallel HPC system. Yet, one of the challenges we encountered in using LaMEM in teaching is that PETSc is often rather tricky to install at first. 
+Luckily the julia-team has thought about that and created the <a href="https://binarybuilder.org">BinaryBuilder</a> system, which allows you to create a build script that precompiles native binaries for essentially all modern platforms currently in use (windows, mac, linux) and hosts them online. 
+These packages can be natively downloaded through the julia package manager, but they also work without julia. Boris previously used this to distribute a compiled version of  <a href="https://github.com/ComputationalThermodynamics/MAGEMin">MAGEMin</a> (see <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4624">here</a> for the original build script) which runs in parallel on essentially any system.</p>
+<p>During the april 2022 Hackathon, Boris and Valentin worked on updating the <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4726">PETSc_jll</a> build script and subsequently created a <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4740">LaMEM_jll</a> package that precompiles LaMEM with PETSc and MPI. It turned out to be a bit more tricky to get all working (particularly windows causes problems), but things now seem to work. Instead of spending hours (or days) installing PETSc, you can now install LaMEM through the julia package manager:</p>
+<pre><code class="julia">julia&gt; ]
+(@v1.7) pkg&gt; add LaMEM_jll
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+    Updating `~/.julia/environments/v1.7/Project.toml`
+  [15d6fa20] + LaMEM_jll v1.1.0+2
+    Updating `~/.julia/environments/v1.7/Manifest.toml`
+  [15d6fa20] + LaMEM_jll v1.1.0+2</code></pre>
+<p>We also provide a wrapper <a href="https://bitbucket.org/bkaus/lamem/src/master/scripts/julia/Run_LaMEM_From_Julia.jl">script</a> in the LaMEM directory (<code>/scripts/julia/Run_LaMEM_From_Julia.jl</code>) that allows you to run LaMEM in serial or parallel for a particular LaMEM input file. As an example of running this on 4 cores:</p>
+<pre><code class="julia">$cd ~/WORK/LaMEM/LaMEM/input_models/BuildInSetups/
+$julia
+ Boris-Mac:BuildInSetups kausb$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type &quot;?&quot; for help, &quot;]?&quot; for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.7.2 (2022-02-06)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia&gt; include(&quot;../../scripts/julia/Run_LaMEM_From_Julia.jl&quot;)
+run_lamem
+julia&gt; ParamFile=&quot;FallingBlock_Multigrid.dat&quot;;
+julia&gt; run_lamem(ParamFile, 4)
+-------------------------------------------------------------------------- 
+                   Lithosphere and Mantle Evolution Model                   
+     Compiled: Date: Apr 11 2022 - Time: 00:59:13           
+-------------------------------------------------------------------------- 
+        STAGGERED-GRID FINITE DIFFERENCE CANONICAL IMPLEMENTATION           
+-------------------------------------------------------------------------- 
+Parsing input file : FallingBlock_Multigrid.dat 
+   Adding PETSc option: -snes_type ksponly
+   Adding PETSc option: -js_ksp_monitor
+   Adding PETSc option: -crs_pc_type bjacobi
+Finished parsing input file : FallingBlock_Multigrid.dat 
+--------------------------------------------------------------------------
+Time stepping parameters:
+   Simulation end time          : 100. [ ] 
+   Maximum number of steps      : 10 
+   Time step                    : 10. [ ] 
+   Minimum time step            : 1e-05 [ ] 
+   Maximum time step            : 100. [ ] 
+   Time step increase factor    : 0.1 
+   CFL criterion                : 0.5 
+   CFLMAX (fixed time steps)    : 0.5 
+   Output time step             : 0.2 [ ] 
+   Output every [n] steps       : 1 
+   Output [n] initial steps     : 1 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Material parameters: 
+--------------------------------------------------------------------------
+   Phase ID : 0   
+   (dens)   : rho = 1. [ ]  
+   (diff)   : eta = 1. [ ]  Bd = 0.5 [ ]  
+
+   Phase ID : 1   
+   (dens)   : rho = 2. [ ]  
+   (diff)   : eta = 100. [ ]  Bd = 0.005 [ ]  
+
+   Phase ID : 2   
+   (dens)   : rho = 2. [ ]  
+   (diff)   : eta = 1000. [ ]  Bd = 0.0005 [ ]  
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Grid parameters:
+   Total number of cpu                  : 4 
+   Processor grid  [nx, ny, nz]         : [1, 2, 2]
+   Fine grid cells [nx, ny, nz]         : [32, 32, 32]
+   Number of cells                      :  32768
+   Number of faces                      :  101376
+   Maximum cell aspect ratio            :  1.00000
+   Lower coordinate bounds [bx, by, bz] : [0., 0., 0.]
+   Upper coordinate bounds [ex, ey, ez] : [1., 1., 1.]
+--------------------------------------------------------------------------</code></pre>
+<p>Please note that the currently available <code>PETSc_jll</code> BinaryBuilder package does not include the parallel direct solvers <code>MUMPS</code> and <code>SUPERLU_DIST</code> yet. Adding that remains work in progress, which you can see <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4672">here</a>, <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4635">here</a> and <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4719">here</a>. Whereas we are optimistic that this will work out for linux, getting a fully native compilation for windows appears to remain tricky. Yet, windows users can always run julia (and <code>LaMEM_jll</code>) through the <a href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a>.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2022 GPU4GEO · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+    <script src="/GPU4GEO/libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/GPU4GEO/libs/coder.min.js"></script>
+
+</body>
+</html>
