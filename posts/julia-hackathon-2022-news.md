@@ -12,6 +12,10 @@ This news item is part of the 2022 Julia hackathon attendee feedback, by Thibaul
 
 ## Stokes 3D, AD, and multi-AMDGPU simulations
 
+~~~
+<img src="../../assets/images/news_stokes3d.png" alt="3D viscous Stokes solution" width="400" class="center">
+~~~
+
 The hackathon week has been extremely prolific, leading to numerous exciting discussions with participants about their projects, e.g., flexible composite viscous flow implementation, plasticity, marker-in-cell advection, pseudo-transient scheme, using [MDoodz](https://github.com/tduretz/MDOODZ6.0) within Julia).
 
 Together with Ludovic Räss, I focused his efforts on the development of a plain Julia 3D Stokes-flow code based on the pseudo-transient method (see: [https://github.com/tduretz/PT3D](https://github.com/tduretz/PT3D)). This script was subsequently employed by Boris Kaus and Valentin Churavy who tested the automatic differentiation tools provided by Julia, [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl), which enables the automated computation of adjoint operators.
