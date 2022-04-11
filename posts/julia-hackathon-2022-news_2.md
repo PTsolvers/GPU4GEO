@@ -12,13 +12,14 @@ We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide ran
 
 ## LaMEM BinaryBuilder version 
 *Boris Kaus*
+
 [LaMEM](https://bitbucket.org/bkaus/lamem) is a 3D parallel geodynamics code used for a wide range of problems, from studying the collision of tectonics plates to estimating the long-term safety of underground reservoirs. It builds on [PETSc](https://petsc.org/release/) which allows it to run on anything from a laptop to a massively parallel HPC system. Yet, one of the challenges we encountered in using LaMEM in teaching is that PETSc is often rather tricky to install at first. 
 Luckily the julia-team has thought about that and created the [BinaryBuilder](https://binarybuilder.org) system, which allows you to create a build script that precompiles native binaries for essentially all modern platforms currently in use (windows, mac, linux) and hosts them online. 
 These packages can be natively downloaded through the julia package manager, but they also work without julia. Boris previously used this to distribute a compiled version of  [MAGEMin](https://github.com/ComputationalThermodynamics/MAGEMin) (see [here](https://github.com/JuliaPackaging/Yggdrasil/pull/4624) for the original build script) which runs in parallel on essentially any system.
 
 During the april 2022 Hackathon, Boris and Valentin worked on updating the [PETSc_jll](https://github.com/JuliaPackaging/Yggdrasil/pull/4726) build script and subsequently created a [LaMEM_jll](https://github.com/JuliaPackaging/Yggdrasil/pull/4740) package that precompiles LaMEM with PETSc and MPI. It turned out to be a bit more tricky to get all working (particularly windows causes problems), but things now seem to work. Instead of spending hours (or days) installing PETSc, you can now install LaMEM through the julia package manager:
 
-```julia
+```julia-repl
 julia> ]
 (@v1.7) pkg> add LaMEM_jll
     Updating registry at `~/.julia/registries/General.toml`
@@ -30,7 +31,7 @@ julia> ]
 ```
 
 We also provide a wrapper [script](https://bitbucket.org/bkaus/lamem/src/master/scripts/julia/Run_LaMEM_From_Julia.jl) in the LaMEM directory (`/scripts/julia/Run_LaMEM_From_Julia.jl`) that allows you to run LaMEM in serial or parallel for a particular LaMEM input file. As an example of running this on 4 cores:
-```julia
+```julia-repl
 $cd ~/WORK/LaMEM/LaMEM/input_models/BuildInSetups/
 $julia
  Boris-Mac:BuildInSetups kausb$ julia
