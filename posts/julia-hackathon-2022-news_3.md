@@ -3,12 +3,12 @@ using Dates
 
 title = "Julia hackathon 2022 - GeoParams.jl, GeophysicalModelGenerator, MAGEMin.jl and PETSc.jl"
 date = Date(2022, 4, 11)
-reading_time = "2-minute read"
+reading_time = "4-minute read"
 
 tags = ["activities", "julia", "coding"]
 +++
 
-We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. For some of us this was one of the first encounters with Julia, whereas others had some more experience with this. Invaluable was the advice of Valentin Churavy, who joined us from the MIT JuliaLab, 
+We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics. For some of us this was one of the first encounters with Julia, whereas others had some more experience with this. Invaluable was the advice of Valentin Churavy, who joined us from the MIT JuliaLab.
 
 ## GeoParams.jl
 *Boris Kaus & Albert de Montserrat*
@@ -51,5 +51,3 @@ A challenge, though, is to bring the wide variety of extisting databases into on
 Unfortunately, time ran out after september 2021, and much of the progress (including the automatic Clang wrappers)  was hanging in the branches `/jek/gen` and `jek/dmstag`. 
 
 During the hackaton, Nico and Patrick continued the work on the `dmstag` branch and improved documentation and added more functionality. Their work-in-progress can be seen [here](https://github.com/nicoberlie/PETSc.jl/tree/jek/dmstag) and the idea is to finish this and ultimately make this the new main branch of PETSc.jl.
-
-
