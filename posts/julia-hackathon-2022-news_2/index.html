@@ -158,12 +158,12 @@
 <h2 id="lamem_binarybuilder_version" > LaMEM BinaryBuilder version <a class="heading-link" href="#lamem_binarybuilder_version">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p><em>Boris Kaus</em>
-<a href="https://bitbucket.org/bkaus/lamem">LaMEM</a> is a 3D parallel geodynamics code used for a wide range of problems, from studying the collision of tectonics plates to estimating the long-term safety of underground reservoirs. It builds on <a href="https://petsc.org/release/">PETSc</a> which allows it to run on anything from a laptop to a massively parallel HPC system. Yet, one of the challenges we encountered in using LaMEM in teaching is that PETSc is often rather tricky to install at first. 
+</h2><p><em>Boris Kaus</em></p>
+<p><a href="https://bitbucket.org/bkaus/lamem">LaMEM</a> is a 3D parallel geodynamics code used for a wide range of problems, from studying the collision of tectonics plates to estimating the long-term safety of underground reservoirs. It builds on <a href="https://petsc.org/release/">PETSc</a> which allows it to run on anything from a laptop to a massively parallel HPC system. Yet, one of the challenges we encountered in using LaMEM in teaching is that PETSc is often rather tricky to install at first. 
 Luckily the julia-team has thought about that and created the <a href="https://binarybuilder.org">BinaryBuilder</a> system, which allows you to create a build script that precompiles native binaries for essentially all modern platforms currently in use (windows, mac, linux) and hosts them online. 
 These packages can be natively downloaded through the julia package manager, but they also work without julia. Boris previously used this to distribute a compiled version of  <a href="https://github.com/ComputationalThermodynamics/MAGEMin">MAGEMin</a> (see <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4624">here</a> for the original build script) which runs in parallel on essentially any system.</p>
 <p>During the april 2022 Hackathon, Boris and Valentin worked on updating the <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4726">PETSc_jll</a> build script and subsequently created a <a href="https://github.com/JuliaPackaging/Yggdrasil/pull/4740">LaMEM_jll</a> package that precompiles LaMEM with PETSc and MPI. It turned out to be a bit more tricky to get all working (particularly windows causes problems), but things now seem to work. Instead of spending hours (or days) installing PETSc, you can now install LaMEM through the julia package manager:</p>
-<pre><code class="julia">julia&gt; ]
+<pre><code class="julia-repl">julia&gt; ]
 (@v1.7) pkg&gt; add LaMEM_jll
     Updating registry at `~/.julia/registries/General.toml`
    Resolving package versions...
@@ -172,7 +172,7 @@ These packages can be natively downloaded through the julia package manager, but
     Updating `~/.julia/environments/v1.7/Manifest.toml`
   [15d6fa20] + LaMEM_jll v1.1.0+2</code></pre>
 <p>We also provide a wrapper <a href="https://bitbucket.org/bkaus/lamem/src/master/scripts/julia/Run_LaMEM_From_Julia.jl">script</a> in the LaMEM directory (<code>/scripts/julia/Run_LaMEM_From_Julia.jl</code>) that allows you to run LaMEM in serial or parallel for a particular LaMEM input file. As an example of running this on 4 cores:</p>
-<pre><code class="julia">$cd ~/WORK/LaMEM/LaMEM/input_models/BuildInSetups/
+<pre><code class="julia-repl">$cd ~/WORK/LaMEM/LaMEM/input_models/BuildInSetups/
 $julia
  Boris-Mac:BuildInSetups kausb$ julia
                _
