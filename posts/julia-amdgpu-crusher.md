@@ -21,7 +21,7 @@ During the Julia hackathon in April 2022, we finalised AMDGPU support ([AMDGPU.j
 
 We are thrilled to announce that the 2D diffusion solver successfully executed on 8 AMD MI250x GPUs using ROCm-aware MPI on [OLCF](https://www.olcf.ornl.gov)'s Crusher test system, a small replica of Frontier, the first exascale supercomputer:
 
-```
+```julia-repl
 Start diffusion process                            
 Global grid: 32762x16382x1 (nprocs: 8, dims: 4x2x1)
 Process 0 selecting device 1
@@ -36,6 +36,6 @@ Starting the time loop 🚀...done
 Executed 1000 steps in = 2.679e+00 sec (@ T_eff = 595.00 GB/s) 
 ```
 
-The code and setup can be found in [in https://github.com/luraess/ROCm-MPI](https://github.com/luraess/ROCm-MPI). On Crusher, we used Julia 1.8.0-rc1 and ROCm 5.1.0.
+The code and setup can be found in [https://github.com/luraess/ROCm-MPI](https://github.com/luraess/ROCm-MPI). On Crusher, we used Julia 1.8.0-rc1 and ROCm 5.1.0.
 
 Thanks to William F. Godoy (OLCF) for having performed the tests. 
