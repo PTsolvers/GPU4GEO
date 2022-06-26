@@ -2,7 +2,7 @@
 using Dates
 
 title = "Julia multi-AMDGPU test solver to run on OLCF test system"
-date = Date(2022, 6, 26)
+date = Date(2022, 6, 25)
 reading_time = "2-minute read"
 
 tags = ["amdgpu", "julia", "coding"]
