@@ -161,7 +161,7 @@
 </h2><p><em>Ludovic Räss</em></p>
 <img src="../../assets/images/rocmawarempi.png" alt="3D viscous Stokes solution" width="400"><p>During the Julia hackathon in April 2022, we finalised AMDGPU support (<a href="https://github.com/JuliaGPU/AMDGPU.jl">AMDGPU.jl</a> ROCm programming) in <a href="https://github.com/JuliaParallel/MPI.jl">MPI.jl</a> and <a href="https://github.com/eth-cscs/ImplicitGlobalGrid.jl">ImplicitGlobalGrid.jl</a> for both ROCm-aware and standard AMDGPU-MPI capabilities.</p>
 <p>We are thrilled to announce that the 2D diffusion solver successfully executed on 8 AMD MI250x GPUs using ROCm-aware MPI on <a href="https://www.olcf.ornl.gov">OLCF</a>'s Crusher test system, a small replica of Frontier, the first exascale supercomputer:</p>
-<pre><code class="julia">Start diffusion process                            
+<pre><code class="julia-repl">Start diffusion process                            
 Global grid: 32762x16382x1 (nprocs: 8, dims: 4x2x1)
 Process 0 selecting device 1
 Process 1 selecting device 2
@@ -173,7 +173,7 @@ Process 7 selecting device 8
 Process 4 selecting device 5
 Starting the time loop 🚀...done
 Executed 1000 steps in = 2.679e+00 sec (@ T_eff = 595.00 GB/s) </code></pre>
-<p>The code and setup can be found in <a href="https://github.com/luraess/ROCm-MPI">in https://github.com/luraess/ROCm-MPI</a>. On Crusher, we used Julia 1.8.0-rc1 and ROCm 5.1.0.</p>
+<p>The code and setup can be found in <a href="https://github.com/luraess/ROCm-MPI">https://github.com/luraess/ROCm-MPI</a>. On Crusher, we used Julia 1.8.0-rc1 and ROCm 5.1.0.</p>
 <p>Thanks to William F. Godoy (OLCF) for having performed the tests. </p>
 
 
