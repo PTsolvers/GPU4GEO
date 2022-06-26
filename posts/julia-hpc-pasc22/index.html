@@ -40,8 +40,6 @@
   
 
   
-    <link rel="stylesheet" href="/GPU4GEO/libs/highlight/github.min.css">
-  
 
   <style>
   :root {
@@ -116,8 +114,8 @@
           <header>
   <div class="post-title">
     <h1 class="title">
-      <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-2022-news_4/index.html">
-        Julia hackathon 2022 - ROCm (AMDGPU) MPI
+      <a class="title-link" href="/GPU4GEO/posts/julia-hpc-pasc22/index.html">
+        Julia for HPC minisymposium at PASC 22 conference
       </a>
     </h1>
   </div>
@@ -127,8 +125,8 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2022-04-11'>
-            April 11, 2022
+          <time datetime='2022-06-26'>
+            June 26, 2022
           </time>
         </span>
 
@@ -144,7 +142,7 @@
     
       <div class="tags">
         <i class="fa fa-tag" aria-hidden="true"></i>
-        <span class="tag"><a href="/GPU4GEO/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/coding/">coding</a></span>
+        <span class="tag"><a href="/GPU4GEO/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/event/">event</a></span><span class="separator">•</span><span class="tag"><a href="/GPU4GEO/tags/hpc/">hpc</a></span>
       </div>
     
     </div>
@@ -154,22 +152,45 @@
        
        
        
-<p>We held our first Hackathon on April 4-8 in Schwarzwald, focussing on a wide range of Julia topics.</p>
-<h2 id="rocm_(amdgpu)_mpi" > ROCm (AMDGPU) MPI<a class="heading-link" href="#rocm_(amdgpu)_mpi">
+<p>Don't miss the Julia for HPC minisymposium at <a href="https://pasc22.pasc-conference.org">PASC 22 conference</a> on Wednesday June 29 2022 in Basel, Switzerland.</p>
+<h2 id="julia_for_hpc" > Julia for HPC<a class="heading-link" href="#julia_for_hpc">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p><em>Ludovic Räss & Ivan Utkin</em></p>
-<img src="../../assets/images/rocmawarempi.png" alt="3D viscous Stokes solution" width="400"><p>Majority of the most powerful and next generation of supercomputers host either Nvidia or AMD graphical processing units (GPUs), commonly known as accelerators. Being able to efficiently utilise thousands of these GPUs in parallel is therefore crucial to sustain petascale and exascale computing workflows in scientific simulations.</p>
-<p>Important is also to be able to leverage both Nvidia and AMD devices without having to change a single line of code, making a decisive design step in a concept commonly referred to as (backend) portability. Backend portability (and thus associated performance portability) is one of the key points we aim to achieve within the <a href="https://www.pasc-ch.org/projects/2021-2024/gpu4geo/">PASC funded GPU4GEO</a> project, using the <a href="https://julialang.org">Julia language</a>.</p>
-<p><strong>We are excited to announce that <a href="https://github.com/eth-cscs/ImplicitGlobalGrid.jl">ImplicitGlobalGrid.jl</a> now supports ROCm (-aware) MPI, including <a href="https://github.com/JuliaGPU/AMDGPU.jl">AMDGPU.jl</a> as backend 🚀, besides <a href="https://github.com/JuliaGPU/CUDA.jl">CUDA.jl</a> (Nvidia GPUs) and (multi-threaded) CPU support.</strong></p>
-<p>To succeed, following changes where required  (to be merged soon and released)</p>
-<ul>
-<li><strong>ImplicitGlobalGrid.jl</strong>: AMDGPU (<code>ROCArray</code>) support, automatic backend detection</li>
-<li><strong>AMDGPU.jl</strong>: adding memory pool API for correct device (and associated device memory) selection, adding <code>unsafe_wrap</code> functionality, <a href="https://github.com/JuliaGPU/AMDGPU.jl/pull/220/commits/ee8f4b6e1fc3b34b9a09540626508226e6363249">adding async memcpy functionality</a></li>
-<li><strong>MPI.jl</strong>: adding <code>ROCArray</code> support for ROCm-aware MPI</li>
-</ul>
-<p><a href="https://github.com/luraess/ROCm-MPI/blob/main/README.md">This repository</a> contains the sandbox project using ROCm (-aware) MPI to compute 2D diffusion on 4 AMD MI50 GPUs at <a href="https://www.cscs.ch">CSCS</a>'s test system. The non-ROCm-aware runs were also successfully performed by Thibault Duretz on the Goethe HLR AMD cluster, University of Frankfurt.</p>
-<p>Thanks to Julian Samaroo (MIT), Valentin Churavy (MIT), Samuel Omlin (CSCS) and Ivan Utkin (ETHZ) for their valuable help and insights on this topic. </p>
+</h2><p><em>Ludovic Räss & Boris Kaus</em></p>
+<img src="../../assets/images/Julia_for_HPC-minisymposium-pasc22.png" alt="Julia for HPC PASC22" width="400"><p>The flow of large amounts of data and the constant increase in spatiotemporal model resolution pose new challenges in scientific software development. Then, high-performance computing (HPC) resources massively rely on hardware accelerators such as graphical processing units (GPUs) that need to be efficiently utilised, representing an additional challenge. Performance portability and scalability as well as fast development on large-scale heterogeneous hardware represent crucial aspects in scientific software development that can be leveraged by the capabilities of the Julia language.</p>
+<p>The goal of this minisymposium is to bring together scientists who work on or show interest in large-scale Julia HPC development, including but not restricted to software ecosystems and portable programming models for development; GPU computing multiphysics solvers, and more. The selection of speakers with expertise spanning from computational to domain science, offers a unique opportunity to learn about the latest development of Julia for HPC to drive discoveries in Earth system sciences and Geodynamics using the next generation of integrated climate models and 3D lithospheric models at unprecedented resolution.</p>
+<h3 id="presentations" > Presentations<a class="heading-link" href="#presentations">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><table class="">
+<thead>
+<th >  Time  </th>
+<th >  Title   </th>
+<th > Presenter </th>
+</thead>
+<tbody>
+<tr>
+<td > 11:00 - 11:30 CEST </td>
+<td > Building Composable Infrastructure for HPC and GPU Computing in Julia </td>
+<td > Valentin Churavy (MIT) </td>
+</tr>
+<tr>
+<td > 11:30 - 12:00 CEST </td>
+<td > Development of Multi-GPU Solvers for Nonlinear Multi-Physics with Julia </td>
+<td > Samuel Omlin (CSCS) </td>
+</tr>
+<tr>
+<td > 12:00 - 12:30 CEST </td>
+<td > ClimaCore.jl: A New Flexible and User-Friendly Dynamical Core </td>
+<td > Valeria Barra </td>
+</tr>
+<tr>
+<td > 12:30 - 13:00 CEST </td>
+<td > Resolving Complex Three-Dimensional Stress Distribution in Earth’s Lithosphere using a Julia Multi-GPU Framework </td>
+<td > Emilie Macherel </td>
+</tr>
+</tbody>
+</table>
 
 
       </section>
@@ -187,9 +208,6 @@
 
   
 
-  
-    <script src="/GPU4GEO/libs/highlight/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/GPU4GEO/libs/coder.min.js"></script>
