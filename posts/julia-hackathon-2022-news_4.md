@@ -28,6 +28,6 @@ To succeed, following changes where required  (to be merged soon and released)
 - **AMDGPU.jl**: adding memory pool API for correct device (and associated device memory) selection, adding `unsafe_wrap` functionality, [adding async memcpy functionality](https://github.com/JuliaGPU/AMDGPU.jl/pull/220/commits/ee8f4b6e1fc3b34b9a09540626508226e6363249)
 - **MPI.jl**: adding `ROCArray` support for ROCm-aware MPI
 
-[This repository](https://github.com/luraess/ROCm-MPI/blob/main/README.md) contains the sandbox project using ROCm (-aware) MPI to compute 2D diffusion on 4 MAD MI50 GPUs at [CSCS](https://www.cscs.ch)'s test system. The non-ROCm-aware runs were also successfully performed by Thibault Duretz on the Goethe HLR AMD cluster, University of Frankfurt.
+[This repository](https://github.com/luraess/ROCm-MPI/blob/main/README.md) contains the sandbox project using ROCm (-aware) MPI to compute 2D diffusion on 4 AMD MI50 GPUs at [CSCS](https://www.cscs.ch)'s test system. The non-ROCm-aware runs were also successfully performed by Thibault Duretz on the Goethe HLR AMD cluster, University of Frankfurt.
 
 Thanks to Julian Samaroo (MIT), Valentin Churavy (MIT), Samuel Omlin (CSCS) and Ivan Utkin (ETHZ) for their valuable help and insights on this topic. 
