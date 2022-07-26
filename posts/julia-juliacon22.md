@@ -3,7 +3,7 @@ using Dates
 
 title = "GPU4GEO contributions at JuliaCon 2022"
 date = Date(2022, 7, 25)
-reading_time = "3-minute read"
+reading_time = "5-minute read"
 
 tags = ["julia", "event"]
 +++
@@ -46,8 +46,19 @@ The "Julia for HPC" minisymposium aims to gather current and prospective Julia p
 | 16:05 - 16:15 CEST | Scalability of the Julia/GPU stack | Samuel Omlin (CSCS) |
 | 17:35 - 17:50 CEST | Julia and GPU-HPC for geoscience applications | Ludovic Räss (ETH Zurich) |
 
-Live stream recording soon available on YouTube: 🚧
+Live stream recording available on YouTube:
 
+- Scalability of the Julia/GPU stack
+
+~~~
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fog1x9rs71Q?start=405" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+~~~
+
+- Julia and GPU-HPC for geoscience applications
+
+~~~
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fog1x9rs71Q?start=5926" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+~~~
 
 ### Wednesday July 27 - JuliaCon main conference
 
@@ -57,9 +68,11 @@ During the main conference, there will be 4 presentations scheduled by members o
 
 |  Time  |  Title   | Presenter |
 |--------|----------|-----------|
+| 14:00 - 15:00 CEST | [Julia to the NEC SX-Aurora Tsubasa Vector Engine](https://live.juliacon.org/talk/QMZUZH) | Valentin Churavy, Erich Focht |
 | 15:00 - 15:30 CEST | [Teaching GPU computing, experiences from our Master-level course](https://live.juliacon.org/talk/YPGNCS) | Ludovic Räss, Samuel Omlin, Mauro Werder |
+| 15:00 - 15:30 CEST | [Fast Forward and Reverse-Mode Differentiation via Enzyme.jl](https://live.juliacon.org/talk/X3UUFD) | Valentin Churavy, William Moses, Ludger Paehler, Tim Gymnich |
 | 15:40 - 15:50 CEST | [GPU4GEO - Frontier GPU multi-physics solvers in Julia](https://live.juliacon.org/talk/7FVVF3) | Ludovic Räss, Ivan Utkin, Albert De Montserrat, Boris Kaus, Samuel Omlin |
 | 17:20 - 17:30 CEST | [High-performance xPU Stencil Computations in Julia](https://live.juliacon.org/talk/AKVUKM) | Samuel Omlin, Ludovic Räss |
-| 17:20 - 17:30 CEST | [Distributed Parallelization of xPU Stencil Computations in Julia](https://live.juliacon.org/talk/RJYBLA) | Samuel Omlin, Ludovic Räss, Ivan Utkin |
+| 17:30 - 17:40 CEST | [Distributed Parallelization of xPU Stencil Computations in Julia](https://live.juliacon.org/talk/RJYBLA) | Samuel Omlin, Ludovic Räss, Ivan Utkin |
 
 
