@@ -23,7 +23,7 @@ Don't miss the [Differentiable Earth system models in Julia minisymposium](https
 | 16:00 - 16:15 CEST | GPU-accelerated optimisation | Ludovic Räss (ETH Zurich) |
 | 16:15 - 16:30 CEST | Examples of using gradients in the Solid Earth geosciences | Boris Kaus (JGU Mainz) |
 
-Live stream recording avaiable on YouTube:
+Live stream recording available on YouTube:
 ~~~
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K2VtJe9baO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ~~~
@@ -46,7 +46,7 @@ The "Julia for HPC" minisymposium aims to gather current and prospective Julia p
 | 16:05 - 16:15 CEST | Scalability of the Julia/GPU stack | Samuel Omlin (CSCS) |
 | 17:35 - 17:50 CEST | Julia and GPU-HPC for geoscience applications | Ludovic Räss (ETH Zurich) |
 
-Live stream recording soon avaiable on YouTube: 🚧
+Live stream recording soon available on YouTube: 🚧
 
 
 ### Wednesday July 27 - JuliaCon main conference
