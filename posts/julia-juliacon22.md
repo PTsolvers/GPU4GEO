@@ -39,6 +39,8 @@ Don't miss the [Julia for HPC minisymposium](https://live.juliacon.org/talk/LUWY
 
 The "Julia for HPC" minisymposium aims to gather current and prospective Julia practitioners in the field of high-performance computing (HPC) from multidisciplinary applications. We invite participation from industry, academia, and government institutions interested in Julia’s capabilities for supercomputing. The goal is to provide a venue for Julia enthusiasts to share best practices, discuss current limitations, and identify future developments in the scientific HPC community.
 
+:point_right: Find all the related material on the [juliacon-2022-julia-for-hpc-minisymposium](https://github.com/JuliaParallel/juliacon-2022-julia-for-hpc-minisymposium) JuliaParallel GitHub repo.
+
 #### Presentations
 
 |  Time  |  Title   | Presenter |
