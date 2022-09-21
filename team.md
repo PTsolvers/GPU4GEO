@@ -24,11 +24,11 @@ header = "Team"
 
 > Postdoctoral researcher at the Laboratory of Hydraulics, Hydrology and Glaciology (VAW) at ETH Zurich. His research focuses on the development and application of high-performance and scalable software tools to further understand the localisation of flow and deformation in ice and porous rocks.
 
-[**Patrick Sanan**](https://github.com/psanan) (co-PI, ETHZ - Argonne)
+[**Patrick Sanan**](https://github.com/psanan) (co-PI, Google)
 
 > Postdoctoral researcher in the Geophysical Fluid Dynamics Group in the Institute of Geophysics, Department of Earth Sciences at ETH Zurich. His interests include scalable solvers for physical simulation, scientific software, and applied mathematics.
 
-[**Sam Omlin**](https://github.com/omlins) (CSCS)
+[**Sam Omlin**](https://github.com/omlins) (CSCS - ETHZ)
 
 > Computational scientist at the Swiss National Supercomputing Centre, CSCS, part of ETH Zurich.
 
