@@ -2,7 +2,7 @@
 header = "Software"
 +++
 
-A succint description and links towards the main project outputs - massively parallel multi-GPU solvers.
+A succinct description and links towards the main project outputs - massively parallel multi-GPU solvers.
 
 Current software development is hosted on the following GitHub organisations:
 
@@ -20,5 +20,5 @@ Current software development is hosted on the following GitHub organisations:
   - [ImplicitGlobalGrid.jl](https://github.com/eth-cscs/ImplicitGlobalGrid.jl) _Almost trivial distributed parallelization of stencil-based GPU and CPU applications on a regular staggered grid_
 
 - **Proof-of-concept packages**
-  - [ROCm-MPI](https://github.com/luraess/ROCm-MPI) _ROCm (-aware) GPU MPI tests on (pre-) exascale superomputers_
+  - [ROCm-MPI](https://github.com/luraess/ROCm-MPI) _ROCm (-aware) GPU MPI tests on (pre-) exascale supercomputers_
   - [PT-AD](https://github.com/PTsolvers/PT-AD) _Pseudo-transient automatic differentiation playground_
