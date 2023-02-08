@@ -22,7 +22,8 @@ Namely, we will focus on advancing Julia software engineering and high-performan
 - Further develop rheology and material parameter routines [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl) and use/implement that in existing codes
 - Exploit AD capabilities using [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl) on GPUs
 - Advance several "differentiable modelling" projects
-- Work on FastIce "packaging"
+- Work on FastIce.jl large-scale application
+- Refactor FastIce.jl "packaging"
 - Combine the Julia FEM code Gridap with GeoParams and AD
 - more...
 
