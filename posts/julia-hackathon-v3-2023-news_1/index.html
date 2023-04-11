@@ -117,7 +117,7 @@
   <div class="post-title">
     <h1 class="title">
       <a class="title-link" href="/GPU4GEO/posts/julia-hackathon-v3-2023-news_1/index.html">
-        Julia hackathon v3.0 2023 - 
+        Julia hackathon v3.0 2023 - Outcome
       </a>
     </h1>
   </div>
@@ -164,21 +164,23 @@
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Casper Pranger</em></p>
-<p>The package <a href="https://github.com/cpranger/StaggeredKernels.jl">StaggeredKernels.jl</a> that I wrote saves one the trouble of writing stencil expressions in one kernels. Instead it permits to assemble them automatically from statements like <code>assign!(r, grad(divergence(v)) - curl(curl(v)) - divergence(grad(v)), ((1,1), (n_x, n_y))</code> (which tests an important vector calculus identity that should be preserved in the staggered grid -- <code>r</code> should go to <code>0</code> as the floating points get more precise, regardless of resolution).</p>
-<img src="../../assets/images/ldc_cpranger.png" alt="Lid-driven cavity 2D" width="400"><p>The package is tested and used in my other newly instated working repo: https://github.com/cpranger/DamageBreakage (see <code>sripts/test-*.jl</code>). Of interest to the community may be the implementation of power- and Chebyshev iteration (<code>algorithm/[powerit,chebyshev].jl</code>), which are used and tested in <code>scripts/test-[powerit,chebyshev].jl</code>. The Chebyshev and pseudo-transient iterations are fundamentally identical, but the Chebyshev iteration provides some insight into selecting optimal "damping" and "time step" parameters, given the spectral radius and -origin of the operator. (It also turns out that power-iteration is not optimal for obtaining those data, Lanczos might be much better).</p>
+<p>The package <a href="https://github.com/cpranger/StaggeredKernels.jl">StaggeredKernels.jl</a> that I wrote saves one the trouble of writing stencil expressions in one kernels. Instead it permits to assemble them automatically from statements like</p>
+<pre><code class="julia">assign!(r, grad(divergence(v)) - curl(curl(v)) - divergence(grad(v)), ((1,1), (n_x, n_y))</code></pre>
+<p>(which tests an important vector calculus identity that should be preserved in the staggered grid - <code>r</code> should go to <code>0</code> as the floating points get more precise, regardless of resolution).</p>
+<img src="../../assets/images/ldc_cpranger.png" alt="Lid-driven cavity 2D" width="400"><p>The package is tested and used in my other newly instated working repo: <a href="https://github.com/cpranger/DamageBreakage">https://github.com/cpranger/DamageBreakage</a> (see <code>sripts/test-*.jl</code>). Of interest to the community may be the implementation of power- and Chebyshev iteration (<code>algorithm/[powerit,chebyshev].jl</code>), which are used and tested in <code>scripts/test-[powerit,chebyshev].jl</code>. The Chebyshev and pseudo-transient iterations are fundamentally identical, but the Chebyshev iteration provides some insight into selecting optimal "damping" and "time step" parameters, given the spectral radius and -origin of the operator. (It also turns out that power-iteration is not optimal for obtaining those data, Lanczos might be much better).</p>
 <p>Another nice feature about the Chebyshev implementation is that it predicts the residual norm after <code>n</code> iterations analytically. The prediction may be inaccurate for stiff systems or poorly constrained spectral data, but can nevertheless be exploited to save a large amount of global reductions.</p>
 <h2 id="justrelax.jl_and_geophysicalmodelgenerator.jl" > JustRelax.jl and GeophysicalModelGenerator.jl<a class="heading-link" href="#justrelax.jl_and_geophysicalmodelgenerator.jl">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Pascal Aellig</em></p>
-<p>Pascal worked on coupling the <a href="https://github.com/boriskaus/MagmaThermoKinematics.jl">MagmaThermoKinematics.jl</a> code with the <a href="https://github.com/PTsolvers/JustRelax.jl">JustRelax.jl</a> framework and collaborated with Marcel Thielmann on the <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator</a> (PR: https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl/commit/617f268c38b0c51e687658bf1490e9485fa09274).</p>
+<p>Pascal worked on coupling the <a href="https://github.com/boriskaus/MagmaThermoKinematics.jl">MagmaThermoKinematics.jl</a> code with the <a href="https://github.com/PTsolvers/JustRelax.jl">JustRelax.jl</a> framework and collaborated with Marcel Thielmann on the <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator</a> (see <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl/commit/617f268c38b0c51e687658bf1490e9485fa09274">this PR</a>).</p>
 <h2 id="tinykernels.jl_and_fastice.jl" > TinyKernels.jl and FastIce.jl<a class="heading-link" href="#tinykernels.jl_and_fastice.jl">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Ivan Utkin & Ludovic Räss</em></p>
 <p><a href="https://github.com/utkinis/TinyKernels.jl">TinyKernels.jl</a> provides a tiny abstraction for GPU (and CPU) kernels, with full support for CUDA (Nvidia) and ROCm (AMD) backends, limited support for Metal (GPU programming on MacOS ARM) backend, and allowing for multi-threaded CPU execution. It supports Enzyme.jl for automatic differentiation of kernels. </p>
 <p>This backend abstraction is currently used to prototype a new version of <a href="https://github.com/PTsolvers/FastIce.jl">FastIce.jl</a> that now handles free surface, complex geometries and multiples "phases" using a variational formulation adapted to the finite-difference formulation and an implicit representation of internal boundaries using a level-set approach.</p>
-<img src="../../assets/images/variational_iutkin.png" alt="Variational Stokes flow formulation" width="600">
+<img src="../../assets/images/variational_iutkin.png" alt="Variational Stokes flow formulation" width="800">
 
       </section>
     </div>
