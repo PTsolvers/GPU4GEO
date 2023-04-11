@@ -48,3 +48,7 @@ This backend abstraction is currently used to prototype a new version of [FastIc
 <img src="../../assets/images/variational_iutkin.png" alt="Variational Stokes flow formulation" width="800">
 ~~~
 
+## GeoParams.jl
+*Nils Medinger*
+
+Work in progress implementing two different Peierls Creep equations in [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl).
