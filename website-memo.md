@@ -9,14 +9,16 @@ Make sure to have the Xranklin package added:
 ```julia-repl
 julia> ]
 
-(@v1.7) pkg> add https://github.com/tlienart/Xranklin.jl#main
+(@v1.9) pkg> activate .
+
+(@GPU4GEO) pkg> add https://github.com/tlienart/Xranklin.jl
 ```
 
 To test the website locally (or after making a pull from Git), `cd` to the local GPU4GEO repo and:
 ```julia-repl
 julia> ]
 
-(@v1.7) pkg> activate .
+(@v1.9) pkg> activate .
 
 julia> using Xranklin
 
