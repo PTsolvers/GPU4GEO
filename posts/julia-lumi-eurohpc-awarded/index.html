@@ -40,8 +40,6 @@
   
 
   
-    <link rel="stylesheet" href="/GPU4GEO/libs/highlight/github.min.css">
-  
 
   <style>
   :root {
@@ -116,8 +114,8 @@
           <header>
   <div class="post-title">
     <h1 class="title">
-      <a class="title-link" href="/GPU4GEO/posts/julia-lumi-eurohpc/index.html">
-        AMDGPU on LUMI - the STREAM project submission
+      <a class="title-link" href="/GPU4GEO/posts/julia-lumi-eurohpc-awarded/index.html">
+        The STREAM project awarded
       </a>
     </h1>
   </div>
@@ -127,8 +125,8 @@
       <div class="date">
         <span class="posted-on">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime='2022-12-08'>
-            December 8, 2022
+          <time datetime='2023-05-08'>
+            May 8, 2023
           </time>
         </span>
 
@@ -154,18 +152,23 @@
        
        
        
-<p>The <a href="https://github.com/JuliaGPU/AMDGPU.jl">AMDGPU.jl</a> implementation of the thermomechanical ice flow solvers <a href="https://github.com/PTsolvers/FastIce.jl">FastIce.jl</a> achieves ideal weak scalability on 512 AMD MI250x GPUs on 64 LUMI-G nodes. The scaling tests were realised in the scope of a EuroHPC Extreme Scale Access submission - the STREAM project.</p>
-<h2 id="fastice.jl_on_amd_gpus_on_lumi_g" > FastIce.jl on AMD GPUs on LUMI-G<a class="heading-link" href="#fastice.jl_on_amd_gpus_on_lumi_g">
+<p>Today we got notified about the <strong>acceptance</strong> of the STREAM project we submitted to the EuroHPC Extreme Scale Access call back in December 2022 🚀</p>
+<h2 id="the_stream_project_fastice.jl_on_amd_gpus_on_lumi_g" > The STREAM project: FastIce.jl on AMD GPUs on LUMI-G<a class="heading-link" href="#the_stream_project_fastice.jl_on_amd_gpus_on_lumi_g">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p><em>Ludovic Räss</em></p>
-<p>The <a href="https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-extreme-scale-access-mode-open-2022-09-28_en">European High Performance Computing Joint Undertaking (EuroHPC JU)</a> launched a call to access its pre-exascale supercomputers. A GPU4GEO team composed of Ludovic Räss (ETHZ), Ivan Utkin (ETHZ) and Julian Samaroo (MIT JuliaLab) submitted the STREAM project within this EuroHPC call, to investigate SponTaneous REArrangment of ice Motion (STREAM).</p>
+</h2><p><em>Ludovic Räss & Ivan Utkin</em></p>
+<p>The GPU4GEO team composed of Ludovic Räss (ETHZ), Ivan Utkin (ETHZ) and Julian Samaroo (MIT JuliaLab) was granted the STREAM project, to investigate SponTaneous REArrangment of ice Motion (STREAM) in the scope of the <a href="https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-extreme-scale-access-mode-open-2022-09-28_en">European High Performance Computing Joint Undertaking (EuroHPC JU)</a> call to access its pre-exascale supercomputer.</p>
+<center>
+  <video width="80%" autoplay controls src="../../assets/images/ice_3d.mp4"/>
+</center><p>The team got granted 5'000'000 GPU-hours (equivalent to 80'000'000 core-hours) on the <a href="https://www.lumi-supercomputer.eu">LUMI-G machine</a>, the European flagship supercomputer and number 3 in the World (Top500 list).</p>
+<p>The STREAM project represents a unique opportunity to unleash Julia at scale by running the next generation full-Stokes and thermo-mechanically coupled ice flow solvers on more than 3000 AMD MI250x GPUs aiming at resolving parts of Greenland ice flow close to metre-scale resolution in 3-dimensions.</p>
 <blockquote><p>The main scientific advances of this EuroHPC allocation will be to understand whether an internal shear band can spontaneously form in ice flowing over rough topography resulting in englacial sliding with the aim of providing a more accurate prediction of surface flow velocities over Greenland.</p>
-</blockquote><p>Regarding the technical aspects, preparing the data for the call application permitted to tune AMDGPU.jl for running on LUMI-G's MI250x GPUs "at scale".</p>
+</blockquote><center>
+  <video width="80%" autoplay controls src="../../assets/images/ice_3d_vel.mp4"/>
+</center><p>Regarding the technical aspects, preparing the data for the call application permitted to tune <a href="https://github.com/JuliaGPU/AMDGPU.jl">AMDGPU.jl</a> for running on LUMI-G's MI250x GPUs.</p>
 <blockquote><p>The main technical advances of this EuroHPC allocation aim to set a milestone running our Julia HPC application on the latest AMD GPUs at pre-exascale on Europe’s fastest supercomputer, LUMI-G.</p>
-</blockquote><p>We achieve a parallel efficiency of 97% during weak scaling tests on up to 512 MI250x AMD GPUs on the LUMI-G EAP partition (64 nodes):</p>
-<img src="../../assets/images/lumi_weak_scale_Teff.png" alt="weak scalability on LUMI-G" width="600"><p>The key ingredient to achieve this ideal weak scalability relies in successfully overlapping ROCm-aware MPI communication with stencil computations. We use HSA custom kernel signal management and define priority on execution queues to schedule asynchronous kernel launch. The result is that MPI communication and send / receive buffer copies overlap with kernel execution as depicted in the figure below (highlighted by the red box):</p>
-<img src="../../assets/images/8procs.png" alt="weak scalability on LUMI-G" width="900"><p>The kernel execution timeline is produced using <code>rocprof</code> tool and visualised using the chrome tracing utility.</p>
+</blockquote><p>Stay tuned or reach out if interested!</p>
+<p><em>Animations: Utkin, I., Räss, L., and Werder, M.: Large-scale thermo-mechanical modelling of Greenland ice sheet, EGU General Assembly 2023, Vienna, Austria, 24–28 Apr 2023, EGU23-16383, <a href="https://doi.org/10.5194/egusphere-egu23-16383">https://doi.org/10.5194/egusphere-egu23-16383</a>, 2023.</em></p>
 
 
       </section>
@@ -183,9 +186,6 @@
 
   
 
-  
-    <script src="/GPU4GEO/libs/highlight/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/GPU4GEO/libs/coder.min.js"></script>
