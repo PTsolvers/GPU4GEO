@@ -8,7 +8,7 @@ reading_time = "3-minute read"
 tags = ["amdgpu", "julia", "proposal"]
 +++
 
-The [AMDGPU.jl](https://github.com/JuliaGPU/AMDGPU.jl) implementation the thermomechanical ice flow solvers [FastIce.jl](https://github.com/PTsolvers/FastIce.jl) achieves ideal weak scalability on 512 AMD MI250x GPUs on 64 LUMI-G nodes. The scaling tests were realised in the scope of a EuroHPC Extreme Scale Access submission - the STREAM project.
+The [AMDGPU.jl](https://github.com/JuliaGPU/AMDGPU.jl) implementation of the thermomechanical ice flow solvers [FastIce.jl](https://github.com/PTsolvers/FastIce.jl) achieves ideal weak scalability on 512 AMD MI250x GPUs on 64 LUMI-G nodes. The scaling tests were realised in the scope of a EuroHPC Extreme Scale Access submission - the STREAM project.
 
 ## FastIce.jl on AMD GPUs on LUMI-G
 *Ludovic Räss*
@@ -21,7 +21,7 @@ Regarding the technical aspects, preparing the data for the call application per
 
 > The main technical advances of this EuroHPC allocation aim to set a milestone running our Julia HPC application on the latest AMD GPUs at pre-exascale on Europe’s fastest supercomputer, LUMI-G.
 
-We achieve a prallel efficiency of 97% during weak scaling tests on up to 512 MI250x AMD GPUs on the LUMI-G EAP partition (64 nodes):
+We achieve a parallel efficiency of 97% during weak scaling tests on up to 512 MI250x AMD GPUs on the LUMI-G EAP partition (64 nodes):
 
 ~~~
 <img src="../../assets/images/lumi_weak_scale_Teff.png" alt="weak scalability on LUMI-G" width="600">
