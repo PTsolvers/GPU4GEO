@@ -1,7 +1,7 @@
 +++
 using Dates
 
-title = "Julia hackathon 2022 - GeoParams.jl, GeophysicalModelGenerator, MAGEMin.jl and PETSc.jl"
+title = "Julia hackathon 2022 - GeoParams.jl and more"
 date = Date(2022, 4, 11)
 reading_time = "4-minute read"
 
