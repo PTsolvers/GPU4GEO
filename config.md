@@ -29,6 +29,7 @@ nav_items = [
   "News"  => "/posts/",
   "Software" => "/software/",
   "Team" => "/team/",
+  "STREAM project" => "/stream/",
   "Publications" => "/publications/"
 ]
 
