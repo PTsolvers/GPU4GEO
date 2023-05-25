@@ -12,7 +12,7 @@ The [GPU4GEO team](/team) and external collaborators will gather for the 4th (!!
 
 ## GPU4GEO Julia hackathon
 
-After three successful editions, we are happy to announce a 4th edition of the Julia hackathon, to be held in September 2024 in the Black Forest.
+After three successful editions, we are happy to announce a 4th edition of the Julia hackathon, to be held in September 2023 in the Black Forest.
 
 **Save the dates: September 11-15 2023**
 
