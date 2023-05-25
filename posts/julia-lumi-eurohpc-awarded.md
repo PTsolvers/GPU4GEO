@@ -37,6 +37,6 @@ Regarding the technical aspects, preparing the data for the call application per
 
 > The main technical advances of this EuroHPC allocation aim to set a milestone running our Julia HPC application on the latest AMD GPUs at pre-exascale on Europe’s fastest supercomputer, LUMI-G.
 
-Stay tuned or reach out if interested!
+Stay tuned or reach out if curious!
 
 _Animations: Utkin, I., Räss, L., and Werder, M.: Large-scale thermo-mechanical modelling of Greenland ice sheet, EGU General Assembly 2023, Vienna, Austria, 24–28 Apr 2023, EGU23-16383, [https://doi.org/10.5194/egusphere-egu23-16383](https://doi.org/10.5194/egusphere-egu23-16383), 2023._

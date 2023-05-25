@@ -1,7 +1,7 @@
 +++
 using Dates
 
-title = "AMDGPU on LUMI - the STREAM project submission"
+title = "AMDGPU on LUMI - The STREAM project submission"
 date = Date(2022, 12, 8)
 reading_time = "3-minute read"
 
