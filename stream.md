@@ -6,7 +6,7 @@ SponTaneous REArrangment of ice Motion (STREAM)
 
 ~~~
 <center>
-  <video width="80%" autoplay controls src="../../assets/images/ice_3d_vel.mp4"/>
+  <video width="80%" autoplay controls src="../assets/images/ice_3d_vel.mp4"/>
 </center>
 ~~~
 
