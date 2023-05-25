@@ -1,5 +1,5 @@
 +++
-header = "Project"
+header = "About"
 +++
 
 [GPU4GEO](https://www.pasc-ch.org/projects/2021-2024/gpu4geo/) is a [PASC](https://www.pasc-ch.org) funded scientific software development project aiming at building "Frontier GPU multi-physics solvers" with application to natural sciences - ice flow dynamics and geodynamics in particular.

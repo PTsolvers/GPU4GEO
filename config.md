@@ -25,11 +25,11 @@ footer_notice = """
     <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>."""
 
 nav_items = [
-  "Project" => "/project/",
+  "About" => "/about/",
+  "STREAM project" => "/stream/",
   "News"  => "/posts/",
   "Software" => "/software/",
   "Team" => "/team/",
-  "STREAM project" => "/stream/",
   "Publications" => "/publications/"
 ]
 
