@@ -25,7 +25,7 @@ header = "Publications"
   - Workshop on Julia for HPC (Ludovic Räss, Ivan Utkin)
   - Parallel inverse modelling on GPUs combining automatic differentiation and the adjoint method (Ludovic Räss, Ivan Utkin)
 - [Galileo Conference](https://egu-galileo.eu/gc11-solidearth/general-information.html) - Solid Earth and Geohazards in the Exascale Era
-  - Master-class: [GPU HPC in Julia - multi-GPU and AD](https://github.com/PTsolvers/Galileo23-MC1-GPU#slot-4) (Ludovic Räss, Ivan Utkin)
+  - Master-class: [GPU HPC in Julia - multi-GPU and AD](https://github.com/PTsolvers/Galileo23-MC1-GPU) (Ludovic Räss, Ivan Utkin)
   - [Massively parallel inverse modelling on GPUs using the adjoint method](https://meetingorganizer.copernicus.org/GC11-solidearth/GC11-solidearth-16.html) (Ivan Utkin, Ludovic Räss)
   - [Using Julia for the next generation of HPC-ready software for geodynamic modelling](https://meetingorganizer.copernicus.org/GC11-solidearth/GC11-solidearth-15.html) (Albert de Montserrat Navarro, Boris Kaus, Ludovic Räss, Ivan Utkin, and Paul Tackley)
   - [Modelling the accumulation of magma prior to the caldera collapse](https://meetingorganizer.copernicus.org/GC11-solidearth/GC11-solidearth-39.html) (Pascal Aellig, Boris Kaus, Albert de Montserrat, Daniel Kiss, and Nicolas Berlie)
