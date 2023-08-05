@@ -11,7 +11,7 @@ tags = ["fastice", "julia", "workshop"]
 Ludovic Räss and Ivan Utkin participated in the first FastIce mini-workshop, hosted by the [SIGMA group](https://sigma.stanford.edu) at [Stanford](https://www.stanford.edu) Geophysics.
 
 ~~~
-<img src="../../assets/images/fastice_workshop.png" alt="fastIce workshop" width="600">
+<img src="../../assets/images/fastice-workshop.png" alt="fastIce workshop" width="600">
 ~~~
 
 The venue provided a two-days event to foster exchange on thematics including ice flow modelling, high-performance computing, and geophysical multi-phase flow.
