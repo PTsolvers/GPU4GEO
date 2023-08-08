@@ -15,6 +15,9 @@ header = "Publications"
 
 ## Conferences & Events
 ### 2023
+- [FastIce workshop](/posts/fastice-workshop/) at Stanford (SIGMA group, Dept. of Geophysics)
+  - Thermo-mechanical modelling of ice sheets (Ludovic Räss)
+  - Massively parallel inverse modelling on GPUs using the adjoint method (Ivan Utkin)
 - [JuliaCon2023](https://juliacon.org/2023/) - the conference dedicated to the Julia programming language
   - Workshop: [Differentiable modelling on GPUs](https://pretalx.com/juliacon2023/talk/GTKJZL/) (Ludovic Räss, Ivan Utkin, Sam Omlin)
   - [Minisymposium: Julia for High-Performance Computing](hhttps://pretalx.com/juliacon2023/talk/PC8PZ8/)
