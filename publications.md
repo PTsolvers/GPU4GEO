@@ -4,7 +4,7 @@ header = "Publications"
 
 ### 2023
 
-- Räss, L., Werder, M. A., Utkin, I., and Omlin, S. (2023). **Teaching supercomputing and software engineering skills to science and engineering students**, ETH Learning and Teaching Journal, Vol 4, No 1, 2023. [https://doi.org/10.82425/lt-eth.v4i1.235](https://learningteaching.ethz.ch/index.php/lt-eth/article/view/235)
+- Räss, L., Werder, M. A., Utkin, I., and Omlin, S. (2023). **Teaching supercomputing and software engineering skills to science and engineering students**, ETH Learning and Teaching Journal, Vol 4, No 1, 2023. [https://doi.org/10.16906/lt-eth.v4i1.235](https://doi.org/10.16906/lt-eth.v4i1.235)
 
 ### 2022
 
