@@ -11,7 +11,9 @@ tags = ["activities", "julia", "coding"]
 We held our fourth GPU4GEO Julia hackathon on September 11-15, 2023 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.
 
 ~~~
-<img src="../../assets/images/julia_hackathon_apr_2022_crowd.JPG" alt="People at Julia Hackathon Apr 2022 (better late than never)" width="400">
+<center>
+<img src="../../assets/images/julia_hackathon_apr_2022_crowd.JPG" title="People at Julia Hackathon Apr 2022 (better late than never)" alt="People at Julia Hackathon Apr 2022 (better late than never)" width="80%">
+</center>
 ~~~
 
 ## FastIce.jl distributed module
@@ -22,5 +24,5 @@ During this hackathon, we worked on enabling the distributed computations in our
 During this hackathon, I managed to write the logic behind task creation and synchronisation, based on the idea of [exchangers](https://github.com/JuliaGPU/KernelAbstractions.jl/blob/vc/exchanger/examples/mpi2.jl) suggested by Valentin Churavy. Ludovic ported the diffusion benchmark to the new KA-based API, and profiled both on CUDA and AMDGPU backends, with excellent overlap between physics computations and MPI data exchange.
 
 ~~~
-<img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="400">
+<img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="100%">
 ~~~
