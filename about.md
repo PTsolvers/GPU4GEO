@@ -2,7 +2,7 @@
 header = "About"
 +++
 
-[GPU4GEO](https://www.pasc-ch.org/projects/2021-2024/gpu4geo/) is a [PASC](https://www.pasc-ch.org) funded scientific software development project aiming at building "Frontier GPU multi-physics solvers" with application to natural sciences - ice flow dynamics and geodynamics in particular.
+[GPU4GEO](https://www.pasc-ch.org/projects/2021-2024/gpu4geo/) is a [PASC](https://www.pasc-ch.org) funded scientific software development project aiming at building "Frontier GPU multi-physics solvers" with application to natural sciences - ice flow dynamics and geodynamics in particular
 
 Computational Earth sciences rely on modelling to understand and predict the evolution of complex physical systems. Ice sheet dynamics and geodynamics modelling are, despite their apparent differences, two domains that build upon similar physical models and ensuing computational challenges: Extremely large simulations which are not possible with the state of the art in high-performance computing (HPC), thus requiring next-generation supercomputers. Those large-scale simulations are crucial when assessing ice flow dynamics over Greenland and Antarctica, understanding the dynamic motion of Earth’s interior or performing three-dimensional simulations.
 
