@@ -26,3 +26,14 @@ During this hackathon, I managed to write the logic behind task creation and syn
 ~~~
 <img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="100%">
 ~~~
+
+## Various improvements (CI systems, documentation, ...)
+*Hendrik Ranocha*
+
+Hendrik spent some time on improving different packages in various aspects. Besides reviewing quite a few PRs,
+he contributed to the Julia ecosystem as follows.
+- Use package extensions introduced in Julia v1.9 to reduce the latency of [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl/pull/105)
+- Add automatic code spell checking (e.g., [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl/pull/98) and [T8code.jl](https://github.com/DLR-AMR/T8code.jl/pull/28))
+- Improve the performance of Trixi.jl (e.g., [multi-threading on ARM](https://github.com/trixi-framework/Trixi.jl/pull/1630), [allocations with non-periodic domains](https://github.com/trixi-framework/Trixi.jl/pull/1636))
+- Improve the documentation of Trixi.jl (e.g., [a new tutorial](https://github.com/trixi-framework/Trixi.jl/pull/1633) and [more reproducibility information](https://github.com/trixi-framework/Trixi.jl/pull/1638))
+- Various software maintenance tasks (e.g., [updates for deprecated functionality](https://github.com/trixi-framework/Trixi2Vtk.jl/pull/70), [automating dependency updates](https://github.com/PTsolvers/FastIce.jl/pull/25)
