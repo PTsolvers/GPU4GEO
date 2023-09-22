@@ -167,7 +167,7 @@
 </h2><p><em>Ivan Utkin, Ludovic Räss</em></p>
 <p>During the 4th edition of the hackathon, we worked on enabling the distributed computations in our ice flow code <a href="https://github.com/PTsolvers/FastIce.jl">FastIce.jl</a>. We use <a href="https://github.com/JuliaGPU/KernelAbstractions.jl">KernelAbstractions.jl</a> (KA) for backend-agnostic computing using both GPUs and CPUs. Since GPU kernels execute asynchronously with the CPU host, it is necessary to synchronize the GPU before so that the results of the computations become available. For distributed MPI computations, we need to overlap data transfers and computations to ensure good scalability. This overlap can be achieved either by using special objects called streams that guarantee ordering of GPU operations. However, streams are backend-dependent, so in KA another approach is used, where the ordering is guaranteed within a Julia task.</p>
 <p>During this hackathon, I managed to write the logic behind task creation and synchronisation, based on the idea of <a href="https://github.com/JuliaGPU/KernelAbstractions.jl/blob/vc/exchanger/examples/mpi2.jl">exchangers</a> suggested by Valentin Churavy. Ludovic ported the diffusion benchmark to the new KA-based API, and profiled both on CUDA and AMDGPU backends, with excellent overlap between physics computations and MPI data exchange.</p>
-<img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="100%"><h2 id="combining_magemin_and_t8code_through_julia_with_parallelization_and_visualization" > Combining MAGEMin and t8code through Julia - with parallelization and visualization<a class="heading-link" href="#combining_magemin_and_t8code_through_julia_with_parallelization_and_visualization">
+<img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="80%"><h2 id="combining_magemin_and_t8code_through_julia_with_parallelization_and_visualization" > Combining MAGEMin and t8code through Julia - with parallelization and visualization<a class="heading-link" href="#combining_magemin_and_t8code_through_julia_with_parallelization_and_visualization">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Boris Kaus, Hendrik Ranocha</em></p>
@@ -196,7 +196,7 @@ Importantly, it is also straightforward to use triangular instead of quadrilater
 Whereas it will still take some time to build the full Dash-based GUI, many of the crucial steps have now been resolved already.
 Some of these modifications (like multithreading) are scheduled to be ported in the next release of
 <a href="https://github.com/ComputationalThermodynamics/MAGEMin_C.jl">MAGEMin_C</a>.</p>
-<img src="../../assets/images/julia_hackathon_sep_2023_magemin_amr.jpg" alt="Result of running MAGEMin in parallel with an adaptive grid" width="100%"><h2 id="various_improvements_(ci_systems,_documentation,_...)" > Various improvements (CI systems, documentation, ...)<a class="heading-link" href="#various_improvements_(ci_systems,_documentation,_...)">
+<img src="../../assets/images/julia_hackathon_sep_2023_magemin_amr.png" alt="Result of running MAGEMin in parallel with an adaptive grid" width="80%"><h2 id="various_improvements_(ci_systems,_documentation,_...)" > Various improvements (CI systems, documentation, ...)<a class="heading-link" href="#various_improvements_(ci_systems,_documentation,_...)">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Hendrik Ranocha</em></p>
