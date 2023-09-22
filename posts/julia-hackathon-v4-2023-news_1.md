@@ -24,7 +24,7 @@ During the 4th edition of the hackathon, we worked on enabling the distributed c
 During this hackathon, I managed to write the logic behind task creation and synchronisation, based on the idea of [exchangers](https://github.com/JuliaGPU/KernelAbstractions.jl/blob/vc/exchanger/examples/mpi2.jl) suggested by Valentin Churavy. Ludovic ported the diffusion benchmark to the new KA-based API, and profiled both on CUDA and AMDGPU backends, with excellent overlap between physics computations and MPI data exchange.
 
 ~~~
-<img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="80%">
+<img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="100%">
 ~~~
 
 ## Combining MAGEMin and t8code through Julia - with parallelization and visualization
@@ -59,7 +59,9 @@ Some of these modifications (like multithreading) are scheduled to be ported in 
 [MAGEMin_C](https://github.com/ComputationalThermodynamics/MAGEMin_C.jl).
 
 ~~~
+<center>
 <img src="../../assets/images/julia_hackathon_sep_2023_magemin_amr.png" alt="Result of running MAGEMin in parallel with an adaptive grid" width="80%">
+</center>
 ~~~
 
 
