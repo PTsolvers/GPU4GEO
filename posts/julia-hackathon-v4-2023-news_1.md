@@ -27,6 +27,23 @@ During this hackathon, I managed to write the logic behind task creation and syn
 <img src="../../assets/images/julia_hackathon_sep_2023_iu_lr.png" alt="Profile from AMDGPU diffusion benchmark on LUMI" width="100%">
 ~~~
 
+## Combining MAGEMin and t8code through Julia - with parallelization and visualization
+*Boris Kaus, Hendrik Ranocha*
+
+Boris and Hendrik spent time on a new prototype of [MAGEMin](https://github.com/ComputationalThermodynamics/MAGEMin),
+a Mineral Assemblage Gibbs Energy Minimization package written in C.
+Using the existing [Julia bindings](https://github.com/ComputationalThermodynamics/MAGEMin_C.jl) and the binaries
+created with BinaryBuilder.jl, they combined MAGEMin with the C/C++ libraries [p4est](https://github.com/cburstedde/p4est)
+and [t8code](https://github.com/DLR-AMR/t8code) for adaptive mesh refinement - using the corresponding Julia bindings
+[P4est.jl](https://github.com/trixi-framework/P4est.jl) and [T8code.jl](https://github.com/DLR-AMR/T8code.jl) including
+binaries from BinaryBuilder.jl, of course. Combined with shared-memory parallelization using `Base.Threads` from Julia
+and visualization, the new prototype is already 1.5x faster than the mature MATLAB interface.
+
+~~~
+<img src="../../assets/images/julia_hackathon_sep_2023_magemin_amr.jpg" alt="Result of running MAGEMin in parallel with an adaptive grid" width="100%">
+~~~
+
+
 ## Various improvements (CI systems, documentation, ...)
 *Hendrik Ranocha*
 
