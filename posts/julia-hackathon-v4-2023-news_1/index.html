@@ -160,7 +160,7 @@
        
 <p>We held our fourth GPU4GEO Julia hackathon on September 11-15, 2023 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.</p>
 <center>
-<img src="../../assets/images/julia_hackathon_apr_2022_crowd.JPG" title="People at Julia Hackathon Apr 2022 (better late than never)" alt="People at Julia Hackathon Apr 2022 (better late than never)" width="80%">
+    <img src="../../assets/images/julia_hackathon_apr_2022_crowd.JPG" title="People at Julia Hackathon Apr 2022 (better late than never)" alt="People at Julia Hackathon Apr 2022 (better late than never)" width="80%">
 </center><h2 id="fastice.jl_distributed_module" > FastIce.jl distributed module<a class="heading-link" href="#fastice.jl_distributed_module">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
@@ -197,7 +197,7 @@ Whereas it will still take some time to build the full Dash-based GUI, many of t
 Some of these modifications (like multithreading) are scheduled to be ported in the next release of
 <a href="https://github.com/ComputationalThermodynamics/MAGEMin_C.jl">MAGEMin_C</a>.</p>
 <center>
-<img src="../../assets/images/julia_hackathon_sep_2023_magemin_amr.png" alt="Result of running MAGEMin in parallel with an adaptive grid" width="80%">
+    <img src="../../assets/images/julia_hackathon_sep_2023_magemin_amr.png" alt="Result of running MAGEMin in parallel with an adaptive grid" width="80%">
 </center><h2 id="various_improvements_(ci_systems,_documentation,_...)" > Various improvements (CI systems, documentation, ...)<a class="heading-link" href="#various_improvements_(ci_systems,_documentation,_...)">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
@@ -211,6 +211,16 @@ he contributed to the Julia ecosystem as follows.</p>
 <li>Improve the documentation of Trixi.jl (e.g., <a href="https://github.com/trixi-framework/Trixi.jl/pull/1633">a new tutorial</a> and <a href="https://github.com/trixi-framework/Trixi.jl/pull/1638">more reproducibility information</a>)</li>
 <li>Various software maintenance tasks (e.g., <a href="https://github.com/trixi-framework/Trixi2Vtk.jl/pull/70">updates for deprecated functionality</a>, <a href="https://github.com/PTsolvers/FastIce.jl/pull/25">automating dependency updates</a></li>
 </ul>
+<h2 id="start_developing_geodynamic_modelling_applications_using_julia" > Start developing Geodynamic modelling applications using Julia<a class="heading-link" href="#start_developing_geodynamic_modelling_applications_using_julia">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Lorenzo Candioti</em></p>
+<p>During the Hackathon, my primary objective was to start developing Geodynamic modelling applications using the Julia programming language. I dedicated my efforts to the development of partial differential equation (PDE) solvers tailored to purely thermal and hydrothermal problems, employing an assortment of discretization techniques.</p>
+<p>Throughout the week, I created models to forecast how thermal and hydrothermal systems behave in both one-dimensional (1D) and two-dimensional (2D) scenarios. These models encompass solutions for the steady-state and changing conditions described by the heat equation and Darcy's law. I incorporated various time integration methods, both implicit and explicit, alongside diverse boundary conditions. The video below demonstrates the solution of 2D porous convection using an implicit time integration approach for temperature and fluid pressure, in addition to flux boundary conditions.</p>
+<center>
+    <video width="80%" autoplay controls src="../../assets/images/porous_convect.mp4"/>
+</center><p>In addition to solver development, I further programmed a routine to generate automatic visual output from HPC simulations on a HPC cluster. This program is also written in Julia and can be executed after the simulation has completed to generate mp4 files from data stored as hdf5 files.</p>
+<p>The Hackathon provided an excellent opportunity for me to make rapid progress in my Julia-based Geodynamic modelling projects. These advancements will serve as the foundation for my ongoing research endeavours. In essence, the event accelerated my work and set the stage for my current research initiatives.</p>
 
 
       </section>
