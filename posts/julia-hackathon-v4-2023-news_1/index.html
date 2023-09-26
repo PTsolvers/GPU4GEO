@@ -221,7 +221,15 @@ he contributed to the Julia ecosystem as follows.</p>
     <video width="80%" autoplay controls src="../../assets/images/porous_convect.mp4"/>
 </center><p>In addition to solver development, I further programmed a routine to generate automatic visual output from HPC simulations on a HPC cluster. This program is also written in Julia and can be executed after the simulation has completed to generate mp4 files from data stored as hdf5 files.</p>
 <p>The Hackathon provided an excellent opportunity for me to make rapid progress in my Julia-based Geodynamic modelling projects. These advancements will serve as the foundation for my ongoing research endeavours. In essence, the event accelerated my work and set the stage for my current research initiatives.</p>
-
+<h2 id="making_a_gui_for_lamem_using_dash.jl" > Making a GUI for LaMEM using Dash.jl<a class="heading-link" href="#making_a_gui_for_lamem_using_dash.jl">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Jamison Assunção, Jacob Frasunkiewicz, Boris Kaus, and Hao Liu</em></p>
+<p><a href="https://github.com/UniMainzGeo/LaMEM/">LaMEM</a> (Lithosphere and Mantle Evolution Model) is a parallel 3D numerical code developed to simulate thermo-mechanical geodynamical processes such as mantle-lithosphere interaction for rocks that have visco-elasto-plastic rheologies. While LaMEM can be installed and used with several methods, the easiest way to use it is via its Julia interface called <a href="https://github.com/JuliaGeodynamics/LaMEM.jl">LaMEM.jl</a>.</p>
+<p>However, LaMEM.jl is used in a script-like manner that can be a barrier for new users. We developed a GUI (Graphics User Interface) using both <a href="https://dash.plotly.com/julia">Dash.jl</a> and <a href="https://dash-bootstrap-components.opensource.faculty.ai">Dash Bootstrap Components</a> with the objective of developing some toy scenarios for new users to get familiarized with the numerical code and the scenarios themselves.</p>
+<p>The developed interface runs on the browser and can easily be hosted in a single machine for people to access it. The advantages of this setup are those of compatibility and portability, which also safeguards the integrity of each user's work from external interference. The GUI streamlines the steps to define the geometric, rheological, and plotting parameters of each scenario. Most notably, it is able to run LaMEM.jl and plot the results on screen while the simulation is running, also providing the user with some controls to better visualize the data that is being displayed.</p>
+<p>The GUI also allows users to customize their visualizations with ease. They can effortlessly choose the specific field for plotting, select the most suitable colormap, overlay contours onto the heatmap, and even opt to include velocity vectors for a comprehensive analysis.</p>
+<img src="../../assets/images/gui-example.png" alt="GUI example made with Dash.jl for LaMEME.jl" width="100%">
 
       </section>
     </div>
