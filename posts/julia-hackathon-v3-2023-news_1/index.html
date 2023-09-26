@@ -158,7 +158,7 @@
        
        
        
-<p>We held our third GPU4GEO Julia hackathon on March 13-17, 2023 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.</p>
+<div class="toc"><ol><li><a href="#silicatemeltprops.jl">SilicateMeltProps.jl</a></li><li><a href="#staggeredkernels.jl">StaggeredKernels.jl</a></li><li><a href="#justrelax.jl_and_geophysicalmodelgenerator.jl">JustRelax.jl and GeophysicalModelGenerator.jl</a></li><li><a href="#tinykernels.jl_and_fastice.jl">TinyKernels.jl and FastIce.jl</a></li><li><a href="#geoparams.jl">GeoParams.jl</a></li></ol></div><p>We held our third GPU4GEO Julia hackathon on March 13-17, 2023 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.</p>
 <h2 id="silicatemeltprops.jl" > SilicateMeltProps.jl<a class="heading-link" href="#silicatemeltprops.jl">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
@@ -182,7 +182,7 @@
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Ivan Utkin & Ludovic Räss</em></p>
-<p><a href="https://github.com/utkinis/TinyKernels.jl">TinyKernels.jl</a> provides a tiny abstraction for GPU (and CPU) kernels, with full support for CUDA (Nvidia) and ROCm (AMD) backends, limited support for Metal (GPU programming on MacOS ARM) backend, and allowing for multi-threaded CPU execution. It supports Enzyme.jl for automatic differentiation of kernels. </p>
+<p><a href="https://github.com/utkinis/TinyKernels.jl">TinyKernels.jl</a> provides a tiny abstraction for GPU (and CPU) kernels, with full support for CUDA (Nvidia) and ROCm (AMD) backends, limited support for Metal (GPU programming on MacOS ARM) backend, and allowing for multi-threaded CPU execution. It supports Enzyme.jl for automatic differentiation of kernels.</p>
 <p>This backend abstraction is currently used to prototype a new version of <a href="https://github.com/PTsolvers/FastIce.jl">FastIce.jl</a> that now handles free surface, complex geometries and multiples "phases" using a variational formulation adapted to the finite-difference formulation and an implicit representation of internal boundaries using a level-set approach.</p>
 <img src="../../assets/images/variational_iutkin.png" alt="Variational Stokes flow formulation" width="800"><h2 id="geoparams.jl" > GeoParams.jl<a class="heading-link" href="#geoparams.jl">
   <i class="fa fa-link" aria-hidden="true"></i>
