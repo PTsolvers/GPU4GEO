@@ -8,6 +8,8 @@ reading_time = "3-minute read"
 tags = ["activities", "julia", "coding"]
 +++
 
+\toc
+
 We held our third GPU4GEO Julia hackathon on March 13-17, 2023 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.
 
 ## SilicateMeltProps.jl
@@ -40,7 +42,7 @@ Pascal worked on coupling the [MagmaThermoKinematics.jl](https://github.com/bori
 ## TinyKernels.jl and FastIce.jl
 *Ivan Utkin & Ludovic Räss*
 
-[TinyKernels.jl](https://github.com/utkinis/TinyKernels.jl) provides a tiny abstraction for GPU (and CPU) kernels, with full support for CUDA (Nvidia) and ROCm (AMD) backends, limited support for Metal (GPU programming on MacOS ARM) backend, and allowing for multi-threaded CPU execution. It supports Enzyme.jl for automatic differentiation of kernels. 
+[TinyKernels.jl](https://github.com/utkinis/TinyKernels.jl) provides a tiny abstraction for GPU (and CPU) kernels, with full support for CUDA (Nvidia) and ROCm (AMD) backends, limited support for Metal (GPU programming on MacOS ARM) backend, and allowing for multi-threaded CPU execution. It supports Enzyme.jl for automatic differentiation of kernels.
 
 This backend abstraction is currently used to prototype a new version of [FastIce.jl](https://github.com/PTsolvers/FastIce.jl) that now handles free surface, complex geometries and multiples "phases" using a variational formulation adapted to the finite-difference formulation and an implicit representation of internal boundaries using a level-set approach.
 
