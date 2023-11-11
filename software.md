@@ -8,12 +8,15 @@ Current software development is hosted on the following GitHub organisations:
 
 - [PTsolvers](https://github.com/PTsolvers) organisation
   - [FastIce.jl](https://github.com/PTsolvers/FastIce.jl) _Parallel (multi-)xPU iterative fast ice flow solvers_
-  - [JustRelax.jl](https://github.com/PTsolvers/JustRelax.jl) _Pseudo-transient accelerated iterative solvers_
+  - [JustRelax.jl](https://github.com/PTsolvers/JustRelax.jl) _Pseudo-transient accelerated iterative solvers for geodynamic models_
 
 - [JuliaGeodynamics](https://github.com/JuliaGeodynamics) organisation
   - [CompGrids.jl](https://github.com/JuliaGeodynamics/CompGrids.jl) _Create computational grids that can be used with ParallelStencil.jl or PETSc.jl_
   - [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl) _Define material parameters and perform non-dimensionalization for geodynamic simulations_
+  - [JustPIC.jl](https://github.com/JuliaGeodynamics/JustPIC.jl) _(multi-)xPU  particles-in-cell advection scheme_
   - [GeophysicalModelGenerator.jl](https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl) _Import, process and interpret geophysical data sets to be used in numerical models_
+  - [GeoDataPicker.jl](https://github.com/JuliaGeodynamics/GeoDataPicker.jl) _Browser-based Graphical User Interface to interpret 3D geological and geophysical data_
+  - [InteractiveGeodynamics.jl](https://github.com/JuliaGeodynamics/InteractiveGeodynamics.jl) _Browser-based Graphical User Interface to run geodynamic models with [LaMEM](https://bitbucket.org/bkaus/lamem/src/master/)_
 
 - **Building blocks**
   - [ParallelStencil.jl](https://github.com/omlins/ParallelStencil.jl) _Package for writing high-level code for parallel high-performance stencil computations that can be deployed on both GPUs and CPUs_
