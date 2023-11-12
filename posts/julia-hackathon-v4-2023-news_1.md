@@ -104,7 +104,9 @@ However, LaMEM.jl is used in a script-like manner that can be a barrier for new 
 
 The developed interface runs on the browser and can easily be hosted in a single machine for people to access it. The advantages of this setup are those of compatibility and portability, which also safeguards the integrity of each user's work from external interference. The GUI streamlines the steps to define the geometric, rheological, and plotting parameters of each scenario. Most notably, it is able to run LaMEM.jl and plot the results on screen while the simulation is running, also providing the user with some controls to better visualize the data that is being displayed.
 
-The GUI also allows users to customize their visualizations with ease. They can effortlessly choose the specific field for plotting, select the most suitable color-map, overlay contours onto the heatmap, and even opt to include velocity vectors for a comprehensive analysis.
+The GUI also allows users to customize their visualizations with ease. They can effortlessly choose the specific field for plotting, select the most suitable color-map, overlay contours onto the heatmap, and even opt to include velocity vectors for a comprehensive analysis. 
+
+The web-paged solution is more versatile and portable than our previous effort based on GLMakie. Meanwhile, the [InteractiveGeodynamics.jl](https://github.com/JuliaGeodynamics/InteractiveGeodynamics.jl) has been registered and comes with 3 examples.
 
 ~~~
 <img src="../../assets/images/gui-example.png" alt="GUI example made with Dash.jl for LaMEME.jl" width="100%">
