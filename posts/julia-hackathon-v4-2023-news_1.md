@@ -111,3 +111,84 @@ The web-paged solution is more versatile and portable than our previous effort b
 ~~~
 <img src="../../assets/images/gui-example.png" alt="GUI example made with Dash.jl for LaMEME.jl" width="100%">
 ~~~
+
+## LaMEM.jl extensions
+*Boris Kaus*
+
+LaMEM is the parallel 3D geodynamic code developed by the Mainz team. During previous hackathons, we managed to create binary builder versions of both PETSc and LaMEM (`PETSc_jll` and `LaMEM_jll`), which is important as it allows installing a binary version of LaMEM natively on essentially any system. This includes MPI support and works on windows, linux and mac (Intel and Apple Silicon). The [LaMEM.jl](https://github.com/JuliaGeodynamics/LaMEM.jl) package contained a few routines to simplify running LaMEM from julia, creating initial model setups (replacing the legacy matlab functions), and reading LaMEM results back into julia. This already turned out to be extremely helpful in teaching as students can run 3D models on their laptop with very little effort, for example in a recent workshop in [Rwanda](https://github.com/boriskaus/Kigali-geodynamics-shortcourse).
+
+Yet, a drawback of the previous approach is that you still needed to provide a LaMEM `*.dat` file that specified the input parameters, so some more LaMEM knowledge was required. Before and during the hackathon we therefore extended the `LaMEM.jl` package and added a number of julia functions that allows creating a julia structure that contains all the info to build and perform a simulation:
+
+You start with a general model setup:
+```julia
+julia> using LaMEM, GeophysicalModelGenerator
+julia> model  = Model(Grid(nel=(16,16,16), x=[-1,1], y=[-1,1], z=[-1,1]))
+LaMEM Model setup
+|
+|-- Scaling             :  GeoParams.Units.GeoUnits{GEO}
+|-- Grid                :  nel=(16, 16, 16); xϵ(-1.0, 1.0), yϵ(-1.0, 1.0), zϵ(-1.0, 1.0) 
+|-- Time                :  nstep_max=50; nstep_out=1; time_end=1.0; dt=0.05
+|-- Boundary conditions :  noslip=[0, 0, 0, 0, 0, 0]
+|-- Solution parameters :  eta_min=1.0e18; eta_max=1.0e25; eta_ref=1.0e20; act_temp_diff=0
+|-- Solver options      :  direct solver; superlu_dist; penalty term=10000.0
+|-- Model setup options :  Type=files; 
+|-- Output options      :  filename=output; pvd=1; avd=0; surf=0
+|-- Materials           :  0 phases; 
+
+```
+
+Next you specify material preoperties:
+```julia
+julia> matrix = Phase(ID=0,Name="matrix",eta=1e20,rho=3000);
+julia> sphere = Phase(ID=1,Name="sphere",eta=1e23,rho=3200)
+Phase 1 (sphere): 
+  rho    = 3200.0 
+  eta    = 1.0e23 
+julia> add_phase!(model, sphere, matrix)
+```
+Create an initial geometry using the GeophysicalModelGenerator interface:
+```julia
+julia> AddSphere!(model,cen=(0.0,0.0,0.0), radius=(0.5, ))
+```
+and run the simulation in parallel:
+```julia
+julia> run_lamem(model,2)
+Saved file: Model3D.vts
+Writing LaMEM marker file -> ./markers/mdb.00000000.dat
+-------------------------------------------------------------------------- 
+                   Lithosphere and Mantle Evolution Model                   
+     Compiled: Date: Apr  7 2023 - Time: 22:11:23           
+     Version : 1.2.4 
+-------------------------------------------------------------------------- 
+        STAGGERED-GRID FINITE DIFFERENCE CANONICAL IMPLEMENTATION           
+-------------------------------------------------------------------------- 
+Parsing input file : output.dat 
+Finished parsing input file : output.dat 
+--------------------------------------------------------------------------
+...
+```
+
+You can also use Jupyter or Pluto notebooks to create a model setup, and plot cross-sections through the model before running. 
+Check out the [tutorials](https://juliageodynamics.github.io/LaMEM.jl/dev/) for additional examples.
+
+
+## GeoDataPicker.jl
+*Boris Kaus, Christian Schuler, Marcel Thielmann*
+
+Creating 3D geodynamic model setups from real data (such as seismic tomography) is usually complicated as the various seismic datasets often do not agree with each other. To complicate matters, many (mostly older) seismic datasets are not available in digital form and all you have are published cross-sections.  
+Creating a 3D setup of a region such as the Alps therefore involves subjective interpretation steps. Whereas this has been done before, the interpretations were not made available in digital and georeferenced (lat/lon/depth) format. To "model the Alps" therefore requires a lengthy and complicated interpretation step to determine which slab is where. Ideally this task is performed by the scientists that performed the seismic inversion.
+To help them with this, we created a web-based graphical user interface called [GeoDataPicker](https://github.com/JuliaGeodynamics/GeoDataPicker.jl). It is build on top of the [GeophysicalModelGenerator](https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl) package and allows to :
+- load data from a centralized repository (all translated to GMG format).
+- plot vertical and horizontal cross-sections through the 3D datasets
+- interactively draw your interpretation on top of the seismic data
+- visualize your interpretation in 3D and create surfaces from your interpretation 
+
+~~~
+<img src="https://github.com/JuliaGeodynamics/GeoDataPicker.jl/blob/main/docs/src/assets/img/Profile_Tab.png"  width="100%">
+~~~
+
+~~~
+<img src="https://github.com/JuliaGeodynamics/GeoDataPicker.jl/blob/main/docs/src/assets/img/3D_Tab.png"  width="100%">
+~~~
+
+This package thus greatly simplifies the process of interpreting existing data. Whereas it may not result in a single unique model for the Alps that everyone agrees upon, it at least makes the discussion more quantitative and allows comparing different models. 
