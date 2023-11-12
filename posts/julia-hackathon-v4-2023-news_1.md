@@ -156,14 +156,14 @@ julia> run_lamem(model,2)
 Saved file: Model3D.vts
 Writing LaMEM marker file -> ./markers/mdb.00000000.dat
 -------------------------------------------------------------------------- 
-                   Lithosphere and Mantle Evolution Model                   
-     Compiled: Date: Apr  7 2023 - Time: 22:11:23           
+                   Lithosphere and Mantle Evolution Model
+     Compiled: Date: Apr  7 2023 - Time: 22:11:23
      Version : 1.2.4 
 -------------------------------------------------------------------------- 
-        STAGGERED-GRID FINITE DIFFERENCE CANONICAL IMPLEMENTATION           
+        STAGGERED-GRID FINITE DIFFERENCE CANONICAL IMPLEMENTATION
 -------------------------------------------------------------------------- 
-Parsing input file : output.dat 
-Finished parsing input file : output.dat 
+Parsing input file : output.dat
+Finished parsing input file : output.dat
 --------------------------------------------------------------------------
 ...
 ```
@@ -191,4 +191,4 @@ To help them with this, we created a web-based graphical user interface called [
 <img src="https://github.com/JuliaGeodynamics/GeoDataPicker.jl/blob/main/docs/src/assets/img/3D_Tab.png"  width="100%">
 ~~~
 
-This package thus greatly simplifies the process of interpreting existing data. Whereas it may not result in a single unique model for the Alps that everyone agrees upon, it at least makes the discussion more quantitative and allows comparing different models. 
+This package thus greatly simplifies the process of interpreting existing data. Whereas it may not result in a single unique model for the Alps that everyone agrees upon, it at least makes the discussion more quantitative and allows comparing different models.
