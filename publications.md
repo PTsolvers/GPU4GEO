@@ -5,6 +5,7 @@ header = "Publications"
 ### 2023
 
 - Räss, L., Werder, M. A., Utkin, I., and Omlin, S. (2023). **Teaching supercomputing and software engineering skills to science and engineering students**, ETH Learning and Teaching Journal, Vol 4, No 1, 2023. [https://doi.org/10.16906/lt-eth.v4i1.235](https://doi.org/10.16906/lt-eth.v4i1.235)
+- Utkin, I., Khakimova, L., Schmalholz, S. M., and Podladchikov, Y. (2023). **Control of nonlinear bulk deformation and large shear strain on first-order phase transformation kinetics**. Continuum Mechanics and Thermodynamics, 1-20. [https://doi.org/10.1007/s00161-023-01245-5](https://doi.org/10.1007/s00161-023-01245-5)
 
 ### 2022
 
