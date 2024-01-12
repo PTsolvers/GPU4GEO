@@ -10,7 +10,7 @@ header = "STREAM project"
 </center>
 ~~~
 
-_Spontaneous formation of an internal shear band ice flowing over rough topography resulting in englacial sliding. The arrows’ colour scale reflects the flow acceleration in the centre of the channelised streaming ice._
+_Spontaneous formation of an internal shear band in a slab of ice flowing over rough topography resulting in englacial sliding. The arrows’ colour scale reflects the flow acceleration in the centre of the channelised streaming ice._
 
 **What mechanisms control the spontaneous rearrangement of ice motion in ice sheets?**
 
