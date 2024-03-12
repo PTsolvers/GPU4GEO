@@ -38,3 +38,14 @@ This has been an intense an exciting week which lead to two major achievements. 
 ~~~
 
 The second achievement was to port a viscous flow solver, which was previously prototyped in a 2D Julia script. This iterative solver allows for automatic adjustment of iteration parameters ("the auto-pilot"). It was ported into 3D using ParallelStencil and tested on a Nvidia A100 GPU on the Octopus cluster. The model domain encompasses inclusions of viscosity of either 1e3 Pa.s or 1e-3 Pa.s in a matrix of viscosity 1 Pa.s. No smoothing is applied to the viscosity field. Early results yield 13s time to solution (relative tolerance 1e-5) for 128^3 cells and 95s for 256^3 (~1 billion DOFs).
+
+## Ductile localization on multiple GPUs
+*Arne Spang*
+
+I worked on adapting my ParallelStencil-based 2D code for ductile localization to run on multiple GPUs using ImplicitGlobalGrid.jl. With the help of Samuel Omlin, Albert de Montserrat and Ludovic Räss, I managed to make the right adjustments and run the code on 2 and 4 GPUs for now. Looking forward to use this for more exciting setups and better resolution in the future.
+
+~~~
+<center>
+    <img src="../../assets/images/2GPU_4GPU_Hackathon5.png" title="Comparison: 2 vs 4 GPU" alt="Comparison: 2 vs 4 GPU" width="75%">
+</center>
+~~~
