@@ -53,7 +53,7 @@ I worked on adapting my ParallelStencil-based 2D code for ductile localization t
 ## Complex initial geometries for LaMEM through GeophysicalModelGenerator
 *Andrea Piccolo, Tatjana Weiler, Arne Spang, Boris Kaus*
 
-We worked on porting a Matlab routine of Andrea to Julia and incorporating it into [GeophysicalModelGenerator](https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl). This included writing an inpolygon function, implementing routines to define subducting slabs with arbitrary orientation and implementing a McKenzie model for temperature distribution in subducting slabs. With the new functionality, we can create complex setups for 2D and 3D [LaMEM](https://github.com/UniMainzGeo/LaMEM/) models including lithosperic blocks and subducting slabs with a realistic temperature structure. Thanks to Albert de Montserrat for helping us with optimizing the functions.
+We worked on porting a Matlab routine of Andrea to Julia and incorporating it into [GeophysicalModelGenerator](https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl). This included writing an `inpolygon` function, implementing routines to define subducting slabs with arbitrary orientation and implementing a McKenzie model for temperature distribution in subducting slabs. With the new functionality, we can create complex setups for 2D and 3D [LaMEM](https://github.com/UniMainzGeo/LaMEM/) models including lithosperic blocks and subducting slabs with a realistic temperature structure. Thanks to Albert de Montserrat for helping us with optimizing the functions.
 
 ~~~
 <center>
