@@ -40,6 +40,8 @@
   
 
   
+    <link rel="stylesheet" href="/GPU4GEO/libs/highlight/github.min.css">
+  
 
   <style>
   :root {
@@ -156,7 +158,7 @@
        
        
        
-<div class="toc"><ol><li><a href="#chmy.jl_computational_core_library_for_ice_flow_model_fastice">Chmy.jl - computational core library for ice flow model FastIce</a></li><li><a href="#hydrothermal_and_viscous_stokes_flow_with_auto_pilot">Hydrothermal and viscous Stokes flow with auto-pilot</a></li><li><a href="#ductile_localization_on_multiple_gpus">Ductile localization on multiple GPUs</a></li></ol></div><p>We held our fifth GPU4GEO Julia hackathon on February 26-March 1, 2024 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.</p>
+<div class="toc"><ol><li><a href="#chmy.jl_computational_core_library_for_ice_flow_model_fastice">Chmy.jl - computational core library for ice flow model FastIce</a></li><li><a href="#hydrothermal_and_viscous_stokes_flow_with_auto_pilot">Hydrothermal and viscous Stokes flow with auto-pilot</a></li><li><a href="#ductile_localization_on_multiple_gpus">Ductile localization on multiple GPUs</a></li><li><a href="#complex_initial_geometries_for_lamem_through_geophysicalmodelgenerator">Complex initial geometries for LaMEM through GeophysicalModelGenerator</a></li></ol></div><p>We held our fifth GPU4GEO Julia hackathon on February 26-March 1, 2024 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.</p>
 <center>
     <img src="../../assets/images/hack_v5_1.jpg" title="Hackathon v5 impressions" alt="Hackathon v5 impressions" width="25%">
     <img src="../../assets/images/hack_v5_2.jpg" title="Hackathon v5 impressions" alt="Hackathon v5 impressions" width="25%">
@@ -182,6 +184,13 @@
 <p>I worked on adapting my ParallelStencil-based 2D code for ductile localization to run on multiple GPUs using ImplicitGlobalGrid.jl. With the help of Samuel Omlin, Albert de Montserrat and Ludovic Räss, I managed to make the right adjustments and run the code on 2 and 4 GPUs for now. Looking forward to use this for more exciting setups and better resolution in the future.</p>
 <center>
     <img src="../../assets/images/2GPU_4GPU_Hackathon5.png" title="Comparison: 2 vs 4 GPU" alt="Comparison: 2 vs 4 GPU" width="75%">
+</center><h2 id="complex_initial_geometries_for_lamem_through_geophysicalmodelgenerator" > Complex initial geometries for LaMEM through GeophysicalModelGenerator<a class="heading-link" href="#complex_initial_geometries_for_lamem_through_geophysicalmodelgenerator">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Andrea Piccolo, Tatjana Weiler, Arne Spang, Boris Kaus</em></p>
+<p>We worked on porting a Matlab routine of Andrea to Julia and incorporating it into <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator</a>. This included writing an <code>inpolygon</code> function, implementing routines to define subducting slabs with arbitrary orientation and implementing a McKenzie model for temperature distribution in subducting slabs. With the new functionality, we can create complex setups for 2D and 3D <a href="https://github.com/UniMainzGeo/LaMEM/">LaMEM</a> models including lithosperic blocks and subducting slabs with a realistic temperature structure. Thanks to Albert de Montserrat for helping us with optimizing the functions.</p>
+<center>
+    <img src="../../assets/images/LaMEM_Setup_Hackathon_5.png" title="LaMEM setup created in GMG" alt="LaMEM setup created in GMG" width="75%">
 </center>
 
       </section>
@@ -199,6 +208,9 @@
 
   
 
+  
+    <script src="/GPU4GEO/libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/GPU4GEO/libs/coder.min.js"></script>
