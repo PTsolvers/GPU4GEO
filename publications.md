@@ -4,6 +4,8 @@ header = "Publications"
 
 ### 2023
 
+- Macherel, E., Podladchikov, Y., Räss, L., and Schmalholz, S. M. (2023). **Quantifying diapir ascent velocities in power-law viscous rock under far-field stress: Integrating analytical estimates, 3D numerical calculations and geodynamic applications.** Geochemistry, Geophysics, Geosystems, 24, e2023GC011115. [https://doi.org/10.1029/2023GC011115](https://doi.org/10.1029/2023GC011115)
+- Schmalholz, S. M., Moulas, E., Räss, L., and Müntener, O. (2023). **Serpentinite dehydration and olivine vein formation during ductile shearing: Insights from 2D numerical modeling on porosity generation, density variations, and transient weakening.** Journal of Geophysical Research: Solid Earth, 128, e2023JB026985. [https://doi.org/10.1029/2023JB026985](https://doi.org/10.1029/2023JB026985)
 - Räss, L., Werder, M. A., Utkin, I., and Omlin, S. (2023). **Teaching supercomputing and software engineering skills to science and engineering students**, ETH Learning and Teaching Journal, Vol 4, No 1, 2023. [https://doi.org/10.16906/lt-eth.v4i1.235](https://doi.org/10.16906/lt-eth.v4i1.235)
 - Utkin, I., Khakimova, L., Schmalholz, S. M., and Podladchikov, Y. (2023). **Control of nonlinear bulk deformation and large shear strain on first-order phase transformation kinetics**. Continuum Mechanics and Thermodynamics, 1-20. [https://doi.org/10.1007/s00161-023-01245-5](https://doi.org/10.1007/s00161-023-01245-5)
 
