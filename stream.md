@@ -24,6 +24,7 @@ Regarding the technical aspects, the project will allow to run Julia at scale an
 
 #### More infos
 Check-out the [News](/posts) section for regular updates, and following posts for submission and award descriptions:
+- [A EuroHPC Success Story](/posts/julia-lumi-eurohpc-story/)
 - [FastIce workshop](/posts/fastice-workshop/)
 - [STREAM award](/posts/julia-lumi-eurohpc-awarded/)
 - [STREAM submission](/posts/julia-lumi-eurohpc/)
