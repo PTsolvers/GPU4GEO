@@ -14,7 +14,7 @@ We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest
 
 > 🚧 more news to come!
 
-## Chmy.jl - Finite differences and staggered grids on CPUs and GPUs
+## Chmy.jl - Finite differences and staggered grids
 *You Wu, Ivan Utkin, Ludovic Räss*
 
 It has been a fruitful week, where we restructured the package structure and we also further furnished the documentation of [Chmy.jl](https://github.com/PTsolvers/Chmy.jl), targeting on the distributed usage of it.
