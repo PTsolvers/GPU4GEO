@@ -15,7 +15,6 @@ We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest
 > 🚧 more news to come!
 
 ## Chmy.jl - Finite differences and staggered grids on CPUs and GPUs
-
 *You Wu, Ivan Utkin, Ludovic Räss*
 
 It has been a fruitful week, where we restructured the package structure and we also further furnished the documentation of [Chmy.jl](https://github.com/PTsolvers/Chmy.jl), targeting on the distributed usage of it.
@@ -25,7 +24,6 @@ In order to allow users to use all submodules with a single `using Chmy` stateme
 With [PR #56](https://github.com/PTsolvers/Chmy.jl/pull/56), we aim to provide a comprehensive yet beginner-friendly documentation to distributed usage of Chmy.jl for our users. To do this, we provide a conceptual introduction to distributed computing generally under the section [`Distributed`](https://ptsolvers.github.io/Chmy.jl/dev/concepts/distributed/). For more experienced users, one can start with a simple script for solving a 2D diffusion example under the section [Using Chmy.jl with MPI](https://ptsolvers.github.io/Chmy.jl/dev/using_chmy_with_mpi/).
 
 ## Convection code
-
 *Paul Tackley*
 
 **A Julia spherical annulus convection program.** The program solves the 2D spherical annulus variable-viscosity equations as given in [Hernlund & Tackley (2008)](https://doi.org/10.1016/j.pepi.2008.07.037), on a staggered grid using the direct solver. Some anomalous behaviour is observed relative to the test cases reported in that paper, so more testing/debugging is needed. Once perfected it will be posted online for general use.
@@ -36,14 +34,12 @@ With [PR #56](https://github.com/PTsolvers/Chmy.jl/pull/56), we aim to provide a
 </center>
 ~~~
 
-## Permability in GeoParams
-
+## Permeability in GeoParams
 *Pascal Aellig, Jacob Frasunkiewicz*
 
 Over the course of the week, we have been discussing and adding Permeability laws to [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl). Currently, there are four laws that can now be added and called from the `MaterialParams` structure. Part one of many has been merged in PR [#225](https://github.com/JuliaGeodynamics/GeoParams.jl/pull/225), so stay tuned for more over the course of the next few weeks as we implement computational routines to facilitate the writing of two-phase codes.
 
 ## Implicit solvers with Enzyme.jl
-
 *Lorenzo Candioti, Valentin Churavy*
 
 We developed a workflow to solve partial differential equations (PDEs) with implicit schemes using the automatic differentiation package [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl). Using Enzyme to solve PDEs typically involves spelling out the residual form of the equations and differentiating this function w.r.t. the solution variable. The resulting Vector-Jacobian-Product (VJP, or Jacobian-Vector-Product, JVP) is then used to assemble the sparse Jacobian needed to solve the equations. The newly developed workflow relies on Krylov solvers which only need the JVP (or VJP) as input to solve the system of equations, thus avoiding the computationally expensive part of assembling the full Jacobian. Tested on a simple 1D Diffusion Equation, the new workflow is ca. 1.5x faster compared to the full Jacobian assembly approach.
