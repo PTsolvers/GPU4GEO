@@ -158,7 +158,7 @@
        
        
        
-<div class="toc"><ol><li><a href="#chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus">Chmy.jl - Finite differences and staggered grids on CPUs and GPUs</a></li><li><a href="#convection_code">Convection code</a></li></ol></div><p>We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.</p>
+<div class="toc"><ol><li><a href="#chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus">Chmy.jl - Finite differences and staggered grids on CPUs and GPUs</a></li><li><a href="#convection_code">Convection code</a></li><li><a href="#permability_in_geoparams">Permability in GeoParams</a></li><li><a href="#implicit_solvers_with_enzyme.jl">Implicit solvers with Enzyme.jl</a></li></ol></div><p>We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.</p>
 <blockquote><p>🚧 more news to come!</p>
 </blockquote><h2 id="chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus" > Chmy.jl - Finite differences and staggered grids on CPUs and GPUs<a class="heading-link" href="#chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus">
   <i class="fa fa-link" aria-hidden="true"></i>
@@ -171,8 +171,48 @@
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Paul Tackley</em></p>
-<p><strong>A Julia spherical annulus convection program.</strong> The program solves the 2D spherical annulus variable-viscosity equations as given in <a href="https://doi.org/10.1016/j.pepi.2008.07.037">Hernlund & Tackley (2008)</a>, on a staggered grid using </p>
-<span style="color:red">... truncated content, a parsing error occurred at some point after this ...</span><span style="color:red">... truncated content, a parsing error occurred at some point after this ...</span>
+<p><strong>A Julia spherical annulus convection program.</strong> The program solves the 2D spherical annulus variable-viscosity equations as given in <a href="https://doi.org/10.1016/j.pepi.2008.07.037">Hernlund & Tackley (2008)</a>, on a staggered grid using the direct solver. Some anomalous behaviour is observed relative to the test cases reported in that paper, so more testing/debugging is needed. Once perfected it will be posted online for general use.</p>
+<center>
+    <img src="../../assets/images/convect_annulus.png" title="Annulus convection" alt="Annulus convection" width="75%">
+</center><h2 id="permability_in_geoparams" > Permability in GeoParams<a class="heading-link" href="#permability_in_geoparams">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Pascal Aellig, Jacob Frasunkiewicz</em></p>
+<p>Over the course of the week, we have been discussing and adding Permeability laws to <a href="https://github.com/JuliaGeodynamics/GeoParams.jl">GeoParams.jl</a>. Currently, there are four laws that can now be added and called from the <code>MaterialParams</code> structure. Part one of many has been merged in PR <a href="https://github.com/JuliaGeodynamics/GeoParams.jl/pull/225">#225</a>, so stay tuned for more over the course of the next few weeks as we implement computational routines to facilitate the writing of two-phase codes.</p>
+<h2 id="implicit_solvers_with_enzyme.jl" > Implicit solvers with Enzyme.jl<a class="heading-link" href="#implicit_solvers_with_enzyme.jl">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Lorenzo Candioti, Valentin Churavy</em></p>
+<p>We developed a workflow to solve partial differential equations (PDEs) with implicit schemes using the automatic differentiation package <a href="https://github.com/EnzymeAD/Enzyme.jl">Enzyme.jl</a>. Using Enzyme to solve PDEs typically involves spelling out the residual form of the equations and differentiating this function w.r.t. the solution variable. The resulting Vector-Jacobian-Product (VJP, or Jacobian-Vector-Product, JVP) is then used to assemble the sparse Jacobian needed to solve the equations. The newly developed workflow relies on Krylov solvers which only need the JVP (or VJP) as input to solve the system of equations, thus avoiding the computationally expensive part of assembling the full Jacobian. Tested on a simple 1D Diffusion Equation, the new workflow is ca. 1.5x faster compared to the full Jacobian assembly approach.</p>
+<pre><code class="julia">                        Matrix-free
+──────────────────────────────────────────────────────────────────────
+                             Time                    Allocations
+                    ───────────────────────   ────────────────────────
+ Tot / % measured:       989ms / 100.0%           1.07MiB /  71.3%
+
+Section     ncalls     time    %tot     avg     alloc    %tot      avg
+──────────────────────────────────────────────────────────────────────
+iteration        1    989ms  100.0%   989ms    785KiB  100.0%   785KiB
+  gmres          9    988ms  100.0%   110ms   78.9KiB   10.1%  8.77KiB
+    jvp      43.3k    276ms   28.0%  6.38μs     0.00B    0.0%    0.00B
+  forward       10   82.2μs    0.0%  8.22μs     0.00B    0.0%    0.00B
+  inc            9   44.4μs    0.0%  4.93μs     0.00B    0.0%    0.00B
+──────────────────────────────────────────────────────────────────────
+                        Jacobian assembly
+───────────────────────────────────────────────────────────────────────
+                              Time                    Allocations
+                     ───────────────────────   ────────────────────────
+  Tot / % measured:       1.43s / 100.0%           56.7MiB /  99.2%
+
+Section      ncalls     time    %tot     avg     alloc    %tot      avg
+───────────────────────────────────────────────────────────────────────
+iteration         1    1.43s  100.0%   1.43s   56.2MiB  100.0%  56.2MiB
+  assembly        9    1.40s   98.2%   156ms   15.0MiB   26.6%  1.66MiB
+    jvp       90.0k    625ms   43.8%  6.94μs     0.00B    0.0%    0.00B
+  solve           9   24.8ms    1.7%  2.76ms   40.5MiB   72.1%  4.50MiB
+  forward        10   73.0μs    0.0%  7.30μs     0.00B    0.0%    0.00B
+───────────────────────────────────────────────────────────────────────</code></pre>
+
 
       </section>
     </div>
