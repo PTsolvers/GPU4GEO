@@ -158,7 +158,7 @@
        
        
        
-<div class="toc"><ol><li><a href="#chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus">Chmy.jl - Finite differences and staggered grids on CPUs and GPUs</a><ol><li><a href="#convection_code">Convection code</a></li></ol></li></ol></div><p>We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.</p>
+<div class="toc"><ol><li><a href="#chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus">Chmy.jl - Finite differences and staggered grids on CPUs and GPUs</a><ol><li><a href="#convection_code">Convection code</a></li><li><a href="#permability_in_geoparams">Permability in GeoParams</a></li></ol></li></ol></div><p>We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.</p>
 <blockquote><p>🚧 more news to come!</p>
 </blockquote><h1 id="chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus" > Chmy.jl - Finite differences and staggered grids on CPUs and GPUs<a class="heading-link" href="#chmy.jl_finite_differences_and_staggered_grids_on_cpus_and_gpus">
   <i class="fa fa-link" aria-hidden="true"></i>
@@ -175,7 +175,12 @@
 <center>
     <img src="../../assets/images/convect_annulus.png" title="Annulus convection" alt="Annulus convection" width="75%">
 </center><blockquote><p>Almost producing the right result.</p>
-</blockquote>
+</blockquote><h2 id="permability_in_geoparams" > Permability in GeoParams<a class="heading-link" href="#permability_in_geoparams">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Pascal Aellig, Jacob Frasunkiewicz</em></p>
+<p>Over the course of the week, we have been discussing and adding Permeability laws to <a href="https://github.com/JuliaGeodynamics/GeoParams.jl">GeoParams.jl</a>. Currently, there are four laws that can now be added and called from the <code>MaterialParams</code> structure. Part one of many has been merged in PR <a href="https://github.com/JuliaGeodynamics/GeoParams.jl/pull/225">#225</a>, so stay tuned for more over the course of the next few weeks as we implement computational routines to facilitate the writing of two-phase codes.</p>
+
 
       </section>
     </div>
