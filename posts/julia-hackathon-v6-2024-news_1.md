@@ -35,3 +35,8 @@ A Julia spherical annulus convection program.
 ~~~
 
 > Almost producing the right result.
+
+## Permability in GeoParams
+*Pascal Aellig, Jacob Frasunkiewicz*
+
+Over the course of the week, we have been discussing and adding Permeability laws to [GeoParams.jl](https://github.com/JuliaGeodynamics/GeoParams.jl). Currently, there are four laws that can now be added and called from the `MaterialParams` structure. Part one of many has been merged in PR [#225](https://github.com/JuliaGeodynamics/GeoParams.jl/pull/225), so stay tuned for more over the course of the next few weeks as we implement computational routines to facilitate the writing of two-phase codes.
