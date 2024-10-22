@@ -47,7 +47,7 @@ Over the course of the week, we have been discussing and adding Permeability law
 *Lorenzo Candioti, Valentin Churavy*
 
 We developed a workflow to solve partial differential equations (PDEs) with implicit schemes using the automatic differentiation package [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl). Using Enzyme to solve PDEs typically involves spelling out the residual form of the equations and differentiating this function w.r.t. the solution variable. The resulting Vector-Jacobian-Product (VJP, or Jacobian-Vector-Product, JVP) is then used to assemble the sparse Jacobian needed to solve the equations. The newly developed workflow relies on Krylov solvers which only need the JVP (or VJP) as input to solve the system of equations, thus avoiding the computationally expensive part of assembling the full Jacobian. Tested on a simple 1D Diffusion Equation, the new workflow is ca. 1.5x faster compared to the full Jacobian assembly approach.
-```
+```julia-repl
                         Matrix-free
 ──────────────────────────────────────────────────────────────────────
                              Time                    Allocations
