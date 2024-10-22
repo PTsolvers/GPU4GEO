@@ -14,7 +14,7 @@ We held our sixth GPU4GEO Julia hackathon on October 07-11, 2024 in Black Forest
 
 > 🚧 more news to come!
 
-# Chmy.jl - Finite differences and staggered grids on CPUs and GPUs
+## Chmy.jl - Finite differences and staggered grids on CPUs and GPUs
 
 *You Wu, Ivan Utkin, Ludovic Räss*
 
@@ -30,11 +30,11 @@ With [PR #56](https://github.com/PTsolvers/Chmy.jl/pull/56), we aim to provide a
 
 A Julia spherical annulus convection program.
 
-```
+~~~
 <center>
     <img src="../../assets/images/convect_annulus.png" title="Annulus convection" alt="Annulus convection" width="75%">
 </center>
-```
+~~~
 
 > Almost producing the right result.
 
@@ -52,9 +52,9 @@ We developed a workflow to solve partial differential equations (PDEs) with impl
 ```
                         Matrix-free
 ──────────────────────────────────────────────────────────────────────
-                             Time                    Allocations      
+                             Time                    Allocations
                     ───────────────────────   ────────────────────────
- Tot / % measured:       989ms / 100.0%           1.07MiB /  71.3%    
+ Tot / % measured:       989ms / 100.0%           1.07MiB /  71.3%
 
 Section     ncalls     time    %tot     avg     alloc    %tot      avg
 ──────────────────────────────────────────────────────────────────────
@@ -66,9 +66,9 @@ iteration        1    989ms  100.0%   989ms    785KiB  100.0%   785KiB
 ──────────────────────────────────────────────────────────────────────
                         Jacobian assembly
 ───────────────────────────────────────────────────────────────────────
-                              Time                    Allocations      
+                              Time                    Allocations
                      ───────────────────────   ────────────────────────
-  Tot / % measured:       1.43s / 100.0%           56.7MiB /  99.2%    
+  Tot / % measured:       1.43s / 100.0%           56.7MiB /  99.2%
 
 Section      ncalls     time    %tot     avg     alloc    %tot      avg
 ───────────────────────────────────────────────────────────────────────
