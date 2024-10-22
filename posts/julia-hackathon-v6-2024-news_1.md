@@ -28,15 +28,13 @@ With [PR #56](https://github.com/PTsolvers/Chmy.jl/pull/56), we aim to provide a
 
 *Paul Tackley*
 
-A Julia spherical annulus convection program.
+**A Julia spherical annulus convection program.** The program solves the 2D spherical annulus variable-viscosity equations as given in [Hernlund & Tackley (2008)](https://doi.org/10.1016/j.pepi.2008.07.037), on a staggered grid using the direct solver (`\`). Some anomalous behaviour is observed relative to the test cases reported in that paper, so more testing/debugging is needed. Once perfected it will be posted online for general use.
 
 ~~~
 <center>
     <img src="../../assets/images/convect_annulus.png" title="Annulus convection" alt="Annulus convection" width="75%">
 </center>
 ~~~
-
-> Almost producing the right result.
 
 ## Permability in GeoParams
 
