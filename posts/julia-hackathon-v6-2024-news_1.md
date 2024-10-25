@@ -74,7 +74,7 @@ iteration         1    1.43s  100.0%   1.43s   56.2MiB  100.0%  56.2MiB
 ───────────────────────────────────────────────────────────────────────
 ```
 
-## Using Enzyme.jl in order to calculate adjoint sensitivies with JustRelax.jl
+## Using Enzyme.jl to calculate adjoint sensitivies within JustRelax.jl
 *Christian Schuler, Valentin Churavy, Albert de Montserrat, Pascal Aellig*
 
 [ParallelStencil.jl](https://github.com/omlins/ParallelStencil.jl) has been made compatible with the latest [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl) version (PR [#169](https://github.com/omlins/ParallelStencil.jl/pull/169) and PR [#170](https://github.com/omlins/ParallelStencil.jl/pull/170)). With the help of [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl) and [ParallelStencil.jl](https://github.com/omlins/ParallelStencil.jl) the neccessary vector-Jacobian products (VJP) for the adjoint solve in [JustRelax.jl](https://github.com/PTsolvers/JustRelax.jl) can be calculated. Work has also been done to make the adjoint solve work on multiple GPUs/CPUs. The figure shows a viscoelastic falling block example with adjoint sensitivities w.r.t. to the viscosity and density. 
