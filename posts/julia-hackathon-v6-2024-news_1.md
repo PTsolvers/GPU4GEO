@@ -89,6 +89,6 @@ iteration         1    1.43s  100.0%   1.43s   56.2MiB  100.0%  56.2MiB
 *Giacomo Aloisi, Samuel Omlin*
 
 During the week we have implemented a [Metal.jl](https://github.com/JuliaGPU/Metal.jl) backend for [ParallelStencil.jl](https://github.com/omlins/ParallelStencil.jl)! 🎉🎉🎉
-This will allow users to exploit their Apple silicon GPUs like the M1, M2 and M3 chips that are available on modern MacOs laptops, to use with ParallelStencil for an amazing speedup!
+This will allow users to exploit their Apple silicon GPUs like the M1, M2 and M3 chips that are available on modern macOS laptops, to use with ParallelStencil for an amazing speedup!
 
 This is the PR [#175](https://github.com/omlins/ParallelStencil.jl/pull/175) with the changes, so stay tuned for a new release soon!
