@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: 🚀 Build and Deploy
-        uses: tlienart/xranklin-build-action@main
+        uses: kescobo/xranklin-build-action@main
         with:
           BASE_URL_PREFIX: "GPU4GEO"
