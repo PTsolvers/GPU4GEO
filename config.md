@@ -17,7 +17,7 @@ tw_card = "summary"
 tw_title = author_short
 tw_descr = meta_descr
 
-website_url = "https://ptsolvers.github.io/GPU4GEO/"
+website_url = "https://gpu4geo.org"
 
 footer_notice = """
   © 2024 $author · Powered by
