@@ -1,6 +1,6 @@
 +++
 
-prepath = "GPU4GEO"
+prepath = ""
 
 ignore = ["website-memo.md"]
 
