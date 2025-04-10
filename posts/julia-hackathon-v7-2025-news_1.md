@@ -18,7 +18,9 @@ We held our seventh GPU4GEO Julia hackathon on March 24-28, 2025 in Black Forest
 
 *Albert de Montserrat, Ivan Utkin, Ludovic Räss*
 
-Content here
+[Chmy.jl documentation](https://ptsolvers.github.io/Chmy.jl/dev/) deployed using GitHub Action now rendering with VitePress available via the DocumenterVitepress package.
+
+To overcome recent changes made in CUDA.jl with respect to implicit synchronisation as this broke the communication/computation overlap capabilities in Chmy.
 
 ## Jaumann stress rate in viscoplastic regularization routines
 
@@ -26,21 +28,29 @@ Content here
 
 During this edition of the Hackathon, I was working on viscoplastic regularization into a 2D Stokes solver for deforming viscoelastoplastic materials. The solver is based on the accelerated pseudo-transient method with an implicit time integration. Non-dimensionalization of physical quantities is not required and the algorithm can handle both dimensional and non-dimensional input parameters. One of my main outcomes of Hackathon v7 is the incorporation of stress advection and rotation expressed via the Jaumann stress rate into the standard regularization routine. My aim is to use the developments of this week as a foundation for future software that simulates multi-phase reactive flow within transcrustal magmatic systems.
 
-![Plastic shear bands](../_assets/images/Stokes2D_vevp_Hackv7_LGC.gif)
+~~~
+<center>
+    <img src="../../assets/images/Stokes2D_vevp_Hackv7_LGC.gif" title="Plastic shear bands" alt="Plastic shear bands" width="75%">
+</center>
+~~~
 
-### Autotunig Pseudo-Transient solvers (dynamic relaxation)
+## Autotunig Pseudo-Transient solvers (dynamic relaxation)
 
 *Thibault Duretz, Arne Spang*
 
-​Selecting appropriate iteration parameters in pseudo-transient codes can be challenging, often leading to convergence issues. Ideally, simulations should run smoothly without the need for restarts or manual adjustments of these parameters. Dynamic Relaxation (DR) presents a potential solution to these challenges. This method allows for the automatic computation of both the pseudo-timestep and damping parameters during the iterative solution process.​
+Selecting appropriate iteration parameters in pseudo-transient codes can be challenging, often leading to convergence issues. Ideally, simulations should run smoothly without the need for restarts or manual adjustments of these parameters. Dynamic Relaxation (DR) presents a potential solution to these challenges. This method allows for the automatic computation of both the pseudo-timestep and damping parameters during the iterative solution process.
 
 A brief overview of the DR method was provided, along with a basic script that includes essential steps such as estimating the minimum and maximum eigenvalues and implementing preconditioning. These steps are crucial for enhancing the efficiency and stability of the DR method in numerical simulations.
 
 We successfully incorporated this scheme into an existing pseudo-transient 1D shear heating code which can produce thermal runaway in simple shear. The code uses grid refinement, adaptive (physical) time stepping and a composite visco-elastic rheology with diffusion creep, dislocation creep and low-temperature plasticity. During a simulation, the model changes time steps by about 15 orders of magnitude. Damping parameters and pseudo-time steps are recomputed automatically.
 
-![Screenshot from 2025-04-09 10-15-24](../_assets/images/1D_DYREL.png)
+~~~
+<center>
+    <img src="../../assets/images/1D_DYREL.png" title="1D DYREL" alt="1D DYREL" width="75%">
+</center>
+~~~
 
-The model starts with elastic loading where deviatoric stress increases linearly. Approaching 1.8 GPa, low-temperature plasticity limits stress and shear heating causes temperature to grow slowly. During these two stages, temperature, velocity, and time step do not change significantly. Around 700 C (t=12 kyr), dislocation creep becomes the dominant deformation mechanism, and thermal runaway starts. This means that deformation self-localizes into a narrow zone which undergoes a huge temperature increase and viscosity decrease, accompanied by an increase in local velocity. All of this warrants a drastic reduction of the physical time step. More on this model here https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JB028846 😉
+The model starts with elastic loading where deviatoric stress increases linearly. Approaching 1.8 GPa, low-temperature plasticity limits stress and shear heating causes temperature to grow slowly. During these two stages, temperature, velocity, and time step do not change significantly. Around 700 C (t=12 kyr), dislocation creep becomes the dominant deformation mechanism, and thermal runaway starts. This means that deformation self-localizes into a narrow zone which undergoes a huge temperature increase and viscosity decrease, accompanied by an increase in local velocity. All of this warrants a drastic reduction of the physical time step. More on this model in [Spang et al. (2024)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JB028846) 😉
 
 Several challenges remain, such as handling saddle point problems (e.g., Stokes) and multiphysics coupled systems (e.g., two-phase flow), which have yet to be fully addressed through autotuning methods.
 
@@ -88,19 +98,24 @@ We can now scale setups across thousands of MPI ranks without needing to sacrifi
 🏁 Final Boss Defeated
 Before this hackathon:
 
-❌ Couldn’t generate 3D setups above 512×512×128
-❌ Couldn’t scale past 4096 MPI ranks
-❌ Memory bottlenecks everywhere
-❌ Julia: "No error, but I'm still quitting 🤷"
+- ❌ Couldn’t generate 3D setups above 512×512×128
+- ❌ Couldn’t scale past 4096 MPI ranks
+- ❌ Memory bottlenecks everywhere
+- ❌ Julia: "No error, but I'm still quitting 🤷"
 
 After this hackathon:
 
-✅ Generating massive models on a laptop
-✅ All parallel, all fast
-✅ Ready for production-level madness 💪
+- ✅ Generating massive models on a laptop
+- ✅ All parallel, all fast
+- ✅ Ready for production-level madness 💪
 
 💬 TL;DR
+
 Julia + smart MPI rank partitioning + parallel generation = 🚀 rocket fuel for LaMEM setup.
 Can confirm: parallelism is the way 🧵🐙
 
-![64mpi](https://hackmd.io/_uploads/Hyc7QyE0ye.png)
+~~~
+<center>
+    <img src="../../assets/images/64mpi.png" title="64 MPI ranks" alt="64 MPI ranks" width="75%">
+</center>
+~~~
