@@ -18,9 +18,10 @@ We held our seventh GPU4GEO Julia hackathon on March 24-28, 2025 in Black Forest
 
 *Albert de Montserrat, Ivan Utkin, Ludovic Räss*
 
-[Chmy.jl documentation](https://ptsolvers.github.io/Chmy.jl/dev/) deployed using GitHub Action now rendering with VitePress available via the DocumenterVitepress package.
+[Chmy.jl documentation](https://ptsolvers.github.io/Chmy.jl/dev/) deployed using GitHub Action is now rendering with VitePress available via the [DocumenterVitepress](https://luxdl.github.io/DocumenterVitepress.jl/dev/) package. Minor modifications allow for a nice slick rendering 🚀
 
-To overcome recent changes made in CUDA.jl with respect to implicit synchronisation as this broke the communication/computation overlap capabilities in Chmy.
+CUDA 5.4 improved memory management, better tracking memory allocations (see https://juliagpu.org/post/2024-05-28-cuda_5.4/). One feature introduced would ensure implicit synchronisation removing the burden from the user to care about synchronising data used in multiple tasks (see 2. Using multiple streams), as introduced in [#2335](https://github.com/JuliaGPU/CUDA.jl/pull/2335). In Chmy distributed, we rely on launching boundary conditions and expensive I/O (MPI comm) operations using different tasks as to enable asynchronous GPU execution and e.g. overlap communication with computations. This design was broken as the new feature would lead to serialised execution. Using a new possibility to opt out from implicit sync strategy [#2662](https://github.com/JuliaGPU/CUDA.jl/pull/2662), we could modify Chmy and restore the async behaviour ([#65](https://github.com/PTsolvers/Chmy.jl/pull/65)).
+
 
 ## Jaumann stress rate in viscoplastic regularization routines
 
