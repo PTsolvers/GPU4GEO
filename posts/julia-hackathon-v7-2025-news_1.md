@@ -106,7 +106,7 @@ Can confirm: parallelism is the way 🧵🐙
 
 ~~~
 <center>
-    <img src="../../assets/images/64mpi.png" title="64 MPI ranks" alt="64 MPI ranks" width="75%">
+    <img src="../../assets/images/64mpi.PNG" title="64 MPI ranks" alt="64 MPI ranks" width="75%">
 </center>
 ~~~
 
