@@ -12,8 +12,6 @@ tags = ["activities", "julia", "coding"]
 
 We held our seventh GPU4GEO Julia hackathon on March 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions.
 
-> 🚧 more news to come!
-
 ## Jaumann stress rate in viscoplastic regularization routines
 
 *Lorenzo Candioti*
