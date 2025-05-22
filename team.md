@@ -131,6 +131,6 @@ header = "Team"
 
 > Senior researcher at the Laboratory of Hydraulics, Hydrology and Glaciology (VAW) at ETH Zurich. Glaciologist working on modelling and measuring glacier hydraulics. Interests in scientific computing and strolling around on glaciers.
 
-[**Yuri Podladchikov**](https://wp.unil.ch/geocomputing/) (Unil)
+[**Yuri Podladchikov**]() (Unil)
 
 > Professor of physics of geological processes at the Institute of Earth sciences, University of Lausanne.
