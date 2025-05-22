@@ -20,16 +20,16 @@ tw_descr = meta_descr
 website_url = "https://gpu4geo.org"
 
 footer_notice = """
-  © 2024 $author · Powered by
+  © 2025 $author · Powered by
     <a href="https://franklin.jl">Franklin.jl</a> &
     <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>."""
 
 nav_items = [
   "About" => "/about/",
-  "STREAM project" => "/stream/",
+  "∂GPU4GEO" => "/dgpu4geo/",
   "News"  => "/posts/",
-  "Software" => "/software/",
   "Team" => "/team/",
+  "Software" => "/software/",
   "Publications" => "/publications/"
 ]
 

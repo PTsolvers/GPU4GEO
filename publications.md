@@ -2,6 +2,22 @@
 header = "Publications"
 +++
 
+### 2025
+
+- Spang, A., Thielmann, M., de Montserrat, A., and Duretz, T. (in revision). **Transient propagation of ductile ruptures by thermal runaway.** ESS Open Archive . ebruary 06, 2025. [https://doi.org/10.22541/essoar.173884466.65638309/v1](https://doi.org/10.22541/essoar.173884466.65638309/v1)
+- Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025) **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
+- Riel, N., Kaus, B. J. P., de Montserrat, A., Moulas, E., Green, E. C. R., and Dominguez, H. (in revision). **An unconstrained formulation for complex solution phase minimization**. Geosci. Model Dev. Discuss., [https://doi.org/10.5194/gmd-2024-197](https://doi.org/10.5194/gmd-2024-197)
+
+### 2024
+
+- Liu, E. W., Räss, L., Herman, F., Podladchikov, Y., & Suckale, J. (2024). **Spontaneous formation of an internal shear band in ice flowing over topographically variable bedrock.** Journal of Geophysical Research: Earth Surface, 129, e2022JF007040. [https://doi.org/10.1029/2022JF007040](https://doi.org/10.1029/2022JF007040)
+- Macherel, E., Räss, L., and Schmalholz, S.M. (2024). **3D Stresses and Velocities Caused by Continental Plateaus: Scaling Analysis and Numerical Calculations With Application to the Tibetan Plateau.** Geochemistry, Geophysics, Geosystems 25, no. 3 (March 2024): e2023GC011356. [https://doi.org/10.1029/2023GC011356](https://doi.org/10.1029/2023GC011356)
+- Omlin, S., and Räss, L. (2024). **High-performance xPU Stencil Computations in Julia.** The Proceedings of the JuliaCon Conferences, 6(64), 138, [https://doi.org/10.21105/jcon.00138](https://doi.org/10.21105/jcon.00138)
+- Omlin, S., Räss, L., and Utkin, I. (2024). **Distributed Parallelization of xPU Stencil Computations in Julia.** The Proceedings of the JuliaCon Conferences, 6(65), 137. [https://doi.org/10.21105/jcon.00137](https://doi.org/10.21105/jcon.00137).
+- Sandip, A., Räss, L., and Morlighem, M. (2024). **Graphics-Processing-Unit-Accelerated Ice Flow Solver for Unstructured Meshes Using the Shallow-Shelf Approximation (FastIceFlo v1.0.1).** Geoscientific Model Development 17, no. 2 (February 2, 2024): 899–909. [https://doi.org/10.5194/gmd-17-899-2024](https://doi.org/10.5194/gmd-17-899-2024)
+- Spang, A., Thielmann, M., and Kiss, D. (2024). **Rapid ductile strain localization due to thermal runaway.** Journal of Geophysical Research: Solid Earth, 129, e2024JB028846. [https://doi.org/10.1029/2024JB028846](https://doi.org/10.1029/2024JB028846)
+- Kaus, B. J. P., Thielmann, M., Aellig, P., de Montserrat, A., de Siena, L., Frasukiewicz, J., Fuchs, L., Piccolo, A., Ranocha, H., Riel, N., Schuler, C., Spang, A., and Weiler, T. (2024). **GeophysicalModelGenerator. jl: A Julia package to visualise geoscientific data and create numerical model setups.** Journal of Open Source Software, 9(103), 6763. [https://doi.org/10.21105/joss.06763](https://doi.org/10.21105/joss.06763)
+
 ### 2023
 
 - Macherel, E., Podladchikov, Y., Räss, L., and Schmalholz, S. M. (2023). **Quantifying diapir ascent velocities in power-law viscous rock under far-field stress: Integrating analytical estimates, 3D numerical calculations and geodynamic applications.** Geochemistry, Geophysics, Geosystems, 24, e2023GC011115. [https://doi.org/10.1029/2023GC011115](https://doi.org/10.1029/2023GC011115)
@@ -13,10 +29,17 @@ header = "Publications"
 
 - Räss, L., Utkin, I., Duretz, T., Omlin, S., and Podladchikov, Y. Y. (2022). **Assessing the robustness and scalability of the accelerated pseudo-transient method**, Geosci. Model Dev., 15, 5757–5786. [https://doi.org/10.5194/gmd-15-5757-2022](https://doi.org/10.5194/gmd-15-5757-2022)
 - [preprint] Churavy, V., Godoy, W. F., Bauer, C., Ranocha, H., Schlottke-Lakemper, M., Räss, L., Blaschke, J., Giordano, M., Schnetter, E., Omlin, S., Vetter, J. S., & Edelman, A. (2022). **Bridging HPC Communities through the Julia Programming Language**. [https://doi.org/10.48550/ARXIV.2211.02740](https://doi.org/10.48550/ARXIV.2211.02740)
-- [preprint] Omlin, S., & Räss, L. (2022). **High-performance xPU Stencil Computations in Julia**. arXiv. [https://doi.org/10.48550/arXiv.2211.15634](https://doi.org/10.48550/arXiv.2211.15634)
-- [preprint] Omlin, S., Räss, L., & Utkin, I. (2022). **Distributed Parallelization of xPU Stencil Computations in Julia**. arXiv. [https://doi.org/10.48550/arXiv.2211.15716](https://doi.org/10.48550/arXiv.2211.15716)
 
 ## Conferences & Events
+
+### 2025
+
+:construction: coming soon
+
+### 2024
+
+:construction: coming soon
+
 ### 2023
 - [FastIce workshop](/posts/fastice-workshop/) at Stanford (SIGMA group, Dept. of Geophysics)
   - Thermo-mechanical modelling of ice sheets (Ludovic Räss)

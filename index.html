@@ -5,11 +5,11 @@
   <!-- Avatar, name & blurb -->
 
   <!-- <div class="avatar"> -->
-    <img src="/assets/images/gpu_fan.png" alt="avatar" width="80">
+    <img id="logo-img" src="/assets/images/dgpu4geo_logo_light.png" alt="avatar" width="700">
   <!-- </div> -->
 
-  <h1>{{author}}</h1>
-  <h2>{{author_blurb}}</h2>
+  <!-- <h1>{{author}}</h1> -->
+  <!-- <h2>{{author_blurb}}</h2> -->
 
   <!-- List of social icons -->
   <ul>
@@ -22,5 +22,27 @@
 
 </div>
 
+<!-- Hack to change logo from light to dark -->
+<script>
+  // Get toggle and image elements
+  const toggle = document.getElementById('dark-mode-toggle');
+  const logo = document.getElementById('logo-img');
+
+  // Helper: update image based on dark mode class
+  function updateLogo() {
+    const isDark = document.body.classList.contains('colorscheme-dark');
+    logo.src = isDark ? '/assets/images/dgpu4geo_logo_dark.png'
+                      : '/assets/images/dgpu4geo_logo_light.png';
+  }
+
+  // When page loads: adjust logo based on initial mode
+  document.addEventListener('DOMContentLoaded', updateLogo);
+
+  // When user toggles dark mode: wait a bit and then update logo
+  toggle.addEventListener('click', () => {
+    // Delay slightly to allow the class toggle to complete
+    setTimeout(updateLogo, 50);
+  });
+</script>
 
 {{insert foot.html}}
