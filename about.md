@@ -2,7 +2,7 @@
 header = "About"
 +++
 
-[∂GPU4GEO](../dgpu4geo) is our on-going [PASC](https://www.pasc-ch.org) funded scientific software development project aiming at developing "Differentiable multi-physics solvers for extreme-scale geophysics simulations on GPUs" with applications to the geosciences. ∂GPU4GEO aligns with the overall [GPU4GEO](#gpu4geo) initiative pushing the development of "Frontier GPU multi-physics solvers" to the next level. We started the GPU4GEO journey in 2021 and are excited to pursue it for the coming years.
+[∂GPU4GEO](../dgpu4geo) is our on-going [PASC funded](https://pasc-ch.org/projects/2025-2028/gpu4geo-differentiable-multi-physics-solvers-for-extreme-scale-geophysics-simulations-on-gpus/index.html) scientific software development project aiming at developing "Differentiable multi-physics solvers for extreme-scale geophysics simulations on GPUs" with applications to the geosciences. ∂GPU4GEO aligns with the overall [GPU4GEO](#gpu4geo) initiative pushing the development of "Frontier GPU multi-physics solvers" to the next level. We started the GPU4GEO journey in 2021 and are excited to pursue it for the coming years.
 
 ### GPU4GEO
 
