@@ -5,6 +5,7 @@ header = "Publications"
 ### 2025
 
 - Spang, A., Thielmann, M., de Montserrat, A., and Duretz, T. (in revision). **Transient propagation of ductile ruptures by thermal runaway.** ESS Open Archive . ebruary 06, 2025. [https://doi.org/10.22541/essoar.173884466.65638309/v1](https://doi.org/10.22541/essoar.173884466.65638309/v1)
+- Utkin, I., Chen, Y., Räss, L., and Werder, M. A. (2025). **Snapshot and time-dependent inversions of basal sliding using automatic generation of adjoint code on graphics processing units.** Journal of Glaciology, 1–22. [doi:10.1017/jog.2025.40](doi:10.1017/jog.2025.40)
 - Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025) **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
 - Riel, N., Kaus, B. J. P., de Montserrat, A., Moulas, E., Green, E. C. R., and Dominguez, H. (in revision). **An unconstrained formulation for complex solution phase minimization**. Geosci. Model Dev. Discuss., [https://doi.org/10.5194/gmd-2024-197](https://doi.org/10.5194/gmd-2024-197)
 
