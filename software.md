@@ -26,6 +26,7 @@ Current software development is hosted on the following GitHub organisations:
   - [AMDGPU.jl](https://github.com/JuliaGPU/AMDGPU.jl) _AMD GPU (ROCm) programming in Julia_
   - [CUDA.jl](https://github.com/JuliaGPU/CUDA.jl) _Nvidia GPU (CUDA) programming in Julia_
   - [KernelAbstractions.jl](https://github.com/JuliaGPU/KernelAbstractions.jl) _Heterogeneous programming in Julia_
+  - [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl) _Julia bindings for the Enzyme automatic differentiator_
 
 - **Proof-of-concept packages**
   - [ROCm-MPI](https://github.com/luraess/ROCm-MPI) _ROCm (-aware) GPU MPI tests on (pre-) exascale supercomputers_
