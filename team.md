@@ -129,7 +129,7 @@ header = "Team"
 
 [**Mauro Werder**](https://maurow.bitbucket.io) (WSL - ETHZ)
 
-> Senior researcher at the Laboratory of Hydraulics, Hydrology and Glaciology (VAW) at ETH Zurich. Glaciologist working on modelling and measuring glacier hydraulics. Interests in scientific computing and strolling around on glaciers.
+> Senior researcher at the Laboratory of Hydraulics, Hydrology and Glaciology (VAW) at ETH Zurich and WSL Sion. Glaciologist working on modelling and measuring glacier hydraulics. Interests in scientific computing and strolling around on glaciers.
 
 [**Yuri Podladchikov**]() (Unil)
 
