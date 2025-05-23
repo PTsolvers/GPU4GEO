@@ -50,6 +50,16 @@
   }
   </style>
 
+  <script>
+    // Apply saved theme early to prevent flash
+    const savedScheme = localStorage.getItem('colorscheme');
+    if (savedScheme === 'dark') {
+      document.body.classList.add('colorscheme-dark');
+    } else if (savedScheme === 'light') {
+      document.body.classList.add('colorscheme-light');
+    }
+  </script>
+
 </head>
 
 <body class="preload-transitions colorscheme-auto">
