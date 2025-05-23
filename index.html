@@ -24,24 +24,38 @@
 
 <!-- Hack to change logo from light to dark -->
 <script>
-  // Get toggle and image elements
   const toggle = document.getElementById('dark-mode-toggle');
   const logo = document.getElementById('logo-img');
+  const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-  // Helper: update image based on dark mode class
+  // Update logo based on dark/light mode class
   function updateLogo() {
     const isDark = document.body.classList.contains('colorscheme-dark');
     logo.src = isDark ? '/assets/images/dgpu4geo_logo_dark.png'
                       : '/assets/images/dgpu4geo_logo_light.png';
   }
 
-  // When page loads: adjust logo based on initial mode
+  // Update logo on DOM load
   document.addEventListener('DOMContentLoaded', updateLogo);
 
-  // When user toggles dark mode: wait a bit and then update logo
+  // Update logo when toggle clicked (with slight delay)
   toggle.addEventListener('click', () => {
-    // Delay slightly to allow the class toggle to complete
-    setTimeout(updateLogo, 50);
+    setTimeout(() => {
+      const isDark = document.body.classList.contains('colorscheme-dark');
+      localStorage.setItem('colorscheme', isDark ? 'dark' : 'light');
+      updateLogo();
+    }, 50);
+  });
+  // Watch for OS theme change
+  darkQuery.addEventListener('change', e => {
+    const prefersDark = e.matches;
+
+    // Apply correct class to body (you may need to adapt this logic to match your framework)
+    document.body.classList.remove('colorscheme-dark', 'colorscheme-light');
+    document.body.classList.add(prefersDark ? 'colorscheme-dark' : 'colorscheme-light');
+
+    // Update logo after theme switch
+    updateLogo();
   });
 </script>
 
