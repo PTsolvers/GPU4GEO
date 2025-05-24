@@ -31,7 +31,7 @@ This collaborative project proposes a broad set of applications, including plans
 ### Funding and collaborations
 
 The project, funded by the [PASC](https://pasc-ch.org) and the [Swiss National Supercomputing Centre - CSCS](https://www.cscs.ch) part of [ETH Zurich](https://ethz.ch/en.html), is an international collaboration between:
-- [Geocomputing Centre](https://vaw.ethz.ch/en/research/glaciology.html) @Unil
+- [Geocomputing Centre](https://unil-sgc.github.io) @Unil
 - [Geodynamics](https://www.geosciences.uni-mainz.de/geophysics-and-geodynamics/team/univ-prof-dr-boris-kaus/) @JGU Mainz
 - [GFD](https://gfd.ethz.ch) @ETH Zurich
 - [PRONTO Lab](https://wsmoses.com) @UIUC
