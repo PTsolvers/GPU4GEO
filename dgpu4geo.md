@@ -39,5 +39,5 @@ The project, funded by the [PASC](https://pasc-ch.org) and the [Swiss National S
 - [VAW-Glaciology](https://vaw.ethz.ch/en/research/glaciology.html) @ETH Zurich
 - [Geodynamics Modelling](https://sites.google.com/site/thibaultduretz/) @ Goethe Uni Frankfurt
 - [High-Performance Scientific Computing](https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/hpsc/) @Uni Augsburg
-- [Numerical Mathematics](https://ranocha.de/home#gsc.tab=0) @JGU Mainz
+- [Numerical Mathematics](https://ranocha.de) @JGU Mainz
 - [CSCS](https://www.cscs.ch) @ETH Zurich
