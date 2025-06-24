@@ -2,11 +2,11 @@
 header = "About"
 +++
 
-[∂GPU4GEO](../dgpu4geo) is our on-going [PASC funded](https://pasc-ch.org/projects/2025-2028/gpu4geo-differentiable-multi-physics-solvers-for-extreme-scale-geophysics-simulations-on-gpus/index.html) scientific software development project aiming at developing "Differentiable multi-physics solvers for extreme-scale geophysics simulations on GPUs" with applications to the geosciences. ∂GPU4GEO aligns with the overall [GPU4GEO](#gpu4geo) initiative pushing the development of "Frontier GPU multi-physics solvers" to the next level. We started the GPU4GEO journey in 2021 and are excited to pursue it for the coming years.
+[∂GPU4GEO](../dgpu4geo) is our on-going [PASC funded](https://pasc-ch.org/projects/2025-2028/gpu4geo-differentiable-multi-physics-solvers-for-extreme-scale-geophysics-simulations-on-gpus/index.html) scientific software development project aiming at developing **_Differentiable multi-physics solvers for extreme-scale geophysics simulations on GPUs_** with applications to the geosciences. ∂GPU4GEO aligns with the overall [GPU4GEO](#gpu4geo) initiative pushing the development of **_Frontier GPU multi-physics solvers_** to the next level. We started the GPU4GEO journey in 2021 and are excited to pursue it for the coming years.
 
 ### GPU4GEO
 
-The [GPU4GEO PASC project](https://www.pasc-ch.org/projects/2021-2024/gpu4geo/) started in 2021 as a scientific software development project aiming at building "Frontier GPU multi-physics solvers" with application to natural sciences - ice flow dynamics and geodynamics in particular.
+The [GPU4GEO PASC project](https://www.pasc-ch.org/projects/2021-2024/gpu4geo/) started in 2021 as a scientific software development project aiming at building **_Frontier GPU multi-physics solvers_** with application to natural sciences - ice flow dynamics and geodynamics in particular.
 
 Computational Earth sciences rely on modelling to understand and predict the evolution of complex physical systems. Ice sheet dynamics and geodynamics modelling are, despite their apparent differences, two domains that build upon similar physical models and ensuing computational challenges: Extremely large simulations which are not possible with the state of the art in high-performance computing (HPC), thus requiring next-generation supercomputers. Those large-scale simulations are crucial when assessing ice flow dynamics over Greenland and Antarctica, understanding the dynamic motion of Earth’s interior or performing three-dimensional simulations.
 
