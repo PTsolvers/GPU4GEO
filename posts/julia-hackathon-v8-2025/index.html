@@ -50,6 +50,16 @@
   }
   </style>
 
+  <script>
+    // Apply saved theme early to prevent flash
+    const savedScheme = localStorage.getItem('colorscheme');
+    if (savedScheme === 'dark') {
+      document.body.classList.add('colorscheme-dark');
+    } else if (savedScheme === 'light') {
+      document.body.classList.add('colorscheme-light');
+    }
+  </script>
+
 </head>
 
 <body class="preload-transitions colorscheme-auto">
@@ -59,6 +69,8 @@
       <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
   </div>
+
+  <main class="wrapper ">
 
   <main class="wrapper">
 
@@ -111,14 +123,67 @@
 
     <div class="content">
 
-        <section class="container list">
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/posts/julia-hackathon-v8-2025/index.html">
+        Julia hackathon v8.0 2025 - Announce
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2025-10-15'>
+            October 15, 2025
+          </time>
+        </span>
+
+        
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            1-minute read
+          </span>
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/tags/coding/">coding</a></span>
+      </div>
+    
+    </div>
+  </header>
 
 
-<h1 class="title">
-  <a class="title-link" href="/tags/activities/">Tag: activities</a>
-</h1>
+       
+       
+       
+<p>The <a href="/team">GPU4GEO team</a> and external collaborators will gather for the 8th Julia hackathon 🎉, <strong>November 24 - 28 2025</strong> to advance geoscientific Julia projects.</p>
+<h2 id="gpu4geo_julia_hackathon" > GPU4GEO Julia hackathon<a class="heading-link" href="#gpu4geo_julia_hackathon">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>After seven successful editions, we are happy to announce a 8th edition of the Julia hackathon, to be held in November 2025 in the Black Forest.</p>
+<p><strong>Save the dates: November 24 - 28 2025</strong></p>
+<p>During this event, we aim at moving forward with the various open-source Julia projects within ice-flow dynamics and geodynamics where collaboration with experts enables the fast track.</p>
+<p>Namely, we will focus on advancing Julia software engineering and high-performance, parallel, GPU-accelerated code development in following topics:</p>
+<ul>
+<li>Work on AD capabilities using <a href="https://github.com/EnzymeAD/Enzyme.jl">Enzyme.jl</a> on GPUs</li>
+<li>Further develop rheology and material parameter routines <a href="https://github.com/JuliaGeodynamics/GeoParams.jl">GeoParams.jl</a> and use/implement that in existing codes</li>
+<li>Advance several "differentiable modelling" projects</li>
+<li>Learn about the Chmy v0.2 prototype 🚀</li>
+<li>and more!</li>
+</ul>
+<p>Participant will team-up among topics of interest and work on their selected challenges in small groups during the week.</p>
+<p>Stay tuned as more news will follow...</p>
 
-<ul><li><span class="date">October 15, 2025  — </span><a class="title" href="/posts/julia-hackathon-v8-2025">Julia hackathon v8.0 2025 - Announce</a></li><li><span class="date">April 4, 2025  — </span><a class="title" href="/posts/julia-hackathon-v7-2025-news_1">Julia hackathon v7.0 2025 - Outcome</a></li><li><span class="date">February 15, 2025  — </span><a class="title" href="/posts/julia-hackathon-v7-2025">Julia hackathon v7.0 2025 - Announce</a></li><li><span class="date">October 22, 2024  — </span><a class="title" href="/posts/julia-hackathon-v6-2024-news_1">Julia hackathon v6.0 2024 - Outcome</a></li><li><span class="date">July 13, 2024  — </span><a class="title" href="/posts/julia-hackathon-v6-2024">Julia hackathon v6.0 2024 - Announce</a></li><li><span class="date">March 1, 2024  — </span><a class="title" href="/posts/julia-hackathon-v5-2024-news_1">Julia hackathon v5.0 2024 - Outcome</a></li><li><span class="date">November 23, 2023  — </span><a class="title" href="/posts/julia-hackathon-v5-2024">Julia hackathon v5.0 2024 - Announce</a></li><li><span class="date">September 19, 2023  — </span><a class="title" href="/posts/julia-hackathon-v4-2023-news_1">Julia hackathon v4.0 2023 - Outcome</a></li><li><span class="date">May 24, 2023  — </span><a class="title" href="/posts/julia-hackathon-v4-2023">Julia hackathon v4.0 2023 - Announce</a></li><li><span class="date">April 11, 2023  — </span><a class="title" href="/posts/julia-hackathon-v3-2023-news_1">Julia hackathon v3.0 2023 - Outcome</a></li><li><span class="date">February 8, 2023  — </span><a class="title" href="/posts/julia-hackathon-v3-2023">Julia hackathon v3.0 2023</a></li><li><span class="date">August 5, 2022  — </span><a class="title" href="/posts/julia-hackathon-v2-2022">Julia hackathon v2.0 2022</a></li><li><span class="date">April 11, 2022  — </span><a class="title" href="/posts/julia-hackathon-2022-news_3">Julia hackathon 2022 - GeoParams.jl and more</a></li><li><span class="date">April 11, 2022  — </span><a class="title" href="/posts/julia-hackathon-2022-news_4">Julia hackathon 2022 - ROCm &#40;AMDGPU&#41; MPI</a></li><li><span class="date">April 10, 2022  — </span><a class="title" href="/posts/julia-hackathon-2022-news_1">Julia hackathon 2022 - Stokes 3D, AD, and multi-AMDGPU</a></li><li><span class="date">April 10, 2022  — </span><a class="title" href="/posts/julia-hackathon-2022-news_2">Julia hackathon 2022 - LaMEM BinaryBuilder</a></li><li><span class="date">March 23, 2022  — </span><a class="title" href="/posts/julia-hackathon-2022">Julia hackathon 2022 - Final announcement</a></li></ul>
 
       </section>
     </div>
@@ -141,4 +206,3 @@
 
 </body>
 </html>
-
