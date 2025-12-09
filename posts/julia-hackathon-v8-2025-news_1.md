@@ -60,7 +60,11 @@ Once these tests are finalised and we clean up the documentation, a pull request
 
 Having a Julia interface to PETSc, rather than using PETSc directly from C brings many advantages. We can, for example, combine automatic differentiation tools of Julia to compute the jacobian. We have callback functions from PETSc to Julia to define residual functions. At the same time, we can use the full PETSc ecosystem to solve the equations with multigrid without having to code this up manually. This all works on MPI parallel machines as well. It can directly be combined with the whole Julia ecosystem (plotting, machine learning etc.). Here the results of the `porosity_waves.jl` example in 1D, which gives nice Newton convergence at every solution step:
 
-![Porosity wave example using PETSc.jl](h8_porositywave.png)
+~~~
+<center>
+    <img src="../../assets/images/h8_porositywave.png" title="Porosity wave example using PETSc.jl" alt="Porosity wave example using PETSc.jl" width="50%">
+</center>
+~~~
 
 ## Playing with Chmy.jl v0.2
 
@@ -70,4 +74,8 @@ Ivan presented Chmy v0.2 during the Hackathon, which is a game-changer for every
 
 Boris did some finger-warming exercises with it and wrote some 1D & 2D acoustic wave equation codes.
 
-![2D acoustic wave equation](h8_2D_acoustic_waves.png)
+~~~
+<center>
+    <img src="../../assets/images/h8_2D_acoustic_waves.png" title="2D acoustic wave equation" alt="2D acoustic wave equation" width="50%">
+</center>
+~~~
