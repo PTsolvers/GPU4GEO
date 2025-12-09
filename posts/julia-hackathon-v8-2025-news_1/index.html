@@ -204,13 +204,17 @@ the hackathon's daily routine.</p>
 <a href="https://github.com/JuliaParallel/PETSc.jl/tree/bk/wrapping_tests">https://github.com/JuliaParallel/PETSc.jl/tree/bk/wrapping_tests</a></p>
 <p>Once these tests are finalised and we clean up the documentation, a pull request will follow. We still need more tests for other parts of the library (say the <code>DMPLEX</code> interface to generate finite-element codes), but we leave that for future pull requests.</p>
 <p>Having a Julia interface to PETSc, rather than using PETSc directly from C brings many advantages. We can, for example, combine automatic differentiation tools of Julia to compute the jacobian. We have callback functions from PETSc to Julia to define residual functions. At the same time, we can use the full PETSc ecosystem to solve the equations with multigrid without having to code this up manually. This all works on MPI parallel machines as well. It can directly be combined with the whole Julia ecosystem (plotting, machine learning etc.). Here the results of the <code>porosity_waves.jl</code> example in 1D, which gives nice Newton convergence at every solution step:</p>
-<img src="h8_porositywave.png" alt="Porosity wave example using PETSc.jl"><h2 id="playing_with_chmy.jl_v0.2" > Playing with Chmy.jl v0.2<a class="heading-link" href="#playing_with_chmy.jl_v0.2">
+<center>
+    <img src="../../assets/images/h8_porositywave.png" title="Porosity wave example using PETSc.jl" alt="Porosity wave example using PETSc.jl" width="50%">
+</center><h2 id="playing_with_chmy.jl_v0.2" > Playing with Chmy.jl v0.2<a class="heading-link" href="#playing_with_chmy.jl_v0.2">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Boris Kaus & Ivan Utkin</em></p>
 <p>Ivan presented Chmy v0.2 during the Hackathon, which is a game-changer for everyone interested in solving PDE's using (staggered) finite difference. It basically uses a symbolic language to construct the discretisation, which is computed at compile-time, and thus comes at no costs during code execution.</p>
 <p>Boris did some finger-warming exercises with it and wrote some 1D & 2D acoustic wave equation codes.</p>
-<img src="h8_2D_acoustic_waves.png" alt="2D acoustic wave equation">
+<center>
+    <img src="../../assets/images/h8_2D_acoustic_waves.png" title="2D acoustic wave equation" alt="2D acoustic wave equation" width="50%">
+</center>
 
       </section>
     </div>
