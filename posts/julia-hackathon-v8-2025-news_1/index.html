@@ -40,6 +40,8 @@
   
 
   
+    <link rel="stylesheet" href="/libs/highlight/github.min.css">
+  
 
   <style>
   :root {
@@ -156,7 +158,7 @@
     
       <div class="tags">
         <i class="fa fa-tag" aria-hidden="true"></i>
-        <span class="tag"><a href="/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/tags/julia/">julia</a></span><span class="separator">•</span><span class="tag"><a href="/tags/coding/">coding</a></span>
+        <span class="tag"><a href="/tags/activities/">activities</a></span><span class="separator">•</span><span class="tag"><a href="/tags/julia/">Julia</a></span><span class="separator">•</span><span class="tag"><a href="/tags/coding/">coding</a></span>
       </div>
     
     </div>
@@ -166,7 +168,7 @@
        
        
        
-<div class="toc"><ol><li><a href="#heat_conduction_and_lamem.jl">Heat conduction and LaMEM.jl</a></li><li><a href="#project">Project</a></li></ol></div><p>We held our seventh (8th!) GPU4GEO Julia hackathon on November 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions...</p>
+<div class="toc"><ol><li><a href="#heat_conduction_and_lamem.jl">Heat conduction and LaMEM.jl</a></li><li><a href="#petsc.jl">PETSc.jl</a></li><li><a href="#playing_with_chmy.jl_v0.2">Playing with Chmy.jl v0.2</a></li></ol></div><p>We held our seventh (8th!) GPU4GEO Julia hackathon on November 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions...</p>
 <p>...but first a glimpse into
 
 <center>
@@ -191,12 +193,24 @@ the hackathon's daily routine.</p>
     <img src="../../assets/images/h8_jd_temp.png" title="Heat diffusion" alt="Heat diffusion" width="28.6%">
     <img src="../../assets/images/h8_jd_heat.gif" title="Heat diffusion" alt="Heat diffusion" width="35%">
 </center><p>Thanks to valuable feedback, I gained a better understanding of <a href="https://github.com/PTsolvers/Chmy.jl">Chmy.jl</a>, a package designed for discretising and prototyping transient (heat conduction) problems using an iterative finite-difference schemes. That is initially challenging for beginners, but with practice it enables rapid experimentation with boundary conditions, time-stepping strategies, and spatial discretisation without requiring deep expertise in low-level code optimisation. I took the opportunity to engage directly with the developers of the packages I use daily. I hope future Master’s students will have similar opportunities to connect with the modelling community and enrich their research.</p>
-<h2 id="project" > Project<a class="heading-link" href="#project">
+<h2 id="petsc.jl" > PETSc.jl<a class="heading-link" href="#petsc.jl">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
-</h2><p><em>author</em></p>
-<p>What we worked on</p>
-
+</h2><p><em>Boris Kaus</em></p>
+<p><a href="petsc.org">PETSc</a> is an important package for scientific computing on massively parallel high-performance computers. It is used in one way or the other in many open-source packages where it allows users to discretise the governing equations in parallel and use a whole zoo of customisable solvers to solve them in parallel (while changing the solvers with command-line options). Having a Julia interface to PETSc is therefore a natural request from users. This indeed exists in the form of <a href="https://github.com/JuliaParallel/PETSc.jl">PETSc.jl</a> of which Boris is a maintainer. Unfortunately, only a very small part of PETSc was wrapped to Julia because we created manual wrappers for every function. Since PETSc is a huge library with many decades of development manpower going into it by a large team of (mostly) volunteers, making wrappers for the full library in this way is nearly impossible.</p>
+<p>Since our first hackathon, we have been working on improving PETSc support in Julia. Initial efforts focussed in preparing precompiled binaries of the PETSc library, that work on all modern operating systems <code>PETSc_jll</code> (The Yggdrasil build recipe is <a href="https://github.com/JuliaPackaging/Yggdrasil/blob/master/P/PETSc/build_tarballs.jl">here</a>). Thanks to this we could precompile binaries for the geodynamic code <a href="https://github.com/UniMainzGeo/LaMEM">LaMEM</a> that work on all operating systems which is a great help for users (see <a href="https://github.com/JuliaGeodynamics/LaMEM.jl/">LaMEM.jl</a>).</p>
+<p>The issue with the <code>PETSc.jl</code> package was the difficulty of wrapping all functions. The beginning of the package dates back to 2016. But after many years of stalling development, because the initial contributors took up other jobs, Jeremy Kozdon and Boris started to work on this again in 2021. The ultimate goal was always to create automatic wrappers for the whole library, and Jeremy made fantastic progress during those days (using Clang). Yet, after Jeremy moved to industry this effort mostly stalled as well (lack of time on Boris side). More recently, Viral Shah helped to ensure that the main code was working again with more recent Julia versions. Yet, the limited functionality remained.</p>
+<p>This changed more recently, mostly because the main PETSc developer, Barry Smith, created a python script to automatically read in the whole PETSc library and return every function, structure etc, with arguments and types. Boris utilised that to automatically wrap the whole library, which started in september 2025 and is now achieved. Whereas the wrapping is not fully fool-proof (it does require manual work in some cases), it has the nice features that it automatically converts the docstrings from C to Julia and that it returns output objects in a more Julia-manner. Whereas the library is in principle wrapped, we can only know for sure if it works properly if we have tests for it all. Several years back Jeremy, Nicolas Berlie, Pascal Aellig and Boris created a whole range of tests for parts of PETSc (such as <code>Mat</code>, <code>KSP</code>, <code>SNES</code>, <code>Vec</code>, <code>DMDA</code>, <code>DMStag</code> objects). Before and during the hackathon Boris continued the work to make these tests compatible with the latest version of the library. The work is not fully finished, but we are nearly there. If you want to have a look, check out:
+<a href="https://github.com/JuliaParallel/PETSc.jl/tree/bk/wrapping_tests">https://github.com/JuliaParallel/PETSc.jl/tree/bk/wrapping_tests</a></p>
+<p>Once these tests are finalised and we clean up the documentation, a pull request will follow. We still need more tests for other parts of the library (say the <code>DMPLEX</code> interface to generate finite-element codes), but we leave that for future pull requests.</p>
+<p>Having a Julia interface to PETSc, rather than using PETSc directly from C brings many advantages. We can, for example, combine automatic differentiation tools of Julia to compute the jacobian. We have callback functions from PETSc to Julia to define residual functions. At the same time, we can use the full PETSc ecosystem to solve the equations with multigrid without having to code this up manually. This all works on MPI parallel machines as well. It can directly be combined with the whole Julia ecosystem (plotting, machine learning etc.). Here the results of the <code>porosity_waves.jl</code> example in 1D, which gives nice Newton convergence at every solution step:</p>
+<img src="h8_porositywave.png" alt="Porosity wave example using PETSc.jl"><h2 id="playing_with_chmy.jl_v0.2" > Playing with Chmy.jl v0.2<a class="heading-link" href="#playing_with_chmy.jl_v0.2">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus & Ivan Utkin</em></p>
+<p>Ivan presented Chmy v0.2 during the Hackathon, which is a game-changer for everyone interested in solving PDE's using (staggered) finite difference. It basically uses a symbolic language to construct the discretisation, which is computed at compile-time, and thus comes at no costs during code execution.</p>
+<p>Boris did some finger-warming exercises with it and wrote some 1D & 2D acoustic wave equation codes.</p>
+<img src="h8_2D_acoustic_waves.png" alt="2D acoustic wave equation">
 
       </section>
     </div>
@@ -213,6 +227,9 @@ the hackathon's daily routine.</p>
 
   
 
+  
+    <script src="/libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/libs/coder.min.js"></script>
