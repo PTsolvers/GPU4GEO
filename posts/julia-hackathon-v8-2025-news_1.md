@@ -62,7 +62,7 @@ Having a Julia interface to PETSc, rather than using PETSc directly from C bring
 
 ~~~
 <center>
-    <img src="../../assets/images/h8_porositywave.png" title="Porosity wave example using PETSc.jl" alt="Porosity wave example using PETSc.jl" width="50%">
+    <img src="../../assets/images/h8_porositywave.png" title="Porosity wave example using PETSc.jl" alt="Porosity wave example using PETSc.jl" width="75%">
 </center>
 ~~~
 
@@ -76,6 +76,6 @@ Boris did some finger-warming exercises with it and wrote some 1D & 2D acoustic 
 
 ~~~
 <center>
-    <img src="../../assets/images/h8_2D_acoustic_waves.png" title="2D acoustic wave equation" alt="2D acoustic wave equation" width="50%">
+    <img src="../../assets/images/h8_2D_acoustic_waves.png" title="2D acoustic wave equation" alt="2D acoustic wave equation" width="75%">
 </center>
 ~~~
