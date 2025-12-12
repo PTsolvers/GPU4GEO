@@ -168,7 +168,7 @@
        
        
        
-<div class="toc"><ol><li><a href="#heat_conduction_and_lamem.jl">Heat conduction and LaMEM.jl</a></li><li><a href="#petsc.jl">PETSc.jl</a></li><li><a href="#playing_with_chmy.jl_v0.2">Playing with Chmy.jl v0.2</a></li></ol></div><p>We held our seventh (8th!) GPU4GEO Julia hackathon on November 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions...</p>
+<div class="toc"><ol><li><a href="#heat_conduction_and_lamem.jl">Heat conduction and LaMEM.jl</a></li><li><a href="#petsc.jl">PETSc.jl</a></li><li><a href="#playing_with_chmy.jl_v0.2">Playing with Chmy.jl v0.2</a></li><li><a href="#introducing_advection_into_dedloc">Introducing Advection into DEDLoc</a></li></ol></div><p>We held our seventh (8th!) GPU4GEO Julia hackathon on November 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions...</p>
 <p>...but first a glimpse into
 
 <center>
@@ -214,6 +214,13 @@ the hackathon's daily routine.</p>
 <p>Boris did some finger-warming exercises with it and wrote some 1D & 2D acoustic wave equation codes.</p>
 <center>
     <img src="../../assets/images/h8_2D_acoustic_waves.png" title="2D acoustic wave equation" alt="2D acoustic wave equation" width="75%">
+</center><h2 id="introducing_advection_into_dedloc" > Introducing Advection into DEDLoc<a class="heading-link" href="#introducing_advection_into_dedloc">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Arne Spang & Albert de Montserrat</em></p>
+<p>Albert and me met a few weeks ago to add advection (i.e <a href="https://github.com/JuliaGeodynamics/JustPIC.jl">JustPIC</a>) to the 2D version of <a href="https://github.com/ArneSpang/DEDLoc">DEDLoc</a>. I finished the work at the hackathon and tested several cases for my thermal runaway models. Considering advection of temperature reduces the maximum temperature by about 100 C and maximum velocities by about one order of magnitude. Interpolating directly from particles to cell centers results in a smaller impact. For a strongly refined grid, the effect on temperature is still large, but velocities are almost unaffected by advection. Interpolating directly to centers does not work here yet, so work remains in progress.</p>
+<center>
+    <img src="../../assets/images/h8_advection.png" title="Effects of adding advection to highly localized thermal runaway." alt="Effects of adding advection to highly localized thermal runaway." width="75%">
 </center>
 
       </section>
