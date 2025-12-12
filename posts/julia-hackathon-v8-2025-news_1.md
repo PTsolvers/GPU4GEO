@@ -79,3 +79,15 @@ Boris did some finger-warming exercises with it and wrote some 1D & 2D acoustic 
     <img src="../../assets/images/h8_2D_acoustic_waves.png" title="2D acoustic wave equation" alt="2D acoustic wave equation" width="75%">
 </center>
 ~~~
+
+## Introducing Advection into DEDLoc
+
+*Arne Spang & Albert de Montserrat*
+
+Albert and me met a few weeks ago to add advection (i.e [JustPIC](https://github.com/JuliaGeodynamics/JustPIC.jl)) to the 2D version of [DEDLoc](https://github.com/ArneSpang/DEDLoc). I finished the work at the hackathon and tested several cases for my thermal runaway models. Considering advection of temperature reduces the maximum temperature by about 100 C and maximum velocities by about one order of magnitude. Interpolating directly from particles to cell centers results in a smaller impact. For a strongly refined grid, the effect on temperature is still large, but velocities are almost unaffected by advection. Interpolating directly to centers does not work here yet, so work remains in progress.
+
+~~~
+<center>
+    <img src="../../assets/images/h8_advection.png" title="Effects of adding advection to highly localized thermal runaway." alt="Effects of adding advection to highly localized thermal runaway." width="75%">
+</center>
+~~~
