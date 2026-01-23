@@ -1,4 +1,4 @@
-<img width="619" height="223" alt="image" src="https://github.com/user-attachments/assets/4ab77a1f-1836-4084-b61a-90077356dd48" />+++
++++
 using Dates
 
 title = "Julia hackathon v8.0 2025 - Outcome"
