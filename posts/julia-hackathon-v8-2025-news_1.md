@@ -96,7 +96,7 @@ Albert and me met a few weeks ago to add advection (i.e [JustPIC](https://github
 
 *Nobuaki Fuji & Thibault Duretz*
 
-While still under construction, [flexOPT](https://github.com/seismobassoon/flexOPT) can now handle many data formats (including your drawing) to compute seismic wave propagation, neutrino propagation (more to come, I hope). During this 8th edition of hackathon, I was concentrated on the optimisation of compact operator coefficients construction with the aid of GPU. Unlike equation 42 of [Fuji and Duretz (2025, still unpublished](https://arxiv.org/abs/2505.02320), Thibault and I wanted to propose to use mixture of Taylor expansions from all the points in time and space concerned, which rapidly increases the number of for-loop... Thanks to Ludo and Ivan, I was able to make that motor work. But since I do not have still sexy figures, here I just show the whatsoever model that you can literally draw by yourself.
+While still under construction, [flexOPT](https://github.com/seismobassoon/flexOPT) can now handle many data formats (including your drawing) to compute seismic wave propagation, neutrino propagation (more to come, I hope). During this 8th edition of hackathon, I was concentrated on the optimisation of compact operator coefficients construction with the aid of GPU. Unlike equation 42 of [Fuji and Duretz (2025), still unpublished](https://arxiv.org/abs/2505.02320), Thibault and I wanted to propose to use mixture of Taylor expansions from all the points in time and space concerned, which rapidly increases the number of for-loop... Thanks to Ludo and Ivan, I was able to make that motor work. But since I do not have still sexy figures, here I just show the whatsoever model that you can literally draw by yourself.
 
 ~~~
 <center>
