@@ -91,3 +91,13 @@ Albert and me met a few weeks ago to add advection (i.e [JustPIC](https://github
     <img src="../../assets/images/h8_advection.png" title="Effects of adding advection to highly localized thermal runaway." alt="Effects of adding advection to highly localized thermal runaway." width="75%">
 </center>
 ~~~
+
+## flexOPT.jl
+
+While still under construction, [flexOPT](https://github.com/seismobassoon/flexOPT) can now handle many data formats (including your drawing) to compute seismic wave propagation, neutrino propgation (more to come, I hope). During this 8th edition of hackathon, I was concentrated on the optimisation of compact operator coefficients construction with the aid of GPU. Unlike equation 42 of [Fuji and Duretz (2025, still unpublished](https://arxiv.org/abs/2505.02320), Thibault and I wanted to propose to use mixture of Taylor expansions from all the points in time and space concerned, which rapidly increases the number of for-loop... Thanks to Ludo and Ivan, I was able to make that motor work. But since I do not have still sexy figures, here I just show the whatsoever model that you can litterally draw by yourself.
+~~~
+<center>
+    <img src="../../assets/images/h8_flexOPT.png" title="model anything" alt="model anything" width="75%">
+</center>
+~~~
+
