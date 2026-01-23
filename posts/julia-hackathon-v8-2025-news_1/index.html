@@ -168,7 +168,7 @@
        
        
        
-<div class="toc"><ol><li><a href="#heat_conduction_and_lamem.jl">Heat conduction and LaMEM.jl</a></li><li><a href="#petsc.jl">PETSc.jl</a></li><li><a href="#playing_with_chmy.jl_v0.2">Playing with Chmy.jl v0.2</a></li><li><a href="#introducing_advection_into_dedloc">Introducing Advection into DEDLoc</a></li></ol></div><p>We held our seventh (8th!) GPU4GEO Julia hackathon on November 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions...</p>
+<div class="toc"><ol><li><a href="#heat_conduction_and_lamem.jl">Heat conduction and LaMEM.jl</a></li><li><a href="#petsc.jl">PETSc.jl</a></li><li><a href="#playing_with_chmy.jl_v0.2">Playing with Chmy.jl v0.2</a></li><li><a href="#introducing_advection_into_dedloc">Introducing Advection into DEDLoc</a></li><li><a href="#flexopt.jl">flexOPT.jl</a></li></ol></div><p>We held our seventh (8th!) GPU4GEO Julia hackathon on November 24-28, 2025 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects and some visual impressions...</p>
 <p>...but first a glimpse into
 
 <center>
@@ -221,7 +221,15 @@ the hackathon's daily routine.</p>
 <p>Albert and me met a few weeks ago to add advection (i.e <a href="https://github.com/JuliaGeodynamics/JustPIC.jl">JustPIC</a>) to the 2D version of <a href="https://github.com/ArneSpang/DEDLoc">DEDLoc</a>. I finished the work at the hackathon and tested several cases for my thermal runaway models. Considering advection of temperature reduces the maximum temperature by about 100 C and maximum velocities by about one order of magnitude. Interpolating directly from particles to cell centers results in a smaller impact. For a strongly refined grid, the effect on temperature is still large, but velocities are almost unaffected by advection. Interpolating directly to centers does not work here yet, so work remains in progress.</p>
 <center>
     <img src="../../assets/images/h8_advection.png" title="Effects of adding advection to highly localized thermal runaway." alt="Effects of adding advection to highly localized thermal runaway." width="75%">
-</center>
+</center><h2 id="flexopt.jl" > flexOPT.jl<a class="heading-link" href="#flexopt.jl">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p>While still under construction, <a href="https://github.com/seismobassoon/flexOPT">flexOPT</a> can now handle many data formats (including your drawing) to compute seismic wave propagation, neutrino propgation (more to come, I hope). During this 8th edition of hackathon, I was concentrated on the optimisation of compact operator coefficients construction with the aid of GPU. Unlike equation 42 of <a href="https://arxiv.org/abs/2505.02320">Fuji and Duretz (2025, still unpublished</a>, Thibault and I wanted to propose to use mixture of Taylor expansions from all the points in time and space concerned, which rapidly increases the number of for-loop... Thanks to Ludo and Ivan, I was able to make that motor work. But since I do not have still sexy figures, here I just show the whatsoever model that you can litterally draw by yourself.
+
+<center>
+    <img src="../../assets/images/h8_flexOPT.png" title="model anything" alt="model anything" width="75%">
+</center></p>
+
 
       </section>
     </div>
