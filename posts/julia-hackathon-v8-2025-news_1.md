@@ -103,3 +103,17 @@ While still under construction, [flexOPT](https://github.com/seismobassoon/flexO
     <img src="../../assets/images/h8_flexOPT.png" title="model anything" alt="model anything" width="75%">
 </center>
 ~~~
+
+## Plastic yielding in MDOODZ7
+
+*Lorenzo Candioti*
+
+During the hackathon, I started implementing the combined mode-I/mode-II yield function proposed by [Popov et al. (2025)](https://doi.org/10.5194/gmd-18-7035-2025) into the geodynamic modelling software [MDOODZ7](https://github.com/tduretz/MDOODZ7.0). I began by reproducing a 0D stress integration test of their parameterization in Julia, validating its mechanics. I then integrated the yield function into MDOODZ7, enhancing its ability to simulate crustal fracturing processes.
+
+~~~
+<center>
+    <img src="../../assets/images/h8_AccVolPlasticStrain.gif" title="model anything" alt="model anything" width="75%">
+</center>
+~~~
+
+The GIF shows the thermomechanical evolution of a magma chamber, represented as a circular thermal anomaly in the crust. This anomaly induces thermal stresses, increasing the volumetric plastic strain at the chamber’s apex. In this region, the elevated probability of tensile fracturing indicates a potential for eruptions.
