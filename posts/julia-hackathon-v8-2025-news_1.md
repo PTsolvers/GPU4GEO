@@ -112,7 +112,7 @@ During the hackathon, I started implementing the combined mode-I/mode-II yield f
 
 ~~~
 <center>
-    <img src="../../assets/images/h8_AccVolPlasticStrain.gif" title="model anything" alt="model anything" width="75%">
+    <img src="../../assets/images/h8_AccVolPlasticStrain.gif" title="Plastic yielding" alt="Plastic yielding" width="50%">
 </center>
 ~~~
 
