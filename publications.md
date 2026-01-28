@@ -2,13 +2,18 @@
 header = "Publications"
 +++
 
-### 2025
+### 2026
 
-- Spang, A., Thielmann, M., Pranger, C., de Montserrat, A., and Räss, L. (in revision). **Overcoming the numerical challenges owing to rapid ductile localization**. Geosci. Model Dev. Discuss.
+-  de Monserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://github.com/openjournals/joss-papers/blob/joss.09365/joss.09365/10.21105.joss.09365.pdf)
+
+- Spang, A., Thielmann, M., Pranger, C., de Montserrat, A., and Räss, L. (2026). **Overcoming the numerical challenges owing to rapid ductile localization with DEDLoc (version 1.0.0)**, Geosci. Model Dev., 19, 369–388, [https://doi.org/10.5194/gmd-19-369-2026](https://doi.org/10.5194/gmd-19-369-2026)
+  
+### 2025
+- Duretz, T., de Monserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2025). **Automatic tuning of iterative pseudo-transient solvers for modelling the deformation of heterogeneous media**, EGUsphere (preprint), [https://doi.org/10.5194/egusphere-2025-5641](https://doi.org/10.5194/egusphere-2025-5641)
 - Spang, A., Thielmann, M., de Montserrat, A., and Duretz, T. (2025). **Transient propagation of ductile ruptures by thermal runaway.** Journal of Geophysical Research: Solid Earth, 130, e2025JB031240. [https://doi.org/10.1029/2025JB031240](https://doi.org/10.1029/2025JB031240)
 - Utkin, I., Chen, Y., Räss, L., and Werder, M. A. (2025). **Snapshot and time-dependent inversions of basal sliding using automatic generation of adjoint code on graphics processing units.** Journal of Glaciology, 1–22. [https://doi.org/10.1017/jog.2025.40](https://doi.org/10.1017/jog.2025.40)
 - Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025) **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
-- Riel, N., Kaus, B. J. P., de Montserrat, A., Moulas, E., Green, E. C. R., and Dominguez, H. (in revision). **An unconstrained formulation for complex solution phase minimization**. Geosci. Model Dev. Discuss., [https://doi.org/10.5194/gmd-2024-197](https://doi.org/10.5194/gmd-2024-197)
+- Riel, N., Kaus, B. J. P., de Montserrat, A., Moulas, E., Green, E. C. R., and Dominguez, H. (2025). **A bound-constrained formulation for complex solution phase minimization**, Geosci. Model Dev., 18, 6951–6962, [https://doi.org/10.5194/gmd-18-6951-2025](https://doi.org/10.5194/gmd-18-6951-2025)
 
 ### 2024
 
