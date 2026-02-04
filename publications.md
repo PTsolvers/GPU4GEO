@@ -4,7 +4,7 @@ header = "Publications"
 
 ### 2026
 
--  de Monserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://github.com/openjournals/joss-papers/blob/joss.09365/joss.09365/10.21105.joss.09365.pdf)
+-  de Monserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://joss.theoj.org/papers/10.21105/joss.09365)
 - Spang, A., Thielmann, M., Pranger, C., de Montserrat, A., and Räss, L. (2026). **Overcoming the numerical challenges owing to rapid ductile localization with DEDLoc (version 1.0.0)**, Geosci. Model Dev., 19, 369–388, [https://doi.org/10.5194/gmd-19-369-2026](https://doi.org/10.5194/gmd-19-369-2026)
 
 ### 2025
