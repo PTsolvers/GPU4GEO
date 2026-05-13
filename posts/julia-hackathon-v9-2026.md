@@ -12,7 +12,7 @@ The [∂GPU4GEO team](/team) and external collaborators will gather for the 9th 
 
 ## ∂GPU4GEO Julia hackathon
 
-After seven successful editions, we are happy to announce a 8th edition of the Julia hackathon, to be held in March 2026 in the Black Forest.
+After seven successful editions, we are happy to announce a 9th edition of the Julia hackathon, to be held in March 2026 in the Black Forest.
 
 **Save the dates: March 16 - 20 2026**
 
