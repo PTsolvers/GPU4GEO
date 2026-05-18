@@ -20,7 +20,7 @@ tw_descr = meta_descr
 website_url = "https://gpu4geo.org"
 
 footer_notice = """
-  © 2025 $author · Powered by
+  © $(Dates.year(Dates.now())) $author · Powered by
     <a href="https://franklin.jl">Franklin.jl</a> &
     <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>."""
 
