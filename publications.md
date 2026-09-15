@@ -4,26 +4,26 @@ header = "Publications"
 
 ### 2026
 
--  de Monserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://joss.theoj.org/papers/10.21105/joss.09365)
+- de Montserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://joss.theoj.org/papers/10.21105/joss.09365)
 - Spang, A., Thielmann, M., Pranger, C., de Montserrat, A., and Räss, L. (2026). **Overcoming the numerical challenges owing to rapid ductile localization with DEDLoc (version 1.0.0)**, Geosci. Model Dev., 19, 369–388, [https://doi.org/10.5194/gmd-19-369-2026](https://doi.org/10.5194/gmd-19-369-2026)
 
 ### 2025
 
-- Duretz, T., de Monserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2025). **Automatic tuning of iterative pseudo-transient solvers for modelling the deformation of heterogeneous media**, EGUsphere (preprint), [https://doi.org/10.5194/egusphere-2025-5641](https://doi.org/10.5194/egusphere-2025-5641)
+- Duretz, T., de Montserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2025). **Automatic tuning of iterative pseudo-transient solvers for modelling the deformation of heterogeneous media**, EGUsphere (preprint), [https://doi.org/10.5194/egusphere-2025-5641](https://doi.org/10.5194/egusphere-2025-5641)
 - Spang, A., Thielmann, M., de Montserrat, A., and Duretz, T. (2025). **Transient propagation of ductile ruptures by thermal runaway.** Journal of Geophysical Research: Solid Earth, 130, e2025JB031240. [https://doi.org/10.1029/2025JB031240](https://doi.org/10.1029/2025JB031240)
 - Utkin, I., Chen, Y., Räss, L., and Werder, M. A. (2025). **Snapshot and time-dependent inversions of basal sliding using automatic generation of adjoint code on graphics processing units.** Journal of Glaciology, 1–22. [https://doi.org/10.1017/jog.2025.40](https://doi.org/10.1017/jog.2025.40)
-- Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025) **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
+- Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025). **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
 - Riel, N., Kaus, B. J. P., de Montserrat, A., Moulas, E., Green, E. C. R., and Dominguez, H. (2025). **A bound-constrained formulation for complex solution phase minimization**, Geosci. Model Dev., 18, 6951–6962, [https://doi.org/10.5194/gmd-18-6951-2025](https://doi.org/10.5194/gmd-18-6951-2025)
 
 ### 2024
 
 - Liu, E. W., Räss, L., Herman, F., Podladchikov, Y., & Suckale, J. (2024). **Spontaneous formation of an internal shear band in ice flowing over topographically variable bedrock.** Journal of Geophysical Research: Earth Surface, 129, e2022JF007040. [https://doi.org/10.1029/2022JF007040](https://doi.org/10.1029/2022JF007040)
-- Macherel, E., Räss, L., and Schmalholz, S.M. (2024). **3D Stresses and Velocities Caused by Continental Plateaus: Scaling Analysis and Numerical Calculations With Application to the Tibetan Plateau.** Geochemistry, Geophysics, Geosystems 25, no. 3 (March 2024): e2023GC011356. [https://doi.org/10.1029/2023GC011356](https://doi.org/10.1029/2023GC011356)
+- Macherel, E., Räss, L., and Schmalholz, S. M. (2024). **3D Stresses and Velocities Caused by Continental Plateaus: Scaling Analysis and Numerical Calculations With Application to the Tibetan Plateau.** Geochemistry, Geophysics, Geosystems 25, no. 3 (March 2024): e2023GC011356. [https://doi.org/10.1029/2023GC011356](https://doi.org/10.1029/2023GC011356)
 - Omlin, S., and Räss, L. (2024). **High-performance xPU Stencil Computations in Julia.** The Proceedings of the JuliaCon Conferences, 6(64), 138, [https://doi.org/10.21105/jcon.00138](https://doi.org/10.21105/jcon.00138)
 - Omlin, S., Räss, L., and Utkin, I. (2024). **Distributed Parallelization of xPU Stencil Computations in Julia.** The Proceedings of the JuliaCon Conferences, 6(65), 137. [https://doi.org/10.21105/jcon.00137](https://doi.org/10.21105/jcon.00137).
 - Sandip, A., Räss, L., and Morlighem, M. (2024). **Graphics-Processing-Unit-Accelerated Ice Flow Solver for Unstructured Meshes Using the Shallow-Shelf Approximation (FastIceFlo v1.0.1).** Geoscientific Model Development 17, no. 2 (February 2, 2024): 899–909. [https://doi.org/10.5194/gmd-17-899-2024](https://doi.org/10.5194/gmd-17-899-2024)
 - Spang, A., Thielmann, M., and Kiss, D. (2024). **Rapid ductile strain localization due to thermal runaway.** Journal of Geophysical Research: Solid Earth, 129, e2024JB028846. [https://doi.org/10.1029/2024JB028846](https://doi.org/10.1029/2024JB028846)
-- Kaus, B. J. P., Thielmann, M., Aellig, P., de Montserrat, A., de Siena, L., Frasukiewicz, J., Fuchs, L., Piccolo, A., Ranocha, H., Riel, N., Schuler, C., Spang, A., and Weiler, T. (2024). **GeophysicalModelGenerator. jl: A Julia package to visualise geoscientific data and create numerical model setups.** Journal of Open Source Software, 9(103), 6763. [https://doi.org/10.21105/joss.06763](https://doi.org/10.21105/joss.06763)
+- Kaus, B. J. P., Thielmann, M., Aellig, P., de Montserrat, A., de Siena, L., Frasukiewicz, J., Fuchs, L., Piccolo, A., Ranocha, H., Riel, N., Schuler, C., Spang, A., and Weiler, T. (2024). **GeophysicalModelGenerator.jl: A Julia package to visualise geoscientific data and create numerical model setups.** Journal of Open Source Software, 9(103), 6763. [https://doi.org/10.21105/joss.06763](https://doi.org/10.21105/joss.06763)
 
 ### 2023
 
@@ -53,7 +53,7 @@ header = "Publications"
   - Massively parallel inverse modelling on GPUs using the adjoint method (Ivan Utkin)
 - [JuliaCon2023](https://juliacon.org/2023/) - the conference dedicated to the Julia programming language
   - Workshop: [Differentiable modelling on GPUs](https://pretalx.com/juliacon2023/talk/GTKJZL/) (Ludovic Räss, Ivan Utkin, Sam Omlin)
-  - [Minisymposium: Julia for High-Performance Computing](hhttps://pretalx.com/juliacon2023/talk/PC8PZ8/)
+  - [Minisymposium: Julia for High-Performance Computing](https://pretalx.com/juliacon2023/talk/PC8PZ8/)
     - Scalability and HPC readiness of Julia’s AMD GPU stack (Ludovic Räss)
   - Main conference
     - [Massively parallel inverse modelling on GPUs with Enzyme](https://pretalx.com/juliacon2023/talk/YKUD8Q/) (Ivan Utkin, Ludovic Räss, Sam Omlin)
