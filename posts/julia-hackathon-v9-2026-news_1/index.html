@@ -168,17 +168,16 @@
        
        
        
-<div class="toc"><ol><li><a href="#adding_full_advection_for_variable_grid_spacing">Adding full Advection for variable grid spacing</a></li><li><a href="#testing_new_julia_packages_for_implicit_stokes_solvers">Testing new Julia packages for implicit Stokes solvers</a></li></ol></div><p>We held our seventh 9th ∂GPU4GEO Julia hackathon on march 16-20, 2026 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.</p>
+<div class="toc"><ol><li><a href="#adding_full_advection_for_variable_grid_spacing">Adding full Advection for variable grid spacing</a></li><li><a href="#testing_new_julia_packages_for_implicit_stokes_solvers">Testing new Julia packages for implicit Stokes solvers</a></li></ol></div><p>We held our 9th ∂GPU4GEO Julia hackathon on march 16-20, 2026 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.</p>
 <h2 id="adding_full_advection_for_variable_grid_spacing" > Adding full Advection for variable grid spacing<a class="heading-link" href="#adding_full_advection_for_variable_grid_spacing">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Arne Spang & Albert de Montserrat</em></p>
 <p>Albert and I worked on adding particle-in-cell advection (<a href="https://github.com/JuliaGeodynamics/JustPIC.jl">JustPIC</a>) to my 2D thermal runaway code (<a href="https://github.com/ArneSpang/DEDLoc">DEDLoc</a>). This work already started last hackathon and we had to deal with several challenges including variable grid spacing, differences in discretization, minimizing interpolations and adding stress rotations. But we ultimately succeeded. JustPIC now supports variable grids (<a href="https://github.com/JuliaGeodynamics/JustPIC.jl/pull/269">#PR 269</a>) and DEDLoc now has advection of temperature and stresses, including rotations. It works on CPU and GPU.</p>
 <p>This addition makes DEDLoc much more reliable in accurately describing the strong temperature contrasts at extreme deformation rates. Also thanks to Ivan, Ludovic and Albert (again) for a fruitful discussion about how to optimize the convergence criteria and minimize unnecessary iterations.</p>
-<p><a href="p align="center"">p align="center"</a>
-    <a href="img src="../_assets/images/h9_DEDLoc_2D.gif" title="Thermal runaway" alt="Thermal runaway" width="90%"">img src="../_assets/images/h9_DEDLoc_2D.gif" title="Thermal runaway" alt="Thermal runaway" width="90%"</a>
-</p></p>
-<h2 id="testing_new_julia_packages_for_implicit_stokes_solvers" > Testing new Julia packages for implicit Stokes solvers<a class="heading-link" href="#testing_new_julia_packages_for_implicit_stokes_solvers">
+<p align="center">
+    <img src="../../assets/images/h9_DEDLoc_2D.gif" title="Thermal runaway" alt="Thermal runaway" width="60%">
+</p><h2 id="testing_new_julia_packages_for_implicit_stokes_solvers" > Testing new Julia packages for implicit Stokes solvers<a class="heading-link" href="#testing_new_julia_packages_for_implicit_stokes_solvers">
   <i class="fa fa-link" aria-hidden="true"></i>
 </a>
 </h2><p><em>Hugo Dominguez and Jacob Frasunkiewicz</em></p>
@@ -194,10 +193,9 @@
 <p>SparseConnectivityTracer.jl traces the residual function once and hands back the sparsity pattern automatically, so the pattern is always correct for whatever physics is currently in the residual, with no manual bookkeeping to maintain. The trick to have good performance for discretised system is to use the tracer type <code>Set&lbrace;Int&rbrace;</code>, compared to the default <code>BitSet</code>. That makes it scale linearly with the number of connectivity and allowed us to get total sparsity pattern in less than 30 sec for a 800x800 grid.</p>
 <p>NonlinearSolve.jl is the part that ties the other two together into something that runs in a black-box-like solver. It takes the residual, the sparsity pattern, and (via <a href="https://github.com/JuliaDiff/ForwardDiff.jl">ForwardDiff.jl</a>) the means to fill in the Jacobian, and drives the actual Newton iterations (the linear solve at each step via <a href="https://github.com/SciML/LinearSolve.jl">LinearSolve.jl</a>, line search, convergence tolerances etc..) through a generic interface that doesn't care about any of our specific physics.</p>
 <p>Here is the result for our 2D shear band setup:</p>
-<p><a href="p align="center"">p align="center"</a>
-  <a href="img src="../_assets/images/julia_hackathon_v9_shearband_HD.gif" width="90%"">img src="../_assets/images/julia_hackathon_v9_shearband_HD.gif" width="90%"</a>
-</p></p>
-
+<p align="center">
+  <img src="../../assets/images/julia_hackathon_v9_shearband_HD.gif" width="60%">
+</p>
 
       </section>
     </div>
