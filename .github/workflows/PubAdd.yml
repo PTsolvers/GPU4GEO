@@ -62,6 +62,7 @@ jobs:
           title: "Publications: add from #${{ github.event.issue.number }}"
           body-path: ${{ runner.temp }}/report.md
           commit-message: "Add publications from #${{ github.event.issue.number }}"
+          labels: publication
           add-paths: |
             publications.md
             _pubbot/seen_dois.txt

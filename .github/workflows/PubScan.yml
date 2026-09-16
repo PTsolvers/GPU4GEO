@@ -69,6 +69,7 @@ jobs:
           title: "Publications: new papers from the latest scan"
           body-path: ${{ runner.temp }}/report.md
           commit-message: "Add publications from scan"
+          labels: publication
           add-paths: |
             publications.md
             _pubbot/seen_dois.txt
