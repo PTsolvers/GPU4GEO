@@ -2,9 +2,9 @@
 
 Keeps [publications.md](../publications.md) up to date. Two GitHub workflows use it:
 
-- **Weekly scan** ([PubScan.yml](../.github/workflows/PubScan.yml)): every Monday, finds recent papers by
-  the people in [people.toml](people.toml) that use the Julia stack in [config.toml](config.toml), and
-  opens a pull request that adds them. A new scan is skipped while the previous pull request is open.
+- **Scan** ([PubScan.yml](../.github/workflows/PubScan.yml)): on the 1st and 15th of each month, finds recent
+  papers by the people in [people.toml](people.toml) that use the Julia stack in [config.toml](config.toml),
+  and opens a pull request that adds them. A scan is skipped while the previous pull request is open.
 - **Add a publication** issue form ([PubAdd.yml](../.github/workflows/PubAdd.yml)): repository
   collaborators paste DOIs, and a pull request with the formatted entries is opened.
 
@@ -58,7 +58,7 @@ PDF text is cached in `_pubbot/.cache` (git-ignored).
 ## OpenAlex quota
 
 OpenAlex meters its API: without a key, 1000 credits per day per IP address, shared with everyone
-else on the same GitHub runner. A list request costs 1 credit and a full-text search 10. A weekly
+else on the same GitHub runner. A list request costs 1 credit and a full-text search 10. Each
 scan uses a few dozen credits (more on the first run, which checks the whole lookback window).
 Get a free API key at <https://openalex.org> and store it as the repository secret `OPENALEX_API_KEY`;
 locally, export the same variable.

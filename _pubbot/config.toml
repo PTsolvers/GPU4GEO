@@ -1,7 +1,7 @@
 # Publication bot settings.
 
 [scan]
-# How far back the weekly scan looks. DOIs already on the page or in seen_dois.txt
+# How far back each scan looks. DOIs already on the page or in seen_dois.txt
 # are skipped, so a generous window only costs API calls.
 lookback_months = 18
 # OpenAlex work types considered publications.

@@ -6,7 +6,7 @@ end
 function save_seen(path::AbstractString, seen::Set{String})
     open(path, "w") do io
         println(io, "# DOIs already evaluated by the publication bot (_pubbot); they are not proposed again.")
-        println(io, "# Delete a line to have that DOI evaluated again by the next weekly scan.")
+        println(io, "# Delete a line to have that DOI evaluated again by the next scan.")
         foreach(d -> println(io, d), sort!(collect(seen)))
     end
 end
