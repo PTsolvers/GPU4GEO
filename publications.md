@@ -27,6 +27,7 @@ header = "Publications"
 - Sandip, A., Räss, L., and Morlighem, M. (2024). **Graphics-Processing-Unit-Accelerated Ice Flow Solver for Unstructured Meshes Using the Shallow-Shelf Approximation (FastIceFlo v1.0.1).** Geoscientific Model Development 17, no. 2 (February 2, 2024): 899–909. [https://doi.org/10.5194/gmd-17-899-2024](https://doi.org/10.5194/gmd-17-899-2024)
 - Spang, A., Thielmann, M., and Kiss, D. (2024). **Rapid ductile strain localization due to thermal runaway.** Journal of Geophysical Research: Solid Earth, 129, e2024JB028846. [https://doi.org/10.1029/2024JB028846](https://doi.org/10.1029/2024JB028846)
 - Kaus, B. J. P., Thielmann, M., Aellig, P., de Montserrat, A., de Siena, L., Frasukiewicz, J., Fuchs, L., Piccolo, A., Ranocha, H., Riel, N., Schuler, C., Spang, A., and Weiler, T. (2024). **GeophysicalModelGenerator.jl: A Julia package to visualise geoscientific data and create numerical model setups.** Journal of Open Source Software, 9(103), 6763. [https://doi.org/10.21105/joss.06763](https://doi.org/10.21105/joss.06763)
+- Sevilla, R., and Duretz, T. (2024). **Face-centred finite volume methods for Stokes flows with variable viscosity.** International Journal for Numerical Methods in Engineering, 125(10), e7450. [https://doi.org/10.1002/nme.7450](https://doi.org/10.1002/nme.7450)
 
 ### 2023
 
@@ -41,6 +42,7 @@ header = "Publications"
 
 - Räss, L., Utkin, I., Duretz, T., Omlin, S., and Podladchikov, Y. Y. (2022). **Assessing the robustness and scalability of the accelerated pseudo-transient method**, Geosci. Model Dev., 15, 5757–5786. [https://doi.org/10.5194/gmd-15-5757-2022](https://doi.org/10.5194/gmd-15-5757-2022)
 - [preprint] Churavy, V., Godoy, W. F., Bauer, C., Ranocha, H., Schlottke-Lakemper, M., Räss, L., Blaschke, J., Giordano, M., Schnetter, E., Omlin, S., Vetter, J. S., & Edelman, A. (2022). **Bridging HPC Communities through the Julia Programming Language**. [https://doi.org/10.48550/ARXIV.2211.02740](https://doi.org/10.48550/ARXIV.2211.02740)
+- Sanan, P., May, D. A., Mills, R. T., and Kaus, B. J. P. (2022). **DMStag: Staggered, Structured Grids for PETSc.** Journal of Open Source Software, 7(79), 4531. [https://doi.org/10.21105/joss.04531](https://doi.org/10.21105/joss.04531)
 
 ## Conferences & Events
 
