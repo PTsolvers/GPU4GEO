@@ -1,0 +1,2 @@
+# DOIs already evaluated by the publication bot (_pubbot); they are not proposed again.
+# Delete a line to have that DOI evaluated again by the next weekly scan.

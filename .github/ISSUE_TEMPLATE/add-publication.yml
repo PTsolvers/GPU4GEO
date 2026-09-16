@@ -1,0 +1,22 @@
+name: Add a publication
+description: Add papers to the Publications page from their DOI (repository collaborators).
+title: "[Publication] "
+labels: ["publication"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste one or more DOIs. A pull request with the formatted entries is opened automatically
+        for review. Papers should use the Julia stack GPU4GEO works on.
+  - type: textarea
+    id: dois
+    attributes:
+      label: DOI(s)
+      description: One per line, e.g. `10.5194/gmd-19-5343-2026` or `https://doi.org/10.5194/gmd-19-5343-2026`.
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Note
+      description: Optional context for the reviewer.

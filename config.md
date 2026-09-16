@@ -2,7 +2,7 @@
 
 prepath = ""
 
-ignore = ["website-memo.md"]
+ignore = ["website-memo.md", "_pubbot/"]
 
 # Layout information
 

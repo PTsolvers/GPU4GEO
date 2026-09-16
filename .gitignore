@@ -4,3 +4,4 @@ __site/
 .vscode
 
 Manifest.toml
+_pubbot/.cache/
