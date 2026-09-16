@@ -126,7 +126,7 @@ header = "Team"
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-    <img src="/assets/images/headshot_pa.jpeg" alt="Pascal Aellig" style="width:100px; border-radius:20%; object-fit: cover; margin-top: 0;">
+    <img src="/assets/images/headshot_pa.jpg" alt="Pascal Aellig" style="width:100px; border-radius:20%; object-fit: cover; margin-top: 0;">
     <div style="display: flex; flex-direction: column; justify-content: flex-start;">
         <p style="margin: 0;"><strong><a href="https://github.com/aelligp" target="_blank" rel="noopener">Pascal Aellig</a></strong> (JGU)</p>
         <span>PhD student in computational geosciences at the Johannes Gutenberg-University in Mainz. He co-develops JustRelax.jl and other packages for geodynamic modelling. He aims to model the evolution of magmatic systems of various scales, predicting sill convection and large scale caldera collapse.</span>
