@@ -4,12 +4,15 @@ header = "Publications"
 
 ### 2026
 
+- Duretz, T., de Montserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2026). **Automatic tuning of iterative pseudo-transient solvers for modeling the deformation of heterogeneous media.** Geoscientific Model Development, 19(12), 5343–5362. [https://doi.org/10.5194/gmd-19-5343-2026](https://doi.org/10.5194/gmd-19-5343-2026)
+- Aellig, P. S., de Montserrat, A., and Kaus, B. J. P. (2026). **Thermo-Mechanical Controls on Central-Vent Caldera Collapse.** Journal of Geophysical Research: Solid Earth, 131(9), e2026JB034434. [https://doi.org/10.1029/2026jb034434](https://doi.org/10.1029/2026jb034434)
+- Frasunkiewicz, J., Schuler, C., Moulas, E., and Kaus, B. J. P. (2026). **Automatic adjoints without the algebra: flexible sensitivity analysis of nonlinear problems in the geosciences.** EGUsphere (preprint). [https://doi.org/10.5194/egusphere-2026-3963](https://doi.org/10.5194/egusphere-2026-3963)
 - de Montserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://joss.theoj.org/papers/10.21105/joss.09365)
 - Spang, A., Thielmann, M., Pranger, C., de Montserrat, A., and Räss, L. (2026). **Overcoming the numerical challenges owing to rapid ductile localization with DEDLoc (version 1.0.0)**, Geosci. Model Dev., 19, 369–388, [https://doi.org/10.5194/gmd-19-369-2026](https://doi.org/10.5194/gmd-19-369-2026)
 
 ### 2025
 
-- Duretz, T., de Montserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2025). **Automatic tuning of iterative pseudo-transient solvers for modelling the deformation of heterogeneous media**, EGUsphere (preprint), [https://doi.org/10.5194/egusphere-2025-5641](https://doi.org/10.5194/egusphere-2025-5641)
+- Fuji, N., and Duretz, T. (2025). **Optimally accurate operators for partial differential equations.** arXiv (preprint). [https://doi.org/10.48550/ARXIV.2505.02320](https://doi.org/10.48550/ARXIV.2505.02320)
 - Spang, A., Thielmann, M., de Montserrat, A., and Duretz, T. (2025). **Transient propagation of ductile ruptures by thermal runaway.** Journal of Geophysical Research: Solid Earth, 130, e2025JB031240. [https://doi.org/10.1029/2025JB031240](https://doi.org/10.1029/2025JB031240)
 - Utkin, I., Chen, Y., Räss, L., and Werder, M. A. (2025). **Snapshot and time-dependent inversions of basal sliding using automatic generation of adjoint code on graphics processing units.** Journal of Glaciology, 1–22. [https://doi.org/10.1017/jog.2025.40](https://doi.org/10.1017/jog.2025.40)
 - Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025). **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
@@ -24,9 +27,12 @@ header = "Publications"
 - Sandip, A., Räss, L., and Morlighem, M. (2024). **Graphics-Processing-Unit-Accelerated Ice Flow Solver for Unstructured Meshes Using the Shallow-Shelf Approximation (FastIceFlo v1.0.1).** Geoscientific Model Development 17, no. 2 (February 2, 2024): 899–909. [https://doi.org/10.5194/gmd-17-899-2024](https://doi.org/10.5194/gmd-17-899-2024)
 - Spang, A., Thielmann, M., and Kiss, D. (2024). **Rapid ductile strain localization due to thermal runaway.** Journal of Geophysical Research: Solid Earth, 129, e2024JB028846. [https://doi.org/10.1029/2024JB028846](https://doi.org/10.1029/2024JB028846)
 - Kaus, B. J. P., Thielmann, M., Aellig, P., de Montserrat, A., de Siena, L., Frasukiewicz, J., Fuchs, L., Piccolo, A., Ranocha, H., Riel, N., Schuler, C., Spang, A., and Weiler, T. (2024). **GeophysicalModelGenerator.jl: A Julia package to visualise geoscientific data and create numerical model setups.** Journal of Open Source Software, 9(103), 6763. [https://doi.org/10.21105/joss.06763](https://doi.org/10.21105/joss.06763)
+- Sevilla, R., and Duretz, T. (2024). **Face-centred finite volume methods for Stokes flows with variable viscosity.** International Journal for Numerical Methods in Engineering, 125(10), e7450. [https://doi.org/10.1002/nme.7450](https://doi.org/10.1002/nme.7450)
 
 ### 2023
 
+- Schmitt, A. K., Sliwinski, J., Caricchi, L., Bachmann, O., Riel, N., Kaus, B. J. P., Cisneros de Léon, A., Cornet, J., Friedrichs, B., Lovera, O., Sheldrake, T., and Weber, G. (2023). **Zircon age spectra to quantify magma evolution.** Geosphere, 19(4), 1006–1031. [https://doi.org/10.1130/ges02563.1](https://doi.org/10.1130/ges02563.1)
+- Duretz, T., Räss, L., de Borst, R., and Hageman, T. (2023). **A Comparison of Plasticity Regularization Approaches for Geodynamic Modeling.** Geochemistry, Geophysics, Geosystems, 24(7), e2022GC010675. [https://doi.org/10.1029/2022gc010675](https://doi.org/10.1029/2022gc010675)
 - Macherel, E., Podladchikov, Y., Räss, L., and Schmalholz, S. M. (2023). **Quantifying diapir ascent velocities in power-law viscous rock under far-field stress: Integrating analytical estimates, 3D numerical calculations and geodynamic applications.** Geochemistry, Geophysics, Geosystems, 24, e2023GC011115. [https://doi.org/10.1029/2023GC011115](https://doi.org/10.1029/2023GC011115)
 - Schmalholz, S. M., Moulas, E., Räss, L., and Müntener, O. (2023). **Serpentinite dehydration and olivine vein formation during ductile shearing: Insights from 2D numerical modeling on porosity generation, density variations, and transient weakening.** Journal of Geophysical Research: Solid Earth, 128, e2023JB026985. [https://doi.org/10.1029/2023JB026985](https://doi.org/10.1029/2023JB026985)
 - Räss, L., Werder, M. A., Utkin, I., and Omlin, S. (2023). **Teaching supercomputing and software engineering skills to science and engineering students**, ETH Learning and Teaching Journal, Vol 4, No 1, 2023. [https://doi.org/10.16906/lt-eth.v4i1.235](https://doi.org/10.16906/lt-eth.v4i1.235)
@@ -36,6 +42,7 @@ header = "Publications"
 
 - Räss, L., Utkin, I., Duretz, T., Omlin, S., and Podladchikov, Y. Y. (2022). **Assessing the robustness and scalability of the accelerated pseudo-transient method**, Geosci. Model Dev., 15, 5757–5786. [https://doi.org/10.5194/gmd-15-5757-2022](https://doi.org/10.5194/gmd-15-5757-2022)
 - [preprint] Churavy, V., Godoy, W. F., Bauer, C., Ranocha, H., Schlottke-Lakemper, M., Räss, L., Blaschke, J., Giordano, M., Schnetter, E., Omlin, S., Vetter, J. S., & Edelman, A. (2022). **Bridging HPC Communities through the Julia Programming Language**. [https://doi.org/10.48550/ARXIV.2211.02740](https://doi.org/10.48550/ARXIV.2211.02740)
+- Sanan, P., May, D. A., Mills, R. T., and Kaus, B. J. P. (2022). **DMStag: Staggered, Structured Grids for PETSc.** Journal of Open Source Software, 7(79), 4531. [https://doi.org/10.21105/joss.04531](https://doi.org/10.21105/joss.04531)
 
 ## Conferences & Events
 
