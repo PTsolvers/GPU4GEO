@@ -4,12 +4,14 @@ header = "Publications"
 
 ### 2026
 
+- Duretz, T., de Montserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2026). **Automatic tuning of iterative pseudo-transient solvers for modeling the deformation of heterogeneous media.** Geoscientific Model Development, 19(12), 5343–5362. [https://doi.org/10.5194/gmd-19-5343-2026](https://doi.org/10.5194/gmd-19-5343-2026)
+- Aellig, P. S., de Montserrat, A., and Kaus, B. J. P. (2026). **Thermo-Mechanical Controls on Central-Vent Caldera Collapse.** Journal of Geophysical Research: Solid Earth, 131(9), e2026JB034434. [https://doi.org/10.1029/2026jb034434](https://doi.org/10.1029/2026jb034434)
 - de Montserrat, A., Aellig, P., Schuler, C., Navarrete, I., Räss, L., Kaus, B., Dominguez, H. (2026). **JustRelax.jl: A Julia package for geodynamic modeling with matrix-free solvers**. Journal of Open Source Software, 11(117), 9365. [https://doi.org/10.21105/joss.09365](https://joss.theoj.org/papers/10.21105/joss.09365)
 - Spang, A., Thielmann, M., Pranger, C., de Montserrat, A., and Räss, L. (2026). **Overcoming the numerical challenges owing to rapid ductile localization with DEDLoc (version 1.0.0)**, Geosci. Model Dev., 19, 369–388, [https://doi.org/10.5194/gmd-19-369-2026](https://doi.org/10.5194/gmd-19-369-2026)
 
 ### 2025
 
-- Duretz, T., de Montserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2025). **Automatic tuning of iterative pseudo-transient solvers for modelling the deformation of heterogeneous media**, EGUsphere (preprint), [https://doi.org/10.5194/egusphere-2025-5641](https://doi.org/10.5194/egusphere-2025-5641)
+- Fuji, N., and Duretz, T. (2025). **Optimally accurate operators for partial differential equations.** arXiv (preprint). [https://doi.org/10.48550/ARXIV.2505.02320](https://doi.org/10.48550/ARXIV.2505.02320)
 - Spang, A., Thielmann, M., de Montserrat, A., and Duretz, T. (2025). **Transient propagation of ductile ruptures by thermal runaway.** Journal of Geophysical Research: Solid Earth, 130, e2025JB031240. [https://doi.org/10.1029/2025JB031240](https://doi.org/10.1029/2025JB031240)
 - Utkin, I., Chen, Y., Räss, L., and Werder, M. A. (2025). **Snapshot and time-dependent inversions of basal sliding using automatic generation of adjoint code on graphics processing units.** Journal of Glaciology, 1–22. [https://doi.org/10.1017/jog.2025.40](https://doi.org/10.1017/jog.2025.40)
 - Huo, Z., Alkhimenkov, Y., Jaboyedoff, M., Podladchikov, Y., Räss, L., Wyser, E., and Mei, G. (2025). **A High-Performance Backend-Agnostic Material Point Method Solver in Julia.** Computers and Geotechnics 183. [https://doi.org/10.1016/j.compgeo.2025.107189](https://doi.org/10.1016/j.compgeo.2025.107189)
