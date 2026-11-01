@@ -4,6 +4,7 @@ header = "Publications"
 
 ### 2026
 
+- Fackler, P. W., Valero-Lara, P., Miniskar, N. R., Hahn, S., Mankad, H., Chiang, D., Gonzalez, J., Gonzalez, J., Huante, A., Tang, Y. K., Yang, E., Winogrodzki, C. A., Bhirud, R., Samaroo, J., Alomairy, R., Edelman, A., Blaschke, J., Schanen, M., Diehl, P., Pelofske, E., Boussuge, J.-F., Räss, L., Marras, S., Nagai, Y., Vetter, J. S., Teranishi, K., and Godoy, W. F. (2026). **JACC v1.0: High-productivity Performance Portability in the LLVM-compiled Julia Language.** Research Square (preprint). [https://doi.org/10.21203/rs.3.rs-10856841/v1](https://doi.org/10.21203/rs.3.rs-10856841/v1)
 - Duretz, T., de Montserrat, A., Sevilla, R., Räss, L., Utkin, I., and Spang, A. (2026). **Automatic tuning of iterative pseudo-transient solvers for modeling the deformation of heterogeneous media.** Geoscientific Model Development, 19(12), 5343–5362. [https://doi.org/10.5194/gmd-19-5343-2026](https://doi.org/10.5194/gmd-19-5343-2026)
 - Aellig, P. S., de Montserrat, A., and Kaus, B. J. P. (2026). **Thermo-Mechanical Controls on Central-Vent Caldera Collapse.** Journal of Geophysical Research: Solid Earth, 131(9), e2026JB034434. [https://doi.org/10.1029/2026jb034434](https://doi.org/10.1029/2026jb034434)
 - Frasunkiewicz, J., Schuler, C., Moulas, E., and Kaus, B. J. P. (2026). **Automatic adjoints without the algebra: flexible sensitivity analysis of nonlinear problems in the geosciences.** EGUsphere (preprint). [https://doi.org/10.5194/egusphere-2026-3963](https://doi.org/10.5194/egusphere-2026-3963)
