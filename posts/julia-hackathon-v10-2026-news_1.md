@@ -25,3 +25,10 @@ Strictly speaking this wasn't during the Hackathon, but somewhat before. [MagmaT
     <img src="../../assets/images/HighRes2D.gif" title="Magma injection in the crust @ 2.5m resolution" alt="Magma injection in the crust @ 2.5m resolutio" width="60%">
 </p>
 ~~~
+
+
+## DRex.jl: adding ODFTEX
+
+*Boris Kaus*
+
+[DRex.jl](https://github.com/JuliaGeodynamics/DRex.jl) was started during the last hackathon as a Julia translation of [PyDRex](https://github.com/seismic-anisotropy/PyDRex), which predicts how olivine crystals align in a deforming mantle and hence the seismic anisotropy we can expect from a geodynamic model (following the widely-used DRex method of Neil Ribe). The Julia version is more than three orders of magnitude faster than the Python one, also computes finite strain tensors, and can post-process 3D [LaMEM](https://github.com/JuliaGeodynamics/LaMEM.jl) simulations. During this hackaton, we have expanded it to include the new ODFTEX method of [Ribe, Faccenda & VanderBeek (2026)](https://doi.org/10.1093/gji/ggag170) ([#PR 4](https://github.com/JuliaGeodynamics/DRex.jl/pull/4)). Instead of tracking thousands of individual grains, ODFTEX evolves a continuous orientation distribution with a single recrystallisation parameter, which makes it faster and free of sampling noise. In a 2D convection test with 9600 aggregates both methods predict nearly the same anisotropy, but ODFTEX was about 20 times faster. Switching between the two is a single keyword (`method = :drex` or `method = :odftex`), and the documentation reproduces the key figures of both papers.
