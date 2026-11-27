@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
+
+  
+
+  <meta name="author" content="GPU4GEO">
+  <meta name="description" content="GPU4GEO project website">
+  <meta name="keywords" content="GPU,Earth-sciences,Supercomputing">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GPU4GEO">
+  <meta name="twitter:description" content="GPU4GEO project website">
+
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="GPU4GEO project website">
+  <meta property="og:type" content="website">
+
+  <title>GPU4GEO</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/css/coder-dark.min.css" media="screen">
+  <link rel="stylesheet" href="/css/my_style.css" media="screen">
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/images/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+    <link rel="stylesheet" href="/libs/highlight/github.min.css">
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
+  <script>
+    // Apply saved theme early to prevent flash
+    const savedScheme = localStorage.getItem('colorscheme');
+    if (savedScheme === 'dark') {
+      document.body.classList.add('colorscheme-dark');
+    } else if (savedScheme === 'light') {
+      document.body.classList.add('colorscheme-light');
+    }
+  </script>
+
+</head>
+
+<body class="preload-transitions colorscheme-auto">
+
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <main class="wrapper ">
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/">
+      GPU4GEO
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/dgpu4geo/">∂GPU4GEO</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/posts/">News</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/team/">Team</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/software/">Software</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/publications/">Publications</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/posts/julia-hackathon-v10-2026-news_1/index.html">
+        Julia hackathon v10.0 2026 - Outcome
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2026-11-27'>
+            November 27, 2026
+          </time>
+        </span>
+
+        
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            3-minutes read
+          </span>
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/tags/julia/">Julia</a></span><span class="separator">•</span><span class="tag"><a href="/tags/coding/">coding</a></span><span class="separator">•</span><span class="tag"><a href="/tags/activities/">activities</a></span>
+      </div>
+    
+    </div>
+  </header>
+
+
+       
+       
+       
+<div class="toc"><ol><li><a href="#magmathermokinematics.jl_update">MagmaThermoKinematics.jl update</a></li><li><a href="#mantlefabric.jl_adding_odftex">MantleFabric.jl: adding ODFTEX</a></li><li><a href="#seismicwavepc.jl_a_new_julia_code_to_simulate_seismic_waves_and_do_full_waveform_inversion_on_(parallel)_gpus">SeismicWavePC.jl: a new julia code to simulate seismic waves and do full-waveform inversion on (parallel) GPUs</a></li><li><a href="#geophysicalmodelgenerator.jl_giving_the_gravity_solver_a_bit_of_love">GeophysicalModelGenerator.jl: giving the gravity solver a bit of love</a></li></ol></div><p>We held our 10th anniversary ∂GPU4GEO Julia hackathon on November 23-27, 2026 in Black Forest (DE), focussing on a wide range of Julia topics. Hereafter a glimpse into the progress made by some participants on various Julia-related projects.</p>
+<h2 id="magmathermokinematics.jl_update" > MagmaThermoKinematics.jl update<a class="heading-link" href="#magmathermokinematics.jl_update">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus & Pascal Aellig</em></p>
+<p>Strictly speaking this wasn't during the Hackathon, but somewhat before. <a href="https://github.com/boriskaus/MagmaThermoKinematics.jl">MagmaThermoKinematics</a> is our Julia package to simulate the thermal evolution of magmatic systems. We have given it a substantial revamp, switched to KernelAbstractions, added various parameterisations such as convective cooling when a magma body is mostly molten, added an eruption parameterisations which removes magma if the conditions are right, track the motion of the free surface (and hist rock) during magma injection/extraction, and added an implicit enthalpy based, energy conserving, numerical solver (allowing for larger timesteps). 
+ Oh yes, and we performed the highest resolution simulation ever for a volcano (resolving the whole crust with a 2.5 m grid spacing in 2D and 50m in 3D). In 2D, that allows resolving 10m thick dikes and sills (natural lengthscales). A manuscript was send to <a href="https://joss.theoj.org/papers/2439033fcee4e1807e216412d01ab35f">JOSS</a> with more details.</p>
+<p align="center">
+    <img src="../../assets/images/HighRes2D.gif" title="Magma injection in the crust @ 2.5m resolution" alt="Magma injection in the crust @ 2.5m resolution" width="60%">
+</p><h2 id="mantlefabric.jl_adding_odftex" > MantleFabric.jl: adding ODFTEX<a class="heading-link" href="#mantlefabric.jl_adding_odftex">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus</em></p>
+<p><a href="https://github.com/JuliaGeodynamics/MantleFabric.jl">MantleFabric.jl</a> was started during the last hackathon as a Julia translation of <a href="https://github.com/seismic-anisotropy/PyDRex">PyDRex</a>, which predicts how olivine crystals align in a deforming mantle and hence the seismic anisotropy we can expect from a geodynamic model (following the widely-used DRex method of Neil Ribe). The Julia version is more than three orders of magnitude faster than the Python one, also computes finite strain tensors, and can post-process 3D <a href="https://github.com/JuliaGeodynamics/LaMEM.jl">LaMEM</a> simulations. During this hackaton, we have expanded it to include the new ODFTEX method of <a href="https://doi.org/10.1093/gji/ggag170">Ribe, Faccenda & VanderBeek (2026)</a> (<a href="https://github.com/JuliaGeodynamics/DRex.jl/pull/4">#PR 4</a>). Instead of tracking thousands of individual grains, ODFTEX evolves a continuous orientation distribution with a single recrystallisation parameter, which makes it faster and free of sampling noise. In a 2D convection test with 9600 aggregates both methods predict nearly the same anisotropy, but ODFTEX was about 20 times faster. Switching between the two is a single keyword (<code>method = :drex</code> or <code>method = :odftex</code>), and the documentation reproduces the key figures of both papers.</p>
+<h2 id="seismicwavepc.jl_a_new_julia_code_to_simulate_seismic_waves_and_do_full_waveform_inversion_on_(parallel)_gpus" > SeismicWavePC.jl: a new julia code to simulate seismic waves and do full-waveform inversion on (parallel) GPUs<a class="heading-link" href="#seismicwavepc.jl_a_new_julia_code_to_simulate_seismic_waves_and_do_full_waveform_inversion_on_(parallel)_gpus">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus and Ludovic Raess</em></p>
+<p>We released <a href="https://github.com/JuliaGeodynamics/SeismicWavePC.jl">SeismicWavePC.jl</a>, a pure Julia package for seismic waves in 2D and 3D visco-elastic media and for full-waveform inversion (FWI). It runs on CPU threads, on NVIDIA, AMD and Apple GPUs, and with MPI. It started as a port of the Fortran code OpenSWPC, whose seismograms it reproduces to round-off. It handles topography, oceans, attenuation, VTI anisotropy, PML boundaries and teleseismic plane waves, and takes any model built with <a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator.jl</a>, such as thermal models of magmatic systems with MAGEMin velocities. It also computes exact adjoint gradients and Born modelling, and plugs into Optim.jl and Turing.jl for deterministic and Bayesian inversion.</p>
+<p>On the elastic Marmousi2 benchmark (5 m grid, 2.4 million cells, 5317 time steps), our code on 12 CPU threads is as fast as Devito (5.3 s vs 5.2 s). On a laptop GPU (Apple Metal) it takes 2.7 s, 6× faster than OpenSWPC on 12 MPI ranks. A misfit gradient takes 22 s on the GPU, 18× faster than SeismicWaves.jl. For accuracy, we checked the seismograms against OpenSWPC, SPECFEM2D, analytical solutions (to 0.1–0.5 %) and Devito, which converges to our seismograms as its grid is refined. Compared to Devito we lack higher-order (>4) stencils and tilted anisotropy, but we offer elastic gradients, topography and everything in Julia. Here are waves from an earthquake below a volcano:</p>
+<p align="center">
+    <img src="../../assets/images/Unzen_2D_waves_10m.gif" title="2D model of seismic wave propagation below a volcano with magma reservoir" alt="2D model of seismic wave propagation below a volcano with magma reservoir" width="80%">
+</p><h2 id="geophysicalmodelgenerator.jl_giving_the_gravity_solver_a_bit_of_love" > GeophysicalModelGenerator.jl: giving the gravity solver a bit of love <a class="heading-link" href="#geophysicalmodelgenerator.jl_giving_the_gravity_solver_a_bit_of_love">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h2><p><em>Boris Kaus</em></p>
+<p><a href="https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl">GeophysicalModelGenerator.jl v0.10.1</a> comes with a much extended gravity code (<a href="https://juliageodynamics.github.io/GeophysicalModelGenerator.jl/dev/man/gravity_code">docs</a>). <code>voxel_grav</code> computes gravity anomalies and their horizontal gradients from 3D density models: on a flat Earth (<code>CartData</code>) or on the reference ellipsoid (<code>GeoData</code>), at the grid columns or at arbitrary stations such as survey points, and on grids with variable spacing. New helpers compute normal gravity (GRS80) and simple and complete Bouguer corrections, so you can go from observed gravity to Bouguer anomalies. <code>voxel_grav_adjoint</code> computes the sensitivity of the anomaly to the density, which makes it easy to plug GMG models into Julia's inversion ecosystem. The docs work through least-squares inversions with <a href="https://github.com/JuliaSmoothOptimizers/Krylov.jl">Krylov.jl</a> and <a href="https://github.com/JuliaNLSolvers/Optim.jl">Optim.jl</a>, and probabilistic (Hamiltonian Monte Carlo) inversions with <a href="https://turinglang.org">Turing.jl</a> and <a href="https://github.com/TuringLang/AdvancedHMC.jl">AdvancedHMC.jl</a>. With the optional <a href="https://github.com/JuliaGPU/KernelAbstractions.jl">KernelAbstractions.jl</a> backend, the same code also runs on all CPU threads or on a GPU (CUDA, AMD or Apple Metal).</p>
+<p><strong>And yes it is fast.</strong> Every cell is treated as a point mass plus its quadrupole term, and cells close to a station are subdivided adaptively. We compared it with <a href="https://github.com/fatiando/harmonica">Harmonica</a>, <a href="https://simpeg.xyz">SimPEG</a>, GMT <code>gravprisms</code>, <a href="https://cran.r-project.org/package=gravmagsubs">gravmagsubs</a> (Fortran) and <a href="https://github.com/leouieda/tesseroids">Tesseroids</a> (C) on the same model with 10,201 stations above 300,000 prisms. GMG agrees with their exact prism formulas to 2×10⁻⁶ of the maximum anomaly, far below the precision of gravity data. On a single CPU core it takes 3 s, compared with 33 s for SimPEG and 109–240 s for the other codes: 11–80 times faster. On 16 threads, GMG is 3–18 times faster than the other parallel codes, and on the GPU of an Apple M4 Max the model takes 0.27 s. For tesseroids on a sphere, GMG is about 35 times faster than Harmonica and Tesseroids on a single core. The full benchmark, including its setup, is in the <a href="https://juliageodynamics.github.io/GeophysicalModelGenerator.jl/dev/man/gravity_code#Benchmark">documentation</a>.</p>
+
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        © 2026 GPU4GEO · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
+
+  </main>
+
+  
+
+  
+    <script src="/libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+  
+
+<script src="/libs/coder.min.js"></script>
+
+</body>
+</html>
