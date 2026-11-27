@@ -67,9 +67,11 @@ On the elastic Marmousi2 benchmark (5 m grid, 2.4 million cells, 5317 time steps
 
 The hackathon week was extremely fruitful: the latest developments of [GeophysicalModelGenerator.jl v0.10.1](https://github.com/JuliaGeodynamics/GeophysicalModelGenerator.jl) could be put to use straight away. Starting from openly available geological and geophysical datasets, mostly from [swisstopo](https://map.geo.admin.ch), we built a 3D model of the Valais/Wallis region: [GeoValaisWallis3D.jl](https://github.com/tduretz/GeoValaisWallis3D.jl). It combines the [swissALTIRegio](https://www.swisstopo.admin.ch/en/height-model-swissaltiregio) topography, the [swissBEDROCK](https://www.swisstopo.admin.ch/en/3d-swissbedrock-en) thickness of the Quaternary valley fill, the [Tectonic Map of Switzerland](https://map.geo.admin.ch/?layers=ch.swisstopo.geologie-tektonische_karte), the crustal layers and densities of [3D-ALPS](https://doi.org/10.5880/GFZ.4.5.2019.004), the Moho of [Spada et al. (2013)](https://doi.org/10.1093/gji/ggt148), the [3D model of the Nappe de Morcles](https://doi.org/10.6084/m9.figshare.c.4130759), the [Gravimetric Atlas of Switzerland](https://map.geo.admin.ch/?layers=ch.swisstopo.geologie-gravimetrischer_atlas.messpunkte), and the [seismic subsoil classes](https://www.vs.ch/web/sdm/cartes-de-sol-de-fondation) of the Rhône valley (CREALP). All of these can easily be plotted together in the same 3D coordinates and explored interactively with tools such as [ParaView](https://www.paraview.org) or [Makie](https://docs.makie.org/stable/). In addition, the new adjoint of GMG's gravity code, coupled to the LSQR solver of [Krylov.jl](https://github.com/JuliaSmoothOptimizers/Krylov.jl), allowed us to perform a least-squares inversion of the Bouguer anomaly. The result is a density model that explains the gravity data over the canton of Valais/Wallis: the rms misfit drops from 18 to 2 mGal at about 8,000 gravity stations. The inversion solves for about one million unknowns and runs in about a minute on a laptop GPU.
 
-![Seismic subsoil classes draped on the topography of the Rhône valley](https://raw.githubusercontent.com/tduretz/GeoValaisWallis3D.jl/main/docs/figures/subsoil.jpg)
-
-![Density inversion of the Bouguer anomaly](https://raw.githubusercontent.com/tduretz/GeoValaisWallis3D.jl/main/docs/figures/density.jpg) 
+~~~
+<p align="center">
+    <img src="[../../assets/images/Unzen_2D_waves_10m_curvilinear.gif](https://raw.githubusercontent.com/tduretz/GeoValaisWallis3D.jl/main/docs/figures/showcase.jpg)" title="2D model of seismic wave propagation below a volcano with magma reservoir" alt="2D model of seismic wave propagation below a volcano with magma reservoir" width="70%">
+</p>
+~~~
 
 ## A high-performance computation of 1946-like earthquake in canton Valais/Wallis
 
