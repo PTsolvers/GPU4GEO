@@ -22,7 +22,7 @@ Strictly speaking this wasn't during the Hackathon, but somewhat before. [MagmaT
 
 ~~~
 <p align="center">
-    <img src="../../assets/images/HighRes2D.gif" title="Magma injection in the crust @ 2.5m resolution" alt="Magma injection in the crust @ 2.5m resolution" width="60%">
+    <img src="../../assets/images/HighRes2D.gif" title="Magma injection in the crust @ 2.5m resolution" alt="Magma injection in the crust @ 2.5m resolution" width="100%">
 </p>
 ~~~
 
@@ -44,7 +44,7 @@ On the elastic Marmousi2 benchmark (5 m grid, 2.4 million cells, 5317 time steps
 
 ~~~
 <p align="center">
-    <img src="../../assets/images/Unzen_2D_waves_10m.gif" title="2D model of seismic wave propagation below a volcano with magma reservoir" alt="2D model of seismic wave propagation below a volcano with magma reservoir" width="80%">
+    <img src="../../assets/images/Unzen_2D_waves_10m_curvilinear.gif" title="2D model of seismic wave propagation below a volcano with magma reservoir" alt="2D model of seismic wave propagation below a volcano with magma reservoir" width="100%">
 </p>
 ~~~
 
